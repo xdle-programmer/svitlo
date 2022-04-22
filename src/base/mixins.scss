@@ -121,9 +121,3 @@
         cursor: pointer!important;
     }
 }
-
-@mixin clear-page {
-    .mobile-clear-page & {
-        @content
-    }
-}

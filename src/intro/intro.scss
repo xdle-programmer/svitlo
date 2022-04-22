@@ -1,0 +1,87 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.intro {
+
+  &__block {
+  }
+
+  &__video-block {
+  }
+
+  &__desc {
+  }
+
+  &__desc-title {
+  }
+
+  &__desc-text {
+  }
+
+  &__name {
+  }
+
+  &__name-title {
+  }
+
+  &__name-text {
+  }
+
+  &__video {
+  }
+
+  &__video-item {
+  }
+
+  &__about-block {
+  }
+
+  &__about-button-block {
+  }
+
+  &__about-button-text {
+  }
+
+  &__about-button-item {
+  }
+
+  &__about-button-circle {
+  }
+
+  &__about-button-icon {
+  }
+
+  &__about-title {
+  }
+
+  &__about-title-line {
+    &--1 {
+    }
+
+    &--2 {
+    }
+  }
+
+  &__about-desc {
+  }
+
+  &__about-desc-item {
+    &--1 {
+    }
+
+    &--2 {
+    }
+  }
+
+  &__about-link {
+  }
+
+  &__about-link-text {
+  }
+
+  &__about-link-icon {
+  }
+
+}
