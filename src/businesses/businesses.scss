@@ -2,3 +2,115 @@
 @import "../base/mixins";
 @import "../base/variables";
 @import "../base/media-queries";
+
+.businesses {
+  background: var(--main-color);
+  padding-top: 14.4vw;
+  padding-bottom: 9.63vw;
+
+  &__block {
+  }
+
+  &__title {
+    font-size: 22.5638vw;
+    line-height: 106%;
+    letter-spacing: -0.05em;
+    color: var(--white-color);
+    white-space: nowrap;
+    margin-left: -72.8vw;
+    margin-bottom: 4.9vw;
+  }
+
+  &__desc {
+    @include flex-row();
+    justify-content: space-between;
+    padding-right: 1vw;
+    margin-bottom: 12.3vw;
+  }
+
+  &__desc-item {
+    @include manrope();
+    font-size: 3.4392vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+
+    &--1 {
+      color: var(--white-color);
+      font-weight: 700;
+    }
+
+    &--2 {
+      color: var(--black-color);
+    }
+  }
+
+  &__desc-item-line {
+  }
+
+  &__icon-block {
+    margin-bottom: 4.2vw;
+  }
+
+  &__icon {
+    position: relative;
+  }
+
+  &__icon-item {
+    position: absolute;
+    width: 6.8vw;
+    height: 6.8vw;
+    border-radius: 50%;
+    border: 0.15vw solid var(--white-color);
+    left: 0;
+    top: -2vw;
+
+    &--1 {
+    }
+
+    &--2 {
+      left: 5.4vw;
+    }
+  }
+
+  &__icon-title {
+    @include manrope();
+    font-size: 3.4392vw;
+    line-height: 80%;
+    letter-spacing: -0.033em;
+    color: var(--black-color);
+    margin-left: 26vw
+  }
+
+  &__subtitle {
+    @include flex-row();
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  &__subtitle-item {
+    @include manrope();
+    font-size: 12.1417vw;
+    line-height: 80%;
+    letter-spacing: -0.05em;
+
+    &--1 {
+      font-weight: 700;
+      margin-left: 25.5vw;
+      margin-bottom: 2vw;
+    }
+
+    &--2 {
+      font-weight: 700;
+    }
+
+    &--3 {
+      color: var(--white-color);
+      line-height: 112%;
+      letter-spacing: -0.033em;
+      font-weight: 800;
+      font-size: 1.5112vw;
+      width: 22.2vw;
+      margin-left: 4vw;
+    }
+  }
+}

@@ -2,3 +2,91 @@
 @import "../base/mixins";
 @import "../base/variables";
 @import "../base/media-queries";
+
+.lets-discuss {
+  background-color: var(--black-color);
+  padding-top: 15.6vw;
+  padding-bottom: 18.3vw;
+
+  &__block {
+  }
+
+  &__desc {
+    @include flex-row();
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 7.5vw;
+    margin-bottom: 15.6vw;
+  }
+
+  &__desc-item {
+    @include manrope();
+    font-size: 3.4392vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    color: var(--white-color);
+
+    &--1 {
+      width: 34vw;
+    }
+
+    &--2 {
+
+    }
+  }
+
+  &__link-block {
+    position: relative;
+    padding-left: 25.8vw;
+
+    &:after {
+      @include pseudo-absolute();
+      width: 17.5vw;
+      height: 0.15vw;
+      background: var(--white-color);
+      left: 0;
+      top: 2.35vw;
+    }
+  }
+
+  &__link-block-title {
+    @include flex-row();
+    align-items: baseline;
+    margin-bottom: 4.8vw;
+    position: relative;
+  }
+
+  &__link-block-title-item {
+    @include manrope();
+    font-size: 4.7420vw;
+    line-height: 100%;
+    color: var(--white-color);
+    letter-spacing: -0.033em;
+    font-weight: 300;
+    margin-right: 1vw;
+
+    &--bold {
+      font-weight: 800;
+    }
+  }
+
+  &__link-item {
+    @include manrope();
+    font-size: 8.6503vw;
+    line-height: 100%;
+    color: var(--main-color);
+    letter-spacing: -0.033em;
+    font-weight: 700;
+    position: relative;
+    width: fit-content;
+
+    &:after {
+      @include pseudo-absolute();
+      width: 100%;
+      height: 0.65vw;
+      background: var(--main-color);
+      left: 0;
+      top: calc(100% + 1vw);
+    }
+  }
+}

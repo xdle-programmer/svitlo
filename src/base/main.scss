@@ -5,22 +5,57 @@
 
 @font-face {
   font-family: 'Kudryashev';
-  src: url('../../assets/fonts/KudryashevDisplay.woff2') format('woff2');
+  src: url('../../assets/fonts/kudryashev/KudryashevDisplay-Sans.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../../assets/fonts/manrope/Manrope-Light.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../../assets/fonts/manrope/Manrope-Regular.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../../assets/fonts/manrope/Manrope-Medium.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../../assets/fonts/manrope/Manrope-Bold.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../../assets/fonts/manrope/Manrope-ExtraBold.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 800;
 }
 
 :root {
   --white-color: #fff;
   --black-color: #020305;
   --main-color: #768f94;
+  --sub-main-color: #2A2F30;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
-  font-family: 'Kudryashev', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -40,6 +75,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-shadow: none;
   margin: 0;
+  @include kudryashev;
 }
 
 a {

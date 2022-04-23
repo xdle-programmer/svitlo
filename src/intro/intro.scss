@@ -4,67 +4,163 @@
 @import "../base/media-queries";
 
 .intro {
+  background: var(--black-color);
+  color: var(--white-color);
+  padding-bottom: 10.4vw;
 
   &__block {
   }
 
   &__video-block {
+    position: relative;
   }
 
   &__desc {
+    position: absolute;
+    top: 29.39030745vw;
+    left: 0;
+    z-index: 1;
   }
 
   &__desc-title {
+    font-size: 3.439291298vw;
+    line-height: 106%;
+    margin-bottom: 2.449192288vw;
   }
 
   &__desc-text {
+    font-weight: 500;
+    font-size: 1.719645649vw;
+    @include manrope;
+    letter-spacing: -0.033em;
   }
 
   &__name {
+    position: absolute;
+    z-index: 1;
+    top: 2vw;
+    right: -8.55vw;
   }
 
   &__name-title {
+    font-size: 25.11724857vw;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+    @include flex-row;
+    align-items: baseline;
+  }
+
+  &__name-title-letter {
+    font-size: 25.11724857vw;
+  }
+
+  &__name-title-item {
+    font-size: 19.3850964vw;
+    margin-left: -0.5vw;
   }
 
   &__name-text {
+    margin-top: 0.4vw;
+    margin-left: 1.4vw;
+  }
+
+  &__name-text-item {
+    @include manrope;
+    font-weight: 700;
+    font-size: 1.146430433vw;
+    line-height: 120%;
+    letter-spacing: -0.033em;
   }
 
   &__video {
+    position: relative;
+    width: 95.83116206vw;
+    margin: 0 -3vw;
+  }
+
+  &__video-item-wrapper {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
   }
 
   &__video-item {
+    position: absolute;
+    display: block;
+    @include absolute-fill;
+    object-fit: contain;
   }
 
   &__about-block {
+
   }
 
   &__about-button-block {
+    margin-left: 60.5vw;
+    position: relative;
   }
 
   &__about-button-text {
+    font-size: 3.4393vw;
+    @include manrope;
+    font-weight: 300;
+    letter-spacing: -0.033em;
+    writing-mode: vertical-rl;
+    line-height: 100%;
+    color: var(--sub-main-color);
   }
 
   &__about-button-item {
-  }
-
-  &__about-button-circle {
+    position: absolute;
+    width: 20.1668vw;
+    height: 20.1668vw;
+    border-radius: 50%;
+    background: var(--main-color);
+    @include flex-row-center;
+    left: 9vw;
+    top: 8.2vw;
   }
 
   &__about-button-icon {
+    width: 1.5112vw;
+    height: 1.5112vw;
+  }
+
+  &__about-button-icon-anchor {
+    position: absolute;
+    left: 9.3278vw;
+    top: 9.3278vw;
+    width: 1.5112vw;
+    height: 1.5112vw;
   }
 
   &__about-title {
+    font-size: 22.3032vw;
+    letter-spacing: -0.05em;
+    margin-top: 1vw;
+    line-height: 106%;
   }
 
   &__about-title-line {
+
     &--1 {
+      margin-left: -8vw;
     }
 
     &--2 {
+      margin-top: -9vw;
+      margin-left: 43.7vw
     }
   }
 
   &__about-desc {
+    @include manrope;
+    font-size: 3.4392vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    @include flex-row;
+    padding-left: 26vw;
+    padding-top: 4vw;
   }
 
   &__about-desc-item {
@@ -72,16 +168,33 @@
     }
 
     &--2 {
+      font-weight: 700;
+      margin-left: 9vw;
     }
   }
 
   &__about-link {
+    @include flex-row;
+    flex-wrap: wrap;
+    width: 50vw;
+    margin-top: 2vw;
+    align-items: center;
   }
 
   &__about-link-text {
+    @include manrope;
+    font-weight: 700;
+    font-size: 8.6503vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    color: var(--main-color);
   }
 
   &__about-link-icon {
+    width: 1.5112vw;
+    height: 1.5112vw;
+    margin-left: 3vw;
+    margin-top: 2vw;
   }
 
 }
