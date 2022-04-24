@@ -1,0 +1,33 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+
+.logo-circle {
+  width: 100%;
+
+  &__item {
+    width: 100%;
+    position: relative;
+    padding-bottom: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    @include absolute-fill;
+    display: block;
+  }
+
+  &__logo {
+    position: absolute;
+    display: block;
+    width: 11%;
+    height: 13%;
+    object-fit: contain;
+    object-position: center center;
+    @include absolute-center;
+    top: 48%;
+  }
+
+}

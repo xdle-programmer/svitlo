@@ -2,3 +2,83 @@
 @import "../base/mixins";
 @import "../base/variables";
 @import "../base/media-queries";
+
+.our-services {
+  background: var(--black-color);
+  color: var(--white-color);
+  padding-top: 17.3vw;
+  padding-bottom: 10vw;
+
+  &__block {
+  }
+
+  &__title {
+    font-size: 22.5638vw;
+    line-height: 106%;
+    letter-spacing: -0.046em;
+    position: relative;
+    margin-left: -14vw;
+    margin-bottom: 13.3vw;
+
+    &:after {
+      @include pseudo-absolute;
+      width: 22.5vw;
+      height: 22.5vw;
+      background: var(--main-color);
+      border-radius: 50%;
+      right: -8.9630vw;
+      top: -2.4491vw;
+    }
+  }
+
+  &__title-item {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__items {
+  }
+
+  &__item {
+    @include manrope;
+    display: grid;
+    grid-template-columns: 26vw 50vw 1fr;
+    padding: 3vw 0;
+    border-bottom: .1vw solid var(--white-color);
+    margin-bottom: 2.7vw;
+  }
+
+  &__item-number {
+    @include flex-row-center;
+    border: .1vw solid var(--white-color);
+    border-radius: 50%;
+    width: 2.7vw;
+    height: 2.7vw;
+    margin-top: 2vw;
+  }
+
+  &__item-desc {
+  }
+
+  &__item-desc-title {
+    font-size: 3.4392vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    margin-bottom: 2.3vw;
+  }
+
+  &__item-desc-text {
+    font-size: 1.1464vw;
+    line-height: 126%;
+    letter-spacing: -0.033em;
+  }
+
+  &__item-link {
+    font-weight: 800;
+    font-size: 1.7196vw;
+    line-height: 126%;
+    letter-spacing: -0.033em;
+    margin-left: auto;
+    margin-top: auto;
+  }
+}

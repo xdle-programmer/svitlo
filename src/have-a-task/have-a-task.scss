@@ -2,3 +2,70 @@
 @import "../base/mixins";
 @import "../base/variables";
 @import "../base/media-queries";
+
+.have-a-task {
+  background: var(--main-color);
+  color: var(--white-color);
+  padding-top: 9.2vw;
+  padding-bottom: 13.4vw;
+
+  &__block {
+    padding-left: 25vw;
+  }
+
+  &__title {
+    font-size: 13.8613vw;
+    line-height: 106%;
+    letter-spacing: -0.047em;
+    margin-bottom: 1.5vw;
+    white-space: nowrap;
+  }
+
+  &__subtitle {
+    @include manrope;
+    font-weight: 700;
+    font-size: 1.7196vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    padding-left: 1vw;
+    margin-bottom: 8vw;
+  }
+
+  &__form {
+    padding-left: 1vw;
+  }
+
+  &__form-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vw;
+    margin-bottom: 4.9vw;
+  }
+
+  &__form-item {
+  }
+
+  &__form-item-field {
+    margin-bottom: 2.45vw;
+  }
+
+  &__form-button {
+    @include manrope;
+    font-weight: 800;
+    font-size: 5.6279vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    color: var(--black-color);
+    position: relative;
+    width: fit-content;
+
+    &:after {
+      @include pseudo-absolute();
+      width: 100%;
+      height: 0.65vw;
+      background: var(--black-color);
+      left: 0;
+      top: calc(100% + 1vw);
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.input {
+
+  $not-empty: '.placeholder--not-empty';
+  $empty: '.placeholder--empty';
+  $error: '.form-check__error--show';
+  $error-focus: '.form-check__error--show.form-check__field--focus';
+
+  width: 100%;
+  height: 3.8vw;
+  background: transparent;
+  color: var(--black-color);
+  transition: none !important;
+  @include manrope;
+  font-weight: 500;
+  font-size: 1.3548vw;
+  border: none;
+  border-bottom: .1vw solid rgba(0, 0, 0, .16);
+
+  #{$not-empty} & {
+
+  }
+
+  #{$error} & {
+    border-color: var(--error-color);
+    //padding-top: 14px;
+  }
+
+  #{$empty}#{$error-focus} & {
+    //padding-top: 0;
+  }
+
+  &--textarea {
+    min-height: 16.3vw;
+    resize: vertical;
+    padding-top: 0.8858vw;
+    @include customVerticalScroll();
+
+    #{$empty}#{$error-focus} & {
+      //padding-top: 14px;
+    }
+
+    #{$not-empty} & {
+      //padding-top: 25px;
+    }
+
+    #{$error-focus} &,
+    #{$error} & {
+      //padding-top: 24px;
+    }
+  }
+
+  @include input-placeholder {
+    color: var(--natural-color);
+  }
+
+  &:focus {
+    border-bottom: .1vw solid rgba(0, 0, 0, .46);
+  }
+}

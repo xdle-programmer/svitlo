@@ -2,3 +2,220 @@
 @import "../base/mixins";
 @import "../base/variables";
 @import "../base/media-queries";
+
+.portfolio {
+  background: var(--black-color);
+  color: var(--white-color);
+  padding-top: 16vw;
+  padding-bottom: 10vw;
+
+  &__title-block {
+    margin-bottom: 6vw;
+  }
+
+  &__title {
+    @include margin-auto;
+    width: fit-content;
+    position: relative;
+  }
+
+  &__title-text {
+    font-size: 15.5810vw;
+    line-height: 106%;
+    letter-spacing: -0.05em;
+    margin-bottom: 2.2vw;
+  }
+
+  &__title-icon {
+    width: 2.4vw;
+    height: 2.4vw;
+    display: block;
+    position: absolute;
+    right: -2vw;
+    top: 5.8vw;
+  }
+
+  &__subtitle {
+    @include manrope;
+    @include margin-auto;
+    width: fit-content;
+    font-weight: 300;
+    font-size: 1.7196vw;
+    line-height: 100%;
+    letter-spacing: -0.026em;
+  }
+
+  &__slider {
+    background: #768f94;
+    height: 700px;
+    margin-bottom: 4.4vw;
+  }
+
+  &__desc {
+    @include flex-row;
+    padding-left: 26vw;
+    margin-bottom: 2vw;
+  }
+
+  &__desc-item {
+    @include manrope;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+
+    &--1 {
+      font-size: 3.4392vw;
+      width: 29vw;
+    }
+
+    &--2 {
+      font-size: 1.7196vw;
+      margin-left: 6vw;
+      width: 18.5vw;
+    }
+
+  }
+
+  &__desc-item-inner {
+    display: inline;
+
+    &--main-color {
+      color: var(--main-color);
+    }
+  }
+
+  &__chart {
+    width: 100%;
+    position: relative;
+    height: 25vw;
+    margin-bottom: 4vw;
+  }
+
+  &__chart-line {
+    position: absolute;
+    height: 0.13vw;
+    background: var(--main-color);
+    transform-origin: left center;
+
+    &--1 {
+      width: 7.3vw;
+      left: -1vw;
+      top: 23.55vw;
+      transform: rotate(-16deg);
+    }
+
+    &--2 {
+      width: 18.3vw;
+      left: 5.9vw;
+      top: 21.6vw;
+      transform: rotate(-19.6deg);
+    }
+
+    &--3 {
+      width: 17vw;
+      left: 22.9vw;
+      top: 15.6vw;
+      transform: rotate(3deg);
+    }
+
+    &--4 {
+      width: 19.6vw;
+      left: 40.1vw;
+      top: 16.6vw;
+      transform: rotate(-28.8deg);
+    }
+
+    &--5 {
+      width: 17vw;
+      left: 57.3vw;
+      top: 7.2vw;
+      transform: rotate(5.7deg);
+    }
+
+    &--6 {
+      width: 21.7vw;
+      left: 74.3vw;
+      top: 9vw;
+      transform: rotate(-21.9deg);
+    }
+
+    &--7 {
+      width: 20vw;
+      left: 94.3vw;
+      top: 1vw;
+      transform: rotate(-10.9deg);
+    }
+  }
+
+  &__chart-dot {
+    width: 0.63vw;
+    height: 0.63vw;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--main-color);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    &--1 {
+      left: 5.9vw;
+      top: 21.6vw;
+    }
+
+    &--2 {
+      left: 22.9vw;
+      top: 15.6vw;
+    }
+
+    &--3 {
+      left: 40.1vw;
+      top: 16.6vw;
+    }
+
+    &--4 {
+      left: 57.3vw;
+      top: 7.2vw;
+    }
+
+    &--5 {
+      left: 74.3vw;
+      top: 9vw;
+    }
+
+    &--6 {
+      left: 94.3vw;
+      top: 1vw;
+    }
+
+  }
+
+  &__link-block {
+    @include manrope;
+    font-weight: 700;
+    font-size: 6.9306vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    padding-left: 26.5vw;
+  }
+
+  &__link-title {
+    margin-bottom: 3vw;
+  }
+
+  &__link-item {
+    @include manrope();
+    line-height: 100%;
+    color: var(--main-color);
+    letter-spacing: -0.033em;
+    font-weight: 700;
+    position: relative;
+    width: fit-content;
+
+    &:after {
+      @include pseudo-absolute();
+      width: 100%;
+      height: 0.65vw;
+      background: var(--main-color);
+      left: 0;
+      top: calc(100% + 1vw);
+    }
+  }
+}

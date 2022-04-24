@@ -2,3 +2,149 @@
 @import "../base/mixins";
 @import "../base/variables";
 @import "../base/media-queries";
+
+.clients {
+  background: var(--black-color);
+  color: var(--white-color);
+  padding-top: 9vw;
+  padding-bottom: 15vw;
+
+  &__text-row {
+    margin-bottom: 8.6vw;
+  }
+
+  &__text-row-line {
+    @include flex-row;
+    opacity: 0.1;
+    margin-left: -5.4vw;
+  }
+
+  &__text-row-item {
+    @include manrope;
+    font-weight: 300;
+    font-size: 3.4392vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    margin-right: 3.8vw;
+    position: relative;
+
+    &:after {
+      @include pseudo-absolute;
+      width: .3vw;
+      height: .3vw;
+      border-radius: 50%;
+      background: var(--white-color);
+      top: 2vw;
+      right: -2.2vw;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    height: 51vw;
+    position: relative;
+  }
+
+  &__title {
+    @include manrope;
+    font-weight: 700;
+    font-size: 1.7196vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    width: 7vw;
+  }
+
+  &__item {
+    border-radius: 50%;
+    border: .02vw solid var(--main-color);
+    position: absolute;
+    @include flex-row-center;
+
+    &--main {
+      background: var(--main-color);
+    }
+
+    &--1 {
+      left: 1vw;
+      top: 12.2vw;
+      height: 12vw;
+      width: 12vw;
+    }
+
+    &--2 {
+      left: 27.5vw;
+      top: 6.9vw;
+      height: 7vw;
+      width: 7vw;
+    }
+
+    &--3 {
+      left: 64.1vw;
+      top: 0.2vw;
+      height: 15.4vw;
+      width: 15.4vw;
+    }
+
+    &--4 {
+      left: 10.9vw;
+      top: 23.2vw;
+      height: 27.8vw;
+      width: 27.8vw;
+    }
+
+    &--5 {
+      left: 43.5vw;
+      top: 12.9vw;
+      height: 18.8vw;
+      width: 18.8vw;
+    }
+
+    &--6 {
+      left: 73.9vw;
+      top: 22.7vw;
+      height: 12.1vw;
+      width: 12.1vw;
+    }
+
+    &--7 {
+      left: 57.9vw;
+      top: 37.2vw;
+      height: 12.1vw;
+      width: 12.1vw;
+    }
+  }
+
+  &__item-img {
+    display: block;
+    height: auto;
+
+    &--gs {
+      width: 3.4392vw;
+    }
+
+    &--creo {
+      width: 2.8139vw;
+    }
+
+    &--0-100 {
+      width: 7.7644vw;
+    }
+
+    &--traffic {
+      width: 8.3897vw;
+    }
+
+    &--chart {
+      width: 2.6576vw;
+    }
+
+    &--vooodoo {
+      width: 5.2110vw;
+    }
+
+    &--other {
+      width: 4.8983vw;
+    }
+  }
+}
+

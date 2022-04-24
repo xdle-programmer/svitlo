@@ -4,37 +4,83 @@
 @import "../base/media-queries";
 
 .process {
+  padding-top: 14.4vw;
+  padding-bottom: 7vw;
+  background: var(--white-color);
 
   &__block {
+    position: relative;
   }
 
   &__icon {
+    position: absolute;
+    width: 12.1vw;
+    top: -2.3vw;
+    right: -0.2vw;
   }
 
   &__title-block {
+    @include flex-row;
+    align-items: flex-end;
+    margin-bottom: 11.3vw;
   }
 
   &__title {
+    font-size: 20.2188vw;
+    line-height: 106%;
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+    margin-left: -36.25vw;
   }
 
   &__subtitle {
+    @include manrope;
+    font-size: 1.7196vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    margin-left: 5.6vw;
+    width: 10vw;
+    margin-bottom: 1vw;
   }
 
   &__items {
   }
 
   &__item {
+    display: grid;
+    grid-template-columns: 26vw 1fr;
   }
 
   &__item-number {
+    @include manrope;
+    font-size: 1.1464vw;
+    letter-spacing: -0.033em;
+    padding-top: 2.5vw;
   }
 
   &__item-desc {
+    border-top: .2vw solid var(--black-color);
+    padding-top: 1.8vw;
+    padding-bottom: 5.2vw;
+    display: grid;
+    grid-template-columns: 1fr 29.3vw;
   }
 
   &__item-desc-title {
+    @include manrope;
+    font-weight: 700;
+    font-size: 3.4392vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
   }
 
   &__item-desc-text {
+    @include manrope;
+    font-weight: 700;
+    font-size: 1.1464vw;
+    line-height: 126%;
+    letter-spacing: -0.033em;
+    padding-right: 4vw;
+    padding-top: 0.5vw;
   }
 }
