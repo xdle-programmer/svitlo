@@ -44,6 +44,7 @@
         "@babel/runtime": "^7.14.8",
         "axios": "^0.21.4",
         "frontend-scss-mixins": "^1.0.6",
-        "get-viewport-options": "^1.0.0"
+        "get-viewport-options": "^1.0.0",
+        "swiper": "^8.1.3"
     }
 }

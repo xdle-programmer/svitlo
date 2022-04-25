@@ -1,0 +1,55 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.animation {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all .3s ease-out;
+
+  $ready-title: '.animation__block--ready-title';
+  $fade: '.animation__block--fade';
+
+  &__change-background {
+    z-index: 1;
+    position: relative;
+    transition: all .6s ease-out;
+  }
+
+  &__title-wrapper {
+    overflow: hidden;
+  }
+
+  &__title {
+    transition: all 1.6s cubic-bezier(.25, .74, .22, .99);
+    transform: translateY(100%);
+    transform-origin: top right;
+    transition-delay: .2s;
+
+    #{$ready-title} & {
+      transform: none;
+      transition: transform 1.6s cubic-bezier(.25, .74, .22, .99), opacity 0ms;
+      opacity: 1;
+    }
+  }
+
+  &__text-wrapper {
+    overflow: hidden;
+  }
+
+  &__text {
+    transition: all 1.6s cubic-bezier(.25, .74, .22, .99);
+    transform: translateY(100%);
+    transform-origin: top right;
+    transition-delay: .5s;
+
+    #{$ready-title} & {
+      transform: none;
+      transition: transform 1.6s cubic-bezier(.25, .74, .22, .99), opacity 0ms;
+      opacity: 1;
+    }
+  }
+}

@@ -5,7 +5,7 @@
 
 .businesses {
   background: var(--main-color);
-  padding-top: 14.4vw;
+  padding-top: 25vw;
   padding-bottom: 9.63vw;
 
   &__block {
@@ -85,12 +85,13 @@
     @include flex-row();
     flex-wrap: wrap;
     align-items: flex-end;
+    margin-top: 9vw;
   }
 
   &__subtitle-item {
     @include manrope();
     font-size: 12.1417vw;
-    line-height: 80%;
+    margin-top: -8vw;
     letter-spacing: -0.05em;
 
     &--1 {
@@ -111,6 +112,7 @@
       font-size: 1.5112vw;
       width: 22.2vw;
       margin-left: 4vw;
+      margin-bottom: 3.4vw;
     }
   }
 }
