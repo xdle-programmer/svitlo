@@ -8,11 +8,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(baseConfig, {
     mode: 'development',
     watch: true,
-    devServer: {
-        port: 8080,
-        static: ['./dist'],
-        hot: true
-    },
     module: {
         rules: [
             {

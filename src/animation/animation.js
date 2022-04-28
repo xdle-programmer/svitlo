@@ -4,6 +4,22 @@ if ($animation) {
     animationStart()
 }
 
+// let counter = 0;
+//
+// document.addEventListener('click', () => {
+//     Array.from(document.querySelectorAll('.animation__slide'))[counter].style.zIndex = counter * 10
+//     Array.from(document.querySelectorAll('.animation__slide'))[counter].style.transform = 'translateY(0)'
+//     Array.from(document.querySelectorAll('.animation__slide'))[counter].style.opacity = 1
+//
+//     // if (counter > 0) {
+//     //     Array.from(document.querySelectorAll('.animation__slide'))[counter - 1].style.zIndex = '-1'
+//     //     Array.from(document.querySelectorAll('.animation__slide'))[counter - 1].style.transform = 'translateY(-100%)'
+//     // }
+//
+//
+//     counter++
+// })
+
 // Рекурсивная проверка на загрузку и готовность рендера
 function animationStart() {
     if (document.readyState === 'complete') {
@@ -42,6 +58,16 @@ function animation($wrapper) {
 
     })
 
+    for (let index = 0; index < changeBackgroundElements.length; index++) {
+        const $changeBackgroundElement = changeBackgroundElements[index].$selector;
+
+        const height = $changeBackgroundElement.getBoundingClientRect().height
+        $changeBackgroundElement.style.height = height + 'px'
+        $changeBackgroundElement.innerHTML = ''
+
+
+    }
+
     // Блоки для отслеживания тайтлов и текста
     const blocks = Array.from($wrapper.querySelectorAll(`.${blockClass}`));
 
@@ -52,12 +78,13 @@ function animation($wrapper) {
 
     // Функция подскраливания слайда
     function changeBackground() {
+
         let changeHeight = 0
 
         for (let index = 0; index < changeBackgroundElements.length; index++) {
             const $changeBackgroundElement = changeBackgroundElements[index].$selector;
             const initialState = changeBackgroundElements[index].changeState;
-            const offset = $changeBackgroundElement.getBoundingClientRect().top;
+            const offset = $changeBackgroundElement.getBoundingClientRect().top - $changeBackgroundElement.getBoundingClientRect().height + 1000;
             let changeLimit = .8
             let shift = window.innerHeight * .8
 
@@ -65,15 +92,19 @@ function animation($wrapper) {
                 changeLimit = 0
             }
 
+            console.log(offset)
+
             if (offset <= window.innerHeight * changeLimit) {
-                $changeBackgroundElement.style.marginTop = `-${shift}px`
+                // $changeBackgroundElement.style.marginTop = `-${shift}px`
+                $changeBackgroundElement.style.transform = `translateY(-30%)`
                 changeBackgroundElements[index].changeState = true;
 
                 if (initialState !== changeBackgroundElements[index].changeState) {
                     changeHeight -= shift;
                 }
             } else {
-                $changeBackgroundElement.style.marginTop = 0;
+                // $changeBackgroundElement.style.marginTop = 0;
+                $changeBackgroundElement.style.transform = `translateY(100%)`
                 changeBackgroundElements[index].changeState = false;
 
                 if (initialState !== changeBackgroundElements[index].changeState) {
@@ -134,18 +165,23 @@ function animation($wrapper) {
         }
 
         let scrollCheck = true;
+        // let scrollCheck = false;
 
         scrollCheck = changeBackground()
 
-        scrollCheck = setTitleTextClass()
-
+        // scrollCheck = setTitleTextClass()
 
         if (scrollCheck) {
             $wrapper.style.transform = `translateY(-${window.scrollY}px)`;
         }
 
         lastScroll = window.scrollY;
-        requestAnimationFrame(scroll)
+
+        setTimeout(() => {
+            requestAnimationFrame(scroll)
+        }, 25)
+
+
     }
 }
 
