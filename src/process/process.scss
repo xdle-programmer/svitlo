@@ -4,18 +4,19 @@
 @import "../base/media-queries";
 
 .process {
-  padding-top: 25vw;
+  //padding-top: 14vw;
+  padding-top: 10vw;
   padding-bottom: 7vw;
   background: var(--white-color);
+  //position: relative;
 
   &__block {
-    position: relative;
   }
 
   &__icon {
     position: absolute;
     width: 12.1vw;
-    top: -2.3vw;
+    top: 10.7vw;
     right: -0.2vw;
   }
 
@@ -27,7 +28,7 @@
 
   &__title {
     font-size: 20.2188vw;
-    line-height: 106%;
+    margin-bottom: 2vw;
     letter-spacing: -0.05em;
     white-space: nowrap;
     margin-left: -36.25vw;

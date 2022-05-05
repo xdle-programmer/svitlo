@@ -5,20 +5,22 @@
 
 .businesses {
   background: var(--main-color);
-  padding-top: 25vw;
+  padding-top: 10vw;
   padding-bottom: 9.63vw;
+
+  $ready-title: '.animation__block--ready-title';
 
   &__block {
   }
 
   &__title {
     font-size: 22.5638vw;
-    line-height: 106%;
     letter-spacing: -0.05em;
     color: var(--white-color);
     white-space: nowrap;
     margin-left: -72.8vw;
-    margin-bottom: 4.9vw;
+    margin-top: -3.888vw;
+    margin-bottom: 2vw;
   }
 
   &__desc {
@@ -31,7 +33,7 @@
   &__desc-item {
     @include manrope();
     font-size: 3.4392vw;
-    line-height: 100%;
+    margin-top: -1.1vw;
     letter-spacing: -0.033em;
 
     &--1 {
@@ -45,6 +47,7 @@
   }
 
   &__desc-item-line {
+    margin-top: -1.1vw;
   }
 
   &__icon-block {
@@ -60,15 +63,30 @@
     width: 6.8vw;
     height: 6.8vw;
     border-radius: 50%;
-    border: 0.15vw solid var(--white-color);
+    //border: 0.15vw solid var(--white-color);
     left: 0;
     top: -2vw;
 
+    circle {
+      fill: none;
+      stroke: var(--black-color);
+      stroke-width: 0.15vw;
+      stroke-dasharray: 314;
+      stroke-dashoffset: 314;
+      transition: all .5s linear;
+
+      #{$ready-title} & {
+        stroke-dashoffset: 0;
+      }
+    }
+
     &--1 {
+      transform: rotate(45deg);
     }
 
     &--2 {
       left: 5.4vw;
+      transform: rotate(-90deg);
     }
   }
 
@@ -102,17 +120,20 @@
 
     &--2 {
       font-weight: 700;
+      margin-right: 2vw;
     }
 
     &--3 {
       color: var(--white-color);
-      line-height: 112%;
       letter-spacing: -0.033em;
       font-weight: 800;
       font-size: 1.5112vw;
       width: 22.2vw;
-      margin-left: 4vw;
-      margin-bottom: 3.4vw;
+      margin-bottom: 3.2vw;
     }
+  }
+
+  &__subtitle-item-line {
+    margin-top: -.5vw;
   }
 }

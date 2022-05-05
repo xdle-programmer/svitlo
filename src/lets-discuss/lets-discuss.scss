@@ -22,7 +22,6 @@
   &__desc-item {
     @include manrope();
     font-size: 3.4392vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
     color: var(--white-color);
 
@@ -35,17 +34,28 @@
     }
   }
 
+  &__desc-item-line {
+    margin-top: -1.3vw;
+  }
+
   &__link-block {
     position: relative;
     padding-left: 25.8vw;
+  }
 
-    &:after {
-      @include pseudo-absolute();
-      width: 17.5vw;
-      height: 0.15vw;
-      background: var(--white-color);
-      left: 0;
-      top: 2.35vw;
+  &__link-block-line {
+    position: absolute;
+    width: 17.5vw;
+    height: 0.15vw;
+    background: var(--white-color);
+    left: 0;
+    top: 2.35vw;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: all 500ms ease-out;
+
+    &.animation__title-wrapper--active {
+      transform: scaleX(1);
     }
   }
 

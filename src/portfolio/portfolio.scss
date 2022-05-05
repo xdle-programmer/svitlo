@@ -6,7 +6,7 @@
 .portfolio {
   background: var(--black-color);
   color: var(--white-color);
-  padding-top: 16vw;
+  padding-top: 14vw;
   padding-bottom: 10vw;
 
   &__title-block {
@@ -26,12 +26,16 @@
     margin-bottom: 2.2vw;
   }
 
+  &__title-text-line {
+    padding: 0 2vw;
+  }
+
   &__title-icon {
     width: 2.4vw;
     height: 2.4vw;
     display: block;
     position: absolute;
-    right: -2vw;
+    right: 0;
     top: 5.8vw;
   }
 
@@ -88,18 +92,24 @@
 
   &__desc {
     @include flex-row;
-    padding-left: 26vw;
+    padding-left: 55vw;
     margin-bottom: 2vw;
+    position: relative;
+    padding-top: 40vw;
   }
 
   &__desc-item {
     @include manrope;
-    line-height: 100%;
     letter-spacing: -0.033em;
 
     &--1 {
-      font-size: 3.4392vw;
-      width: 29vw;
+      font-size: 8.4392vw;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 0vw;
     }
 
     &--2 {
@@ -110,12 +120,28 @@
 
   }
 
+  $desc-item-1: '.portfolio__desc-item--1';
+
+
   &__desc-item-inner {
-    display: inline;
+    margin-top: -1.33vw;
+    display: flex;
+
+    #{$desc-item-1} & {
+      margin-top: -3.9vw;
+    }
+
+    &--2 {
+      margin-top: -0.33vw;
+    }
 
     &--main-color {
       color: var(--main-color);
     }
+  }
+
+  &__desc-item-inner-line {
+
   }
 
   &__chart {
