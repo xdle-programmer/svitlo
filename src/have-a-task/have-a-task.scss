@@ -13,10 +13,13 @@
     padding-bottom: 13.4vw;
   }
 
+  &__title-wrapper {
+    margin-bottom: 1.5vw;
+  }
+
   &__title {
     font-size: 13.8613vw;
     letter-spacing: -0.047em;
-    margin-bottom: 1.5vw;
     white-space: nowrap;
   }
 
@@ -24,7 +27,6 @@
     @include manrope;
     font-weight: 700;
     font-size: 1.7196vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
     padding-left: 1vw;
     margin-bottom: 8vw;
@@ -52,7 +54,6 @@
     @include manrope;
     font-weight: 800;
     font-size: 5.6279vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
     color: var(--black-color);
     position: relative;

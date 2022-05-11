@@ -33,8 +33,11 @@
     @include manrope;
     font-weight: 700;
     font-size: 3.4392vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
+  }
+
+  &__subtitle-item-text-line {
+    margin-top: -1.1vw;
   }
 
   &__subtitle-flag {
@@ -53,6 +56,10 @@
     margin-bottom: 9.6vw;
   }
 
+  &__title-item {
+    width: 200%;
+  }
+
   &__desc {
     padding-left: 26vw;
     display: grid;
@@ -63,7 +70,6 @@
   &__desc-item {
     @include manrope;
     font-size: 3.4392vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
 
     &--1 {
@@ -82,6 +88,10 @@
     &--2 {
       width: 11vw;
     }
+  }
+
+  &__desc-item-text-line-inner {
+    margin-top: -1.1vw;
   }
 
   &__desc-item-text-line {
@@ -107,8 +117,12 @@
     @include manrope;
     font-weight: 700;
     font-size: 13.8613vw;
-    line-height: 90%;
+    margin-top: 6.5vw;
     letter-spacing: -0.033em;
+  }
+
+  &__owners-title-text-line {
+    margin-top: -6.5vw;
   }
 
   &__owners-title-circle {
@@ -206,12 +220,16 @@
     @include manrope;
     font-weight: 700;
     font-size: 6.9306vw;
-    line-height: 100%;
+    //line-height: 100%;
     letter-spacing: -0.033em;
   }
 
   &__link-desc-text {
     margin-bottom: 5.2vw;
+  }
+
+  &__link-desc-text-line {
+    margin-top: -2.2vw;
   }
 
   &__link-desc-item {

@@ -6,7 +6,8 @@ import Panorama from '../panorama/panorama';
 
 const swiper = new Swiper('.portfolio__slider .swiper', {
     // pass Panorama module
-    modules: [Pagination, Panorama], // enable "panorama" effect
+    // modules: [Pagination, Panorama], // enable "panorama" effect
+    modules: [Pagination], // enable "panorama" effect
     effect: 'panorama',
     slidesPerView: 1.5,
     spaceBetween: 12,
@@ -40,4 +41,3 @@ const swiper = new Swiper('.portfolio__slider .swiper', {
         },
     },
 });
-console.log(swiper);

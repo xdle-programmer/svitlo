@@ -65,10 +65,14 @@
 }
 
 html {
-  overflow-x: hidden;
-  overflow-y: scroll;
   background: var(--black-color);
-  scroll-behavior: auto;
+  height: 100px;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 body {
@@ -76,16 +80,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: auto;
-
   text-shadow: none;
   margin: 0;
+  position: fixed;
+  height: 100px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   @include kudryashev;
-  max-height: 100vh;
-  overflow: hidden;
-
-  &.init {
-    max-height: none;
-  }
+  //max-height: 100vh;
+  //
+  //&.init {
+  //  max-height: none;
+  //}
 
 }
 

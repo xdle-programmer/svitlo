@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
@@ -23,7 +23,14 @@
 </head>
 <body>
 
+
 <div class="animation">
+
+    <div class="animation__scroll">
+        <div class="animation__scroll-handler-wrapper">
+            <div class="animation__scroll-handler"></div>
+        </div>
+    </div>
 
     <div class="animation__screen intro">
         <div class="intro__block layout">
@@ -48,7 +55,7 @@
                 </div>
                 <div class="intro__video">
                     <div class="intro__video-item-wrapper">
-                        <img class="intro__video-item" src="./assets/video/intro-video-temp.jpg">
+                        <img class="intro__video-item" src="./assets/video/intro-video-temp.jpg" style="display: none">
                     </div>
                 </div>
             </div>
@@ -138,7 +145,7 @@
         <div class="businesses__block layout">
             <div class="animation__block animation__block--ready-title">
 
-                <div class="animation__text-x-scroll animation__text-x-scroll--business">
+                <div class="animation__text-x-scroll animation__text-x-scroll--business businesses__title-wrapper">
                     <div class="businesses__title animation__text-x-scroll-item">We help businesses</div>
                 </div>
 
@@ -331,8 +338,8 @@
                     </div>
                 </div>
                 <div class="process__title-block">
-                    <div class="animation__text-x-scroll animation__text-x-scroll--process">
-                        <div class="process__title animation__text-x-scroll-item">Our process</div>
+                    <div class="animation__text-x-scroll animation__text-x-scroll--process process__title-wrapper">
+                        <div class="process__title animation__text-x-scroll-item">Our&nbsp;process&nbsp;</div>
                     </div>
                     <div class="process__subtitle animation__text-wrapper">
                         <div class="animation__text">
@@ -563,35 +570,15 @@
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
+                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">
                     </div>
 
                     <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
+                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">
                     </div>
+
                     <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.png">
+                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">
                     </div>
                 </div>
             </div>
@@ -1008,17 +995,17 @@
                 <div class="we-are__subtitle-item">
                     <img class="we-are__subtitle-item-ornament" src="./assets/images/ornament.png">
                     <div class="we-are__subtitle-item-text">
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__subtitle-item-text-line">
                             <div class="animation__text">
                                 a boutique web production
                             </div>
                         </div>
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__subtitle-item-text-line">
                             <div class="animation__text">
                                 created by Ukrainians during
                             </div>
                         </div>
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__subtitle-item-text-line">
                             <div class="animation__text">
                                 the war.
                             </div>
@@ -1029,26 +1016,26 @@
             </div>
 
             <div class="we-are__title">
-                <div class="animation__title-wrapper">
+                <div class="animation__title-wrapper we-are__title-item">
                     <div class="animation__title">
-                        We are Svitlo
+                        We are Svitlo&nbsp;
                     </div>
                 </div>
             </div>
 
             <div class="we-are__desc">
                 <div class="we-are__desc-item we-are__desc-item--1">
-                    <div class="animation__text-wrapper">
+                    <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                         <div class="animation__text">
                             We lost our jobs,
                         </div>
                     </div>
-                    <div class="animation__text-wrapper">
+                    <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                         <div class="animation__text">
                             businesses, and
                         </div>
                     </div>
-                    <div class="animation__text-wrapper">
+                    <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                         <div class="animation__text">
                             homes
                         </div>
@@ -1056,27 +1043,27 @@
                 </div>
                 <div class="we-are__desc-item we-are__desc-item--2">
                     <div class="we-are__desc-item-text we-are__desc-item-text--1">
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                             <div class="animation__text">
                                 but we didn't
                             </div>
                         </div>
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                             <div class="animation__text">
                                 give up and
                             </div>
                         </div>
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                             <div class="animation__text">
                                 started
                             </div>
                         </div>
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                             <div class="animation__text">
                                 creating new
                             </div>
                         </div>
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__desc-item-text-line-inner">
                             <div class="animation__text">
                                 projects
                             </div>
@@ -1105,12 +1092,12 @@
             <div class="we-are__owners">
                 <div class="we-are__owners-title-block">
                     <div class="we-are__owners-title-text">
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__owners-title-text-line">
                             <div class="animation__text">
                                 We are
                             </div>
                         </div>
-                        <div class="animation__text-wrapper">
+                        <div class="animation__text-wrapper we-are__owners-title-text-line">
                             <div class="animation__text">
                                 a boutique,
                             </div>
@@ -1256,17 +1243,17 @@
                     </div>
                     <div class="we-are__link-desc">
                         <div class="we-are__link-desc-text">
-                            <div class="animation__text-wrapper">
+                            <div class="animation__text-wrapper we-are__link-desc-text-line">
                                 <div class="animation__text">
                                     Let's set up a call
                                 </div>
                             </div>
-                            <div class="animation__text-wrapper">
+                            <div class="animation__text-wrapper we-are__link-desc-text-line">
                                 <div class="animation__text">
                                     to find out how we
                                 </div>
                             </div>
-                            <div class="animation__text-wrapper">
+                            <div class="animation__text-wrapper we-are__link-desc-text-line">
                                 <div class="animation__text">
                                     can help you
                                 </div>
@@ -1344,7 +1331,7 @@
         <div class="have-a-task__block layout">
 
             <div class="animation__block animation__block--ready-title">
-                <div class="animation__text-x-scroll animation__text-x-scroll--have-a-task">
+                <div class="animation__text-x-scroll animation__text-x-scroll--have-a-task have-a-task__title-wrapper">
                     <div class="have-a-task__title animation__text-x-scroll-item">Have a task?</div>
                 </div>
                 <div class="have-a-task__subtitle">
@@ -1403,85 +1390,85 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <div class="footer__text-row">
-                <div class="footer__text-row-line">
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
-                    <div class="footer__text-row-item">Svitlo.Production</div>
+    <div class="animation__screen footer">
+        <div class="footer__text-row">
+            <div class="footer__text-row-line">
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+                <div class="footer__text-row-item">Svitlo.Production</div>
+            </div>
+        </div>
+
+        <div class="footer__block animation__block animation__block--ready-title layout">
+            <div class="footer__top">
+                <img class="footer__logo" src="./assets/images/logo-white.svg">
+                <div class="footer__desc">
+
+                    <div class="animation__text-wrapper">
+                        <div class="animation__text">
+                            We will make
+                        </div>
+                    </div>
+                    <div class="animation__text-wrapper">
+                        <div class="animation__text">
+                            your digital
+                        </div>
+                    </div>
+                    <div class="animation__text-wrapper">
+                        <div class="animation__text">
+                            side of business
+                        </div>
+                    </div>
+                    <div class="animation__text-wrapper">
+                        <div class="animation__text">
+                            attractive to
+                        </div>
+                    </div>
+                    <div class="animation__text-wrapper">
+                        <div class="animation__text">
+                            your clients.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__contacts">
+                    <a href="tel:+380730667577" class="footer__contacts-phone">380 73 066 75 77</a>
+                    <a href="mailto:hello@svitlo-production.com"
+                       class="footer__contacts-mail">hello@svitlo-production.com</a>
+                    <div class="footer__contacts-copyright">© Svitlo.Production 2022</div>
                 </div>
             </div>
-
-            <div class="footer__block animation__block animation__block--ready-title layout">
-                <div class="footer__top">
-                    <img class="footer__logo" src="./assets/images/logo-white.svg">
-                    <div class="footer__desc">
-
-                        <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                We will make
-                            </div>
-                        </div>
-                        <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                your digital
-                            </div>
-                        </div>
-                        <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                side of business
-                            </div>
-                        </div>
-                        <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                attractive to
-                            </div>
-                        </div>
-                        <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                your clients.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer__contacts">
-                        <a href="tel:+380730667577" class="footer__contacts-phone">380 73 066 75 77</a>
-                        <a href="mailto:hello@svitlo-production.com"
-                           class="footer__contacts-mail">hello@svitlo-production.com</a>
-                        <div class="footer__contacts-copyright">© Svitlo.Production 2022</div>
-                    </div>
+            <div class="footer__bottom">
+                <div class="footer__link">
+                    Let's discuss.
                 </div>
-                <div class="footer__bottom">
-                    <div class="footer__link">
-                        Let's discuss.
-                    </div>
-                    <div class="footer__social">
-                        <a href="#" class="footer__social-item">
-                            <img class="footer__social-item-img" src="./assets/icons/whatsapp.svg">
-                        </a>
-                        <a href="#" class="footer__social-item">
-                            <img class="footer__social-item-img" src="./assets/icons/instagram.svg">
-                        </a>
-                        <a href="#" class="footer__social-item">
-                            <img class="footer__social-item-img" src="./assets/icons/linkedin.svg">
-                        </a>
-                        <a href="#" class="footer__social-item">
-                            <img class="footer__social-item-img" src="./assets/icons/behance.svg">
-                        </a>
-                        <a href="#" class="footer__social-item">
-                            <img class="footer__social-item-img" src="./assets/icons/dribbble.svg">
-                        </a>
-                    </div>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-item">
+                        <img class="footer__social-item-img" src="./assets/icons/whatsapp.svg">
+                    </a>
+                    <a href="#" class="footer__social-item">
+                        <img class="footer__social-item-img" src="./assets/icons/instagram.svg">
+                    </a>
+                    <a href="#" class="footer__social-item">
+                        <img class="footer__social-item-img" src="./assets/icons/linkedin.svg">
+                    </a>
+                    <a href="#" class="footer__social-item">
+                        <img class="footer__social-item-img" src="./assets/icons/behance.svg">
+                    </a>
+                    <a href="#" class="footer__social-item">
+                        <img class="footer__social-item-img" src="./assets/icons/dribbble.svg">
+                    </a>
                 </div>
             </div>
         </div>

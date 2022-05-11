@@ -284,24 +284,61 @@
 .swiper-pagination-lock {
   display: none; }
 
+.animation__scroll {
+  position: fixed;
+  width: 30px;
+  z-index: 200;
+  right: 0;
+  top: 0;
+  height: 100vh; }
+  .animation__scroll:hover {
+    background: rgba(0, 0, 0, 0.1); }
+
+.animation__scroll-handler-wrapper {
+  width: 100%;
+  height: 4vw;
+  transition: transform;
+  contain: content;
+  will-change: transform;
+  position: relative; }
+
+.animation__scroll-handler {
+  position: absolute;
+  right: 5px;
+  width: 20px;
+  height: calc(100% - 10px);
+  top: 5px;
+  transition: all;
+  contain: content;
+  will-change: transform;
+  transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  transition-duration: 200ms;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  opacity: .2; }
+  .animation__scroll:hover .animation__scroll-handler {
+    opacity: 1;
+    border: 2px solid var(--main-color);
+    background: var(--main-color); }
+
 .animation__screen {
   position: fixed;
   width: 100%;
   z-index: 100;
   left: 0;
   top: 0;
-  transition: transform;
-  contain: content;
   will-change: transform;
-  transition-timing-function: cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  transition: none;
   transform: matrix(1, 0, 0, 1, 0, 0); }
 
 .animation__change-background {
+  transition: none !important;
   will-change: transform;
   background: var(--main-color); }
 
 .animation__text-x-scroll {
   transition: transform;
+  transition: none !important;
   transition-duration: 300ms;
   contain: content;
   will-change: transform;
@@ -319,10 +356,9 @@
 
 .animation__title {
   will-change: transform;
-  transition: transform 0.8s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  transition: transform 800ms linear;
-  transform-origin: top right;
-  contain: content; }
+  transition: transform 1300ms cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  transform: translate3d(0, 100%, 0);
+  transform-origin: top right; }
   .animation__title--active {
     transform: none; }
 
@@ -331,10 +367,10 @@
 
 .animation__text {
   will-change: transform;
-  transition: transform 1300ms linear;
+  transition: transform 900ms cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  transform: translate3d(0, 100%, 0);
   transform-origin: top right;
-  transition-delay: .3s;
-  contain: content; }
+  transition-delay: .1s; }
   .animation__block--ready-title .animation__text--active {
     transform: none; }
 
@@ -397,10 +433,14 @@
   padding: 0; }
 
 html {
-  overflow-x: hidden;
-  overflow-y: scroll;
   background: var(--black-color);
-  scroll-behavior: auto; }
+  height: 100px;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
 
 body {
   font-size: 14px;
@@ -409,11 +449,13 @@ body {
   -webkit-overflow-scrolling: auto;
   text-shadow: none;
   margin: 0;
-  font-family: 'Kudryashev', sans-serif;
-  max-height: 100vh;
-  overflow: hidden; }
-  body.init {
-    max-height: none; }
+  position: fixed;
+  height: 100px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-family: 'Kudryashev', sans-serif; }
 
 a {
   text-decoration: none;
@@ -439,14 +481,15 @@ button:focus, input:focus, textarea:focus {
   background: var(--main-color);
   padding-top: 10vw;
   padding-bottom: 9.63vw; }
+  .businesses__title-wrapper {
+    margin-left: -72.8vw;
+    margin-top: -3.888vw;
+    margin-bottom: 2vw; }
   .businesses__title {
     font-size: 22.5638vw;
     letter-spacing: -0.05em;
     color: var(--white-color);
-    white-space: nowrap;
-    margin-left: -72.8vw;
-    margin-top: -3.888vw;
-    margin-bottom: 2vw; }
+    white-space: nowrap; }
   .businesses__desc {
     display: flex;
     flex-direction: row;
@@ -808,16 +851,16 @@ button:focus, input:focus, textarea:focus {
   .have-a-task__block {
     padding-left: 25vw;
     padding-bottom: 13.4vw; }
+  .have-a-task__title-wrapper {
+    margin-bottom: 1.5vw; }
   .have-a-task__title {
     font-size: 13.8613vw;
     letter-spacing: -0.047em;
-    margin-bottom: 1.5vw;
     white-space: nowrap; }
   .have-a-task__subtitle {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 1.7196vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
     padding-left: 1vw;
     margin-bottom: 8vw; }
@@ -834,7 +877,6 @@ button:focus, input:focus, textarea:focus {
     font-family: 'Manrope', sans-serif;
     font-weight: 800;
     font-size: 5.6279vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
     color: var(--black-color);
     position: relative;
@@ -1201,9 +1243,8 @@ button:focus, input:focus, textarea:focus {
     margin-top: 2vw; }
   .our-services__item-desc-title {
     font-size: 3.4392vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
-    margin-bottom: 2.3vw; }
+    margin-bottom: 1.3vw; }
   .our-services__item-desc-text {
     font-size: 1.1464vw;
     line-height: 126%;
@@ -1459,12 +1500,13 @@ button:focus, input:focus, textarea:focus {
     align-items: flex-start;
     align-items: flex-end;
     margin-bottom: 11.3vw; }
+  .process__title-wrapper {
+    margin-left: -36.25vw;
+    margin-bottom: 2vw; }
   .process__title {
     font-size: 20.2188vw;
-    margin-bottom: 2vw;
     letter-spacing: -0.05em;
-    white-space: nowrap;
-    margin-left: -36.25vw; }
+    white-space: nowrap; }
   .process__subtitle {
     font-family: 'Manrope', sans-serif;
     font-size: 1.7196vw;
@@ -1524,8 +1566,9 @@ button:focus, input:focus, textarea:focus {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 3.4392vw;
-    line-height: 100%;
     letter-spacing: -0.033em; }
+  .we-are__subtitle-item-text-line {
+    margin-top: -1.1vw; }
   .we-are__subtitle-flag {
     width: 14.1219vw;
     margin-top: -1vw;
@@ -1538,6 +1581,8 @@ button:focus, input:focus, textarea:focus {
     letter-spacing: -0.046em;
     white-space: nowrap;
     margin-bottom: 9.6vw; }
+  .we-are__title-item {
+    width: 200%; }
   .we-are__desc {
     padding-left: 26vw;
     display: grid;
@@ -1546,7 +1591,6 @@ button:focus, input:focus, textarea:focus {
   .we-are__desc-item {
     font-family: 'Manrope', sans-serif;
     font-size: 3.4392vw;
-    line-height: 100%;
     letter-spacing: -0.033em; }
     .we-are__desc-item--2 {
       font-weight: 700; }
@@ -1554,6 +1598,8 @@ button:focus, input:focus, textarea:focus {
     margin-bottom: 5.5vw; }
   .we-are__desc-item-text--2 {
     width: 11vw; }
+  .we-are__desc-item-text-line-inner {
+    margin-top: -1.1vw; }
   .we-are__desc-item-text-line {
     font-family: 'Manrope', sans-serif;
     font-size: 1.1464vw;
@@ -1568,8 +1614,10 @@ button:focus, input:focus, textarea:focus {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 13.8613vw;
-    line-height: 90%;
+    margin-top: 6.5vw;
     letter-spacing: -0.033em; }
+  .we-are__owners-title-text-line {
+    margin-top: -6.5vw; }
   .we-are__owners-title-circle {
     position: absolute;
     width: 12.2vw;
@@ -1638,10 +1686,11 @@ button:focus, input:focus, textarea:focus {
     font-family: 'Manrope', sans-serif;
     font-weight: 700;
     font-size: 6.9306vw;
-    line-height: 100%;
     letter-spacing: -0.033em; }
   .we-are__link-desc-text {
     margin-bottom: 5.2vw; }
+  .we-are__link-desc-text-line {
+    margin-top: -2.2vw; }
   .we-are__link-desc-item {
     color: var(--main-color);
     position: relative;
@@ -1657,4 +1706,4 @@ button:focus, input:focus, textarea:focus {
       top: calc(100% + 1vw); }
 
 
-/*# sourceMappingURL=main.42a17e6d9375a77372d1.css.map*/
+/*# sourceMappingURL=main.66156532a4096f553edc.css.map*/

@@ -13,14 +13,17 @@
   &__block {
   }
 
+  &__title-wrapper {
+    margin-left: -72.8vw;
+    margin-top: -3.888vw;
+    margin-bottom: 2vw;
+  }
+
   &__title {
     font-size: 22.5638vw;
     letter-spacing: -0.05em;
     color: var(--white-color);
     white-space: nowrap;
-    margin-left: -72.8vw;
-    margin-top: -3.888vw;
-    margin-bottom: 2vw;
   }
 
   &__desc {
