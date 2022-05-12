@@ -1355,6 +1355,14 @@ button:focus, input:focus, textarea:focus {
     transform: translate(-50%, -50%);
     top: 48%; }
 
+.magnet {
+  background: white;
+  width: 100%; }
+  .magnet__canvas {
+    width: 100%;
+    height: 900px;
+    display: block; }
+
 .our-services {
   background: var(--black-color);
   color: var(--white-color);
@@ -1871,4 +1879,4 @@ button:focus, input:focus, textarea:focus {
       top: calc(100% + 1vw); }
 
 
-/*# sourceMappingURL=main.90888a56cc63d97c34b8.css.map*/
+/*# sourceMappingURL=main.24965fd75b089e81b687.css.map*/

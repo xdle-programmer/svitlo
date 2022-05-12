@@ -1,0 +1,15 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.magnet {
+  background: white;
+  width: 100%;
+
+  &__canvas {
+    width: 100%;
+    height: 900px;
+    display: block;
+  }
+}
