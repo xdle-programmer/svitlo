@@ -49,7 +49,7 @@
     </div>
 </div>
 
-<div class="animation" style="opacity: 1;">
+<div class="animation" style="opacity: 0;">
 
     <div class="animation__scroll">
         <div class="animation__scroll-handler-wrapper">
