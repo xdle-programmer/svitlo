@@ -5,6 +5,16 @@
 
 .animation {
 
+  &--preshow {
+    transform: scale(1.4) !important;
+    transition-timing-function: cubic-bezier(.25, .74, .22, .99);
+  }
+
+  &--show {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+
   &__scroll {
     position: fixed;
     width: 30px;

@@ -1,0 +1,104 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.loader {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  @include flex-column-center;
+  background: var(--black-color);
+  opacity: 1 !important;
+  transition: opacity 300ms ease-out;
+
+  &--hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:after {
+    @include pseudo-absolute;
+    border-radius: 50%;
+    width: 22.5638vw;
+    height: 22.5638vw;
+    left: 64.2522vw;
+    top: 17.3527vw;
+    background: var(--main-color);
+    filter: blur(250px);
+    transform: rotate(14.5deg);
+  }
+
+  &__block {
+    color: var(--white-color);
+    height: calc(100% - 10.0052vw);
+    @include flex-column-center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__top {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__logo {
+    width: 2.5013vw;
+    height: auto;
+    display: block;
+  }
+
+  &__text {
+    @include manrope;
+    font-weight: 700;
+    font-size: 3.4392vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    width: 29vw;
+    padding-right: 2vw;
+  }
+
+  &__bottom {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    padding-bottom: 3vw;
+  }
+
+  &__progress {
+    font-size: 13.8613vw;
+    line-height: 106%;
+    letter-spacing: -0.05em;
+  }
+
+  &__name {
+    @include manrope;
+    font-weight: 500;
+    font-size: 1.7196vw;
+    line-height: 106%;
+    letter-spacing: -0.033em;
+  }
+
+  &__line {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: .1vw;
+    background: rgba(255, 255, 255, .3);
+  }
+
+  &__line-progress {
+    position: absolute;
+    @include absolute-fill;
+    background: rgba(255, 255, 255, 1);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}

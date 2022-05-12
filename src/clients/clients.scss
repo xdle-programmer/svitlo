@@ -7,16 +7,45 @@
   background: var(--black-color);
   color: var(--white-color);
   padding-top: 9vw;
-  padding-bottom: 15vw;
+  padding-bottom: 25vw;
 
   &__text-row {
     margin-bottom: 8.6vw;
+    position: relative;
+    height: 2vw;
   }
 
   &__text-row-line {
     @include flex-row;
-    opacity: 0.1;
-    margin-left: -5.4vw;
+    width: fit-content;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    position: absolute;
+    animation: scroll1 25s infinite linear;
+
+    &--2 {
+      transform: translateX(100%);
+      animation: scroll2 25s infinite linear;
+    }
+  }
+
+  @keyframes scroll1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scroll2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   &__text-row-item {

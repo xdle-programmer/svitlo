@@ -108,8 +108,10 @@
       position: absolute;
       top: 0;
       left: 50%;
-      transform: translateX(-50%);
-      padding-top: 0vw;
+      padding-top: 0;
+      transform-origin: left;
+      z-index: 4;
+      transform: translateX(-50%)
     }
 
     &--2 {
@@ -149,6 +151,18 @@
     position: relative;
     height: 25vw;
     margin-bottom: 4vw;
+    overflow: hidden;
+  }
+
+  &__chart-mask {
+    position: absolute;
+    width: 110%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(76deg, rgba(2, 3, 5, 0) 0%, rgba(2, 3, 5, 1) 10%, rgba(2, 3, 5, 1) 100%);
+    background: var(--black-color);
+    z-index: 3;
   }
 
   &__chart-line {

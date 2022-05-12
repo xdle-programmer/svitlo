@@ -1,23 +1,18 @@
-const $animation = document.querySelector('.animation');
-
-if ($animation) {
-    animationStart();
-}
-
 // Рекурсивная проверка на загрузку и готовность рендера
-function animationStart() {
+export function animationStart($animation) {
     if (document.readyState === 'complete') {
         requestAnimationFrame(() => {
             animation($animation);
         });
     } else {
         setTimeout(() => {
-            animationStart();
+            animationStart($animation);
         }, 5);
     }
 }
 
-function animation($wrapper) {
+export function animation($wrapper) {
+    console.log(+new Date());
 
     // Общие переменные
     const $body = document.querySelector('body');
@@ -29,6 +24,7 @@ function animation($wrapper) {
 
     // Переменные для текущего состояния скролла
     let scrollDirection = 'down';
+    let lastScrollDirection = 'down';
     let lastScroll = 0;
     let limitPosition = true;
     let touchActive = false;
@@ -77,7 +73,37 @@ function animation($wrapper) {
         window.addEventListener('resize', calcScreenSizes);
 
         $wrapper.addEventListener('init', () => {
+            const $video = $wrapper.querySelector('.intro__video-item');
+            const $loader = document.querySelector('.loader');
+            const $name = $wrapper.querySelector('.intro__name');
+            const videoDuration = $video.duration;
+            const introTransition = 800;
+
             $body.classList.add('init');
+            $video.pause();
+            $video.currentTime = 0;
+
+            $wrapper.classList.add('animation--preshow');
+            $wrapper.style.transition = `all ${introTransition}ms`;
+
+            let checkScale = setInterval(() => {
+                let matrix = new WebKitCSSMatrix(window.getComputedStyle($wrapper).transform);
+                if (matrix.a === 1.4) {
+                    $loader.classList.add('loader--hide');
+                    $wrapper.classList.add('animation--show');
+                    $video.classList.add('intro__video-item--show');
+
+                    setTimeout(() => {
+                        $video.play();
+
+                        setTimeout(() => {
+                            $name.classList.add('intro__name--show');
+                        }, 3030);
+                    }, introTransition);
+
+                    clearInterval(checkScale);
+                }
+            }, 5);
         });
 
         window.addEventListener('wheel', (event) => {
@@ -108,8 +134,6 @@ function animation($wrapper) {
         });
 
         window.addEventListener('keydown', (event) => {
-            console.log(event.code === event.key, event.code, event.key);
-
             if (event.code === 'Space' || event.code === 'PageDown') {
                 calcAlgorithmicScroll(viewportHeight);
             }
@@ -295,7 +319,6 @@ function animation($wrapper) {
         setBodyHeight();
     }
 
-
     // Функция определения тачпада
     function detectTrackPad(event) {
 
@@ -334,7 +357,6 @@ function animation($wrapper) {
                 changeScreenPosition.changePosition(scrollPosition);
                 limitPosition = true;
             }
-
             return;
         } else if (scrollPosition < 0) {
             scrollPosition = 0;
@@ -356,7 +378,13 @@ function animation($wrapper) {
             scrollDirection = 'down';
         }
 
+        if (lastScrollDirection !== scrollDirection) {
+            shiftScroll = [];
+        }
+
+
         lastScroll = scrollY;
+        lastScrollDirection = scrollDirection;
 
         changeScreenPosition.changePosition(scrollY);
 
@@ -489,6 +517,12 @@ function animation($wrapper) {
         const titleWrapperActiveClass = 'animation__title-wrapper--active';
         const textActiveClass = 'animation__text--active';
         const textWrapperActiveClass = 'animation__text-wrapper--active';
+        const $portfolioDesc = $wrapper.querySelector('.portfolio__desc');
+        const $portfolioDescTitle = $wrapper.querySelector('.portfolio__desc-item--1');
+        const $chart = $wrapper.querySelector('.portfolio__chart');
+        const owners = $wrapper.querySelectorAll('.we-are__owners-item');
+        const parallaxCoefficient = .1;
+        const logos = $wrapper.querySelectorAll('.clients__item--main');
 
         // Функция добавления классов для тайтлов
         function setTitleShowClass() {
@@ -547,12 +581,10 @@ function animation($wrapper) {
 
         // Функция масштабирования заголовка портфолио
         function setScalePortfolioTitle() {
-            const $portfolioDesc = $wrapper.querySelector('.portfolio__desc');
-            const $portfolioDescTitle = $wrapper.querySelector('.portfolio__desc-item--1');
             const scrollHeight = window.innerHeight / 3;
             const offset = $portfolioDesc.getBoundingClientRect().top;
             const scaleMax = 1;
-            const scaleMin = .4;
+            const scaleMin = .7;
             const translateMax = 0;
 
             const translateMin = 61;
@@ -563,7 +595,71 @@ function animation($wrapper) {
                 const translate = (translateMin - translateMax) / 100 * percent;
 
                 $portfolioDescTitle.style.transform = `translateX(-50%) scale(${scale}) translateY(${translate}vw)`;
+            } else if (offset > 0) {
+                $portfolioDescTitle.style.transform = `translateX(-50%)`;
+            } else {
+                $portfolioDescTitle.style.transform = `translateX(-50%) scale(${scaleMin}) translateY(${translateMin}vw)`;
             }
+        }
+
+        // Функция отрисовки чарта
+        function setChart() {
+            const scrollHeight = window.innerHeight / 3 * 2;
+            const offset = $chart.getBoundingClientRect().top - viewportHeight + ($chart.getBoundingClientRect().height / 2);
+
+            const $chartMask = $wrapper.querySelector('.portfolio__chart-mask');
+
+            const percent = (offset * -1) / (scrollHeight / 100);
+
+            if (offset < 0 && offset * -1 < scrollHeight) {
+                $chartMask.style.transform = `translateX(${percent}%)`;
+            } else if (offset > 0) {
+                $chartMask.style.transform = `translateX(${0}%)`;
+            } else {
+                $chartMask.style.transform = `translateX(${100}%)`;
+            }
+        }
+
+        // Функция отрисовки парралакса на оунерах
+        function setOwnerParallax() {
+            owners.forEach(($owner) => {
+                const scrollHeight = window.innerHeight / 3 * 2;
+                const $photo = $owner.querySelector('.we-are__owners-item-photo');
+                const offset = $owner.getBoundingClientRect().top - viewportHeight + $photo.getBoundingClientRect().height;
+
+                const percent = (offset * -1) / (scrollHeight / 100);
+
+
+                if (offset < 0 && offset * -1 < scrollHeight) {
+                    $photo.style.transform = `translateY(${viewportHeight / 100 * percent * parallaxCoefficient}px)`;
+                } else if (offset > 0) {
+                    $photo.style.transform = `translateY(0)`;
+                } else {
+                    $photo.style.transform = `translateY(${viewportHeight * parallaxCoefficient}px)`;
+                }
+            });
+        }
+
+        // Функция отрисовки масштабирования логотипов
+        function setLogoScale() {
+            logos.forEach(($logo) => {
+                const scrollHeight = window.innerHeight / 3 * 2;
+                const offset = $logo.getBoundingClientRect().top - viewportHeight;
+
+                const percent = (offset * -1) / (scrollHeight / 100);
+
+                if (offset < 0 && offset * -1 < scrollHeight) {
+                    if (percent < 10) {
+                        $logo.style.transform = `scale(${.1})`;
+                    } else {
+                        $logo.style.transform = `scale(${percent / 100})`;
+                    }
+                } else if (offset > 0) {
+                    $logo.style.transform = `scale(${.1})`;
+                } else {
+                    $logo.style.transform = `scale(${1})`;
+                }
+            });
         }
 
         function toggleEffects() {
@@ -572,7 +668,13 @@ function animation($wrapper) {
 
             setTextsShowClass();
 
-            // setScalePortfolioTitle();
+            setScalePortfolioTitle();
+
+            setChart();
+
+            setOwnerParallax();
+
+            setLogoScale();
         }
 
         this.toggleEffects = toggleEffects;

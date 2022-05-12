@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" style="background: #020305">
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
@@ -23,8 +23,33 @@
 </head>
 <body>
 
+<div class="loader" style="opacity: 0">
+    <div class="loader__block layout">
 
-<div class="animation">
+        <div class="loader__top">
+            <img class="loader__logo" src="./assets/images/logo-white.svg">
+            <div class="loader__text">
+                We will make your digital side of business attractive to your clients.
+            </div>
+        </div>
+
+        <div class="loader__bottom">
+            <div class="loader__progress">0%</div>
+            <div class="loader__name">
+                Svitlo<br>
+                Web<br>
+                Production<br>
+            </div>
+        </div>
+
+        <div class="loader__line">
+            <div class="loader__line-progress"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="animation" style="opacity: 1;">
 
     <div class="animation__scroll">
         <div class="animation__scroll-handler-wrapper">
@@ -44,6 +69,7 @@
                     <div class="intro__desc-text">& outstanding design.</div>
                 </div>
                 <div class="intro__name">
+                    <div class="intro__name-mask"></div>
                     <div class="intro__name-title">
                         <div class="intro__name-title-letter">S</div>
                         <div class="intro__name-title-item">vitle</div>
@@ -55,7 +81,8 @@
                 </div>
                 <div class="intro__video">
                     <div class="intro__video-item-wrapper">
-                        <img class="intro__video-item" src="./assets/video/intro-video-temp.jpg" style="display: none">
+                        <video class="intro__video-item" autoplay muted></video>
+                        <!--                        <img class="intro__video-item" src="./assets/video/intro-video-temp.jpg">-->
                     </div>
                 </div>
             </div>
@@ -541,7 +568,7 @@
         </div>
     </div>
 
-    <div class="animation__screen portfolio">
+    <div class="animation__screen portfolio animation__screen--change-background">
         <div class="animation__block portfolio__title-block layout">
             <div class="portfolio__title">
                 <div class="portfolio__title-text">
@@ -570,21 +597,24 @@
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">
+                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
+                        <div class="portfolio__slider-img" style="background: #768f94"></div>
                     </div>
 
                     <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">
+                        <div class="portfolio__slider-img" style="background: #768f94"></div>
+                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
                     </div>
 
                     <div class="swiper-slide">
-                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">
+                        <div class="portfolio__slider-img" style="background: #768f94"></div>
+                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
                     </div>
                 </div>
             </div>
 
-
         </div>
+
         <div class="animation__block animation__block--ready-title">
             <div class="portfolio__desc layout">
                 <div class="portfolio__desc-item portfolio__desc-item--1">
@@ -670,6 +700,7 @@
         </div>
 
         <div class="portfolio__chart">
+            <div class="portfolio__chart-mask"></div>
             <div class="portfolio__chart-line portfolio__chart-line--1"></div>
             <div class="portfolio__chart-dot portfolio__chart-dot--1"></div>
             <div class="portfolio__chart-line portfolio__chart-line--2"></div>
@@ -1274,7 +1305,21 @@
 
     <div class="animation__screen clients">
         <div class="clients__text-row">
-            <div class="clients__text-row-line">
+            <div class="clients__text-row-line clients__text-row-line--1">
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+            </div>
+            <div class="clients__text-row-line clients__text-row-line--2">
                 <div class="clients__text-row-item">Svitlo.Production</div>
                 <div class="clients__text-row-item">Svitlo.Production</div>
                 <div class="clients__text-row-item">Svitlo.Production</div>
@@ -1393,20 +1438,34 @@
     </div>
 
     <div class="animation__screen footer">
-        <div class="footer__text-row">
-            <div class="footer__text-row-line">
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
-                <div class="footer__text-row-item">Svitlo.Production</div>
+        <div class="clients__text-row">
+            <div class="clients__text-row-line clients__text-row-line--1">
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+            </div>
+            <div class="clients__text-row-line clients__text-row-line--2">
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
+                <div class="clients__text-row-item">Svitlo.Production</div>
             </div>
         </div>
 
