@@ -1,0 +1,44 @@
+//&__text {
+//  will-change: transform;
+//  transition: transform 900ms cubic-bezier(.25, .74, .22, .99);
+//  transform: translate3d(0, 100%, 0);
+//  transform-origin: top right;
+//  transition-delay: .1s;
+//  display: flex;
+//
+//  #{$ready-title} &--active {
+//    transform: none;
+//  }
+//
+//  &:hover span {
+//    animation: test 600ms ease-out;
+//    animation-iteration-count: 1;
+//    display: inline-block;
+//
+//    @keyframes test {
+//      0% {
+//        transform: translateY(0);
+//      }
+//      50% {
+//        transform: translateY(-100%);
+//      }
+//      50.000000001% {
+//        transform: translateY(100%);
+//      }
+//      100% {
+//        transform: translateY(0);
+//      }
+//    }
+//
+//    $delay: 80;
+//
+//
+//
+//    &:nth-of-type(1) {animation-delay: #{$delay * 1 - 1}ms};
+//    &:nth-of-type(2) {animation-delay: #{$delay * 2 - 1}ms};
+//    &:nth-of-type(3) {animation-delay: #{$delay * 3 - 1}ms};
+//    &:nth-of-type(4) {animation-delay: #{$delay * 4 - 1}ms};
+//  }
+//
+//
+//}

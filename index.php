@@ -88,14 +88,22 @@
             </div>
 
             <div class="intro__about-block">
+                <div class="intro__about-magnet">
+                    <div class="magnet">
+                        <canvas class="magnet__canvas"></canvas>
+                    </div>
+                </div>
                 <div class="intro__about-button-block">
                     <div class="intro__about-button-text">
                         <div class="intro__about-button-text-item">View</div>
                         <div class="intro__about-button-text-item">showreel</div>
                     </div>
                     <div class="intro__about-button-item">
-                        <img class="intro__about-button-icon" src="assets/icons/play-black.svg">
-                        <img class="intro__about-button-icon-anchor" src="assets/icons/play-black.svg">
+
+                        <svg class="intro__about-button-icon" viewBox="0 0 20 20">
+                            <polygon class="intro__about-button-icon-polygon" points="0,0 20,10 0,20"
+                                     style="stroke:black;stroke-width:1"/>
+                        </svg>
 
                         <div class="intro__about-button-item-form"></div>
                     </div>
@@ -145,9 +153,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="intro__about-link">
+                    <div class="intro__about-link char-hover">
                         <div class="intro__about-link-text animation__text-wrapper">
-                            <div class="animation__text">
+                            <div class="animation__text char-hover__item">
                                 View
                             </div>
                         </div>
@@ -158,7 +166,7 @@
                         </div>
 
                         <div class="intro__about-link-text animation__text-wrapper">
-                            <div class="animation__text">
+                            <div class="animation__text char-hover__item">
                                 showreel
                             </div>
                         </div>

@@ -116,7 +116,14 @@
   }
 
   &__about-block {
+    position: relative;
+  }
 
+  &__about-magnet {
+    position: absolute;
+    left: -10.0052vw;
+    width: calc(100% + (10.0052vw * 2));
+    top: -20vw;
   }
 
   &__about-button-block {
@@ -139,11 +146,15 @@
     width: 20.1668vw;
     height: 20.1668vw;
     border-radius: 50%;
-    background: var(--main-color);
+    //background: var(--main-color);
     @include flex-row-center;
     left: 9vw;
     top: 8.2vw;
+    cursor: pointer;
+    z-index: 1;
   }
+
+  $button-hover: '.intro__about-button-item:hover';
 
   &__about-button-item-form {
     position: absolute;
@@ -154,6 +165,35 @@
   &__about-button-icon {
     width: 1.5112vw;
     height: 1.5112vw;
+    transition: all .3s ease-out;
+
+    #{$button-hover} & {
+      transform: scale(1.3)!important;
+      fill: none;
+    }
+  }
+
+  &__about-button-icon-polygon {
+    stroke-dasharray: 65;
+    fill: black;
+
+    #{$button-hover} & {
+      animation: stroke-anim 1s linear;
+      animation-iteration-count: infinite;
+      fill: none;
+    }
+
+    @keyframes stroke-anim {
+      0% {
+        stroke-dashoffset: 0;
+      }
+      50% {
+        stroke-dashoffset: 65;
+      }
+      100% {
+        stroke-dashoffset: 130;
+      }
+    }
   }
 
   &__about-button-icon-anchor {

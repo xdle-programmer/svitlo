@@ -130,6 +130,7 @@
     transform: translate3d(0, 100%, 0);
     transform-origin: top right;
     transition-delay: .1s;
+    display: flex;
 
     #{$ready-title} &--active {
       transform: none;

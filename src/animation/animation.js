@@ -12,8 +12,6 @@ export function animationStart($animation) {
 }
 
 export function animation($wrapper) {
-    console.log(+new Date());
-
     // Общие переменные
     const $body = document.querySelector('body');
     let originalHeight = 0;

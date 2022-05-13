@@ -6,14 +6,15 @@ if ($magnet) {
 
 function magnet($wrapper) {
     const $canvas = $wrapper.querySelector('.magnet__canvas');
+    const $icon = document.querySelector('.intro__about-button-icon');
     let context = $canvas.getContext('2d');
     let width;
     let height;
     let circlePercent = {
-        x: 80,
-        y: 50,
-        r: 10,
-        shiftX: 7,
+        x: 81.5,
+        y: 55,
+        r: 9,
+        shiftX: 6,
         shiftY: 4,
     };
 
@@ -118,6 +119,8 @@ function magnet($wrapper) {
         calcYProgression();
         calcXProgression();
 
+        $icon.style.transform = `none`;
+
         function calcYProgression() {
             let shiftY = lastShiftY / (circleSize.shiftY / 100);
 
@@ -191,7 +194,7 @@ function magnet($wrapper) {
 
         context.clearRect(0, 0, $canvas.width, $canvas.height);
         context.beginPath();
-        context.fillStyle = 'blue';
+        context.fillStyle = '#768f94';
 
         if (shiftPxXArray.length > 0) {
             let fullShiftX = count(shiftPxXArray);
@@ -220,6 +223,24 @@ function magnet($wrapper) {
 
         let subShiftX = currentShiftX * subShiftCoefficient * -1;
         let subShiftY = currentShiftY * subShiftCoefficient;
+
+        // $icon.style.transform = `translate(${subShiftX}px, ${subShiftY}px)`
+
+        let triangleX = lastShiftX > 0 ? lastShiftX : -lastShiftX;
+        let triangleY = lastShiftY > 0 ? lastShiftY : -lastShiftY;
+
+        let angleMultiply = -1;
+
+        if (lastShiftY < 0) {
+            angleMultiply = 1;
+        }
+
+        // let triangleX = 31;
+        // let triangleY = 31;
+
+        // console.log(triangleX)
+
+        $icon.style.transform = `translate(${subShiftX}px, ${subShiftY}px) rotate(${(Math.atan(triangleY / triangleX) * (180 / Math.PI)) * angleMultiply}deg)`;
 
         // Первая кривая (по часовой стрелке 12 - 3)
         let p1 = [x + subShiftX, y - r + subShiftY];

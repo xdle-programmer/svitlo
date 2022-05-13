@@ -29,9 +29,6 @@ function loadIntro() {
                 responseType: 'blob',
                 onDownloadProgress: (progressEvent) => {
                     let progress = parseInt(progressEvent.loaded / (progressEvent.total / 100));
-
-                    console.log(progress);
-
                     $loaderText.innerText = `${progress}%`;
                     $loaderLine.style.transform = `scaleX(0${progress / 100})`;
                 },

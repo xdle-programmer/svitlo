@@ -2018,8 +2018,7 @@ function animationStart($animation) {
   }
 }
 function animation($wrapper) {
-  console.log(+new Date()); // Общие переменные
-
+  // Общие переменные
   const $body = document.querySelector('body');
   let originalHeight = 0;
   let viewportHeight = window.innerHeight;
@@ -2647,6 +2646,19 @@ function animation($wrapper) {
 
 /***/ }),
 
+/***/ "./src/char-hover/char-hover.js":
+/*!**************************************!*\
+  !*** ./src/char-hover/char-hover.js ***!
+  \**************************************/
+/***/ (function() {
+
+const charHoverAll = Array.from(document.querySelectorAll('.char-hover'));
+charHoverAll.forEach($charHover => {
+  console.log($charHover);
+});
+
+/***/ }),
+
 /***/ "./src/clients/clients.js":
 /*!********************************!*\
   !*** ./src/clients/clients.js ***!
@@ -3113,7 +3125,6 @@ function loadIntro() {
       responseType: 'blob',
       onDownloadProgress: progressEvent => {
         let progress = parseInt(progressEvent.loaded / (progressEvent.total / 100));
-        console.log(progress);
         $loaderText.innerText = `${progress}%`;
         $loaderLine.style.transform = `scaleX(0${progress / 100})`;
       }
@@ -3147,14 +3158,15 @@ if ($magnet) {
 
 function magnet($wrapper) {
   const $canvas = $wrapper.querySelector('.magnet__canvas');
+  const $icon = document.querySelector('.intro__about-button-icon');
   let context = $canvas.getContext('2d');
   let width;
   let height;
   let circlePercent = {
-    x: 80,
-    y: 50,
-    r: 10,
-    shiftX: 7,
+    x: 81.5,
+    y: 55,
+    r: 9,
+    shiftX: 6,
     shiftY: 4
   };
   let circleSize = {};
@@ -3251,6 +3263,7 @@ function magnet($wrapper) {
 
     calcYProgression();
     calcXProgression();
+    $icon.style.transform = `none`;
 
     function calcYProgression() {
       let shiftY = lastShiftY / (circleSize.shiftY / 100);
@@ -3327,7 +3340,7 @@ function magnet($wrapper) {
     let animationStep = 7;
     context.clearRect(0, 0, $canvas.width, $canvas.height);
     context.beginPath();
-    context.fillStyle = 'blue';
+    context.fillStyle = '#768f94';
 
     if (shiftPxXArray.length > 0) {
       let fullShiftX = count(shiftPxXArray);
@@ -3354,7 +3367,20 @@ function magnet($wrapper) {
     }
 
     let subShiftX = currentShiftX * subShiftCoefficient * -1;
-    let subShiftY = currentShiftY * subShiftCoefficient; // Первая кривая (по часовой стрелке 12 - 3)
+    let subShiftY = currentShiftY * subShiftCoefficient; // $icon.style.transform = `translate(${subShiftX}px, ${subShiftY}px)`
+
+    let triangleX = lastShiftX > 0 ? lastShiftX : -lastShiftX;
+    let triangleY = lastShiftY > 0 ? lastShiftY : -lastShiftY;
+    let angleMultiply = -1;
+
+    if (lastShiftY < 0) {
+      angleMultiply = 1;
+    } // let triangleX = 31;
+    // let triangleY = 31;
+    // console.log(triangleX)
+
+
+    $icon.style.transform = `translate(${subShiftX}px, ${subShiftY}px) rotate(${Math.atan(triangleY / triangleX) * (180 / Math.PI) * angleMultiply}deg)`; // Первая кривая (по часовой стрелке 12 - 3)
 
     let p1 = [x + subShiftX, y - r + subShiftY];
     let cp1_1 = [x + initRShift + subShiftX, y - r + subShiftY];
@@ -3602,6 +3628,19 @@ __webpack_require__.r(__webpack_exports__);
 /***/ "./src/businesses/businesses.scss":
 /*!****************************************!*\
   !*** ./src/businesses/businesses.scss ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/char-hover/char-hover.scss":
+/*!****************************************!*\
+  !*** ./src/char-hover/char-hover.scss ***!
   \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -16809,6 +16848,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__("./src/animation/animation.js");
 /******/ 	__webpack_require__("./src/businesses/businesses.js");
+/******/ 	__webpack_require__("./src/char-hover/char-hover.js");
 /******/ 	__webpack_require__("./src/clients/clients.js");
 /******/ 	__webpack_require__("./src/footer/footer.js");
 /******/ 	__webpack_require__("./src/form-check/form-check.js");
@@ -16830,6 +16870,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	__webpack_require__("./src/base/mixins.scss");
 /******/ 	__webpack_require__("./src/base/variables.scss");
 /******/ 	__webpack_require__("./src/businesses/businesses.scss");
+/******/ 	__webpack_require__("./src/char-hover/char-hover.scss");
 /******/ 	__webpack_require__("./src/clients/clients.scss");
 /******/ 	__webpack_require__("./src/footer/footer.scss");
 /******/ 	__webpack_require__("./src/form-check/form-check.scss");
@@ -16850,4 +16891,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.24965fd75b089e81b687.js.map
+//# sourceMappingURL=main.4e27f4e80a1be01216c1.js.map
