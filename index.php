@@ -166,7 +166,7 @@
                         </div>
 
                         <div class="intro__about-link-text animation__text-wrapper">
-                            <div class="animation__text char-hover__item">
+                            <div class="animation__text">
                                 showreel
                             </div>
                         </div>
@@ -351,9 +351,11 @@
                         </div>
                     </div>
 
-                    <div class="lets-discuss__link-item animation__title-wrapper">
-                        <div class="animation__title">
-                            Let's discuss.
+                    <div class="lets-discuss__link-item char-hover">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title char-hover__item">
+                                Let's discuss.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1543,5 +1545,7 @@
 </div>
 
 <script src="./dist/<?= $js ?>"></script>
+
+
 </body>
 </html>

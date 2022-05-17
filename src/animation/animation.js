@@ -45,6 +45,7 @@ export function animation($wrapper) {
     const slideTextItemClass = 'animation__text-x-scroll-item';
     const screens = Array.from($wrapper.querySelectorAll(`.${screenClass}`));
     let $scrollHandler = document.querySelector('.animation__scroll-handler-wrapper');
+    const $chartMask = $wrapper.querySelector('.portfolio__chart-mask');
 
     // Переменные для функций конструкторов
     let changeScreenPosition;
@@ -72,36 +73,41 @@ export function animation($wrapper) {
 
         $wrapper.addEventListener('init', () => {
             const $video = $wrapper.querySelector('.intro__video-item');
-            const $loader = document.querySelector('.loader');
-            const $name = $wrapper.querySelector('.intro__name');
-            const videoDuration = $video.duration;
-            const introTransition = 800;
 
-            $body.classList.add('init');
-            $video.pause();
-            $video.currentTime = 0;
+            if ($video) {
+                const $loader = document.querySelector('.loader');
+                const $name = $wrapper.querySelector('.intro__name');
+                const videoDuration = $video.duration;
+                const introTransition = 800;
 
-            $wrapper.classList.add('animation--preshow');
-            $wrapper.style.transition = `all ${introTransition}ms`;
+                $body.classList.add('init');
+                $video.pause();
+                $video.currentTime = 0;
 
-            let checkScale = setInterval(() => {
-                let matrix = new WebKitCSSMatrix(window.getComputedStyle($wrapper).transform);
-                if (matrix.a === 1.4) {
-                    $loader.classList.add('loader--hide');
-                    $wrapper.classList.add('animation--show');
-                    $video.classList.add('intro__video-item--show');
+                $wrapper.classList.add('animation--preshow');
+                $wrapper.style.transition = `all ${introTransition}ms`;
 
-                    setTimeout(() => {
-                        $video.play();
+                let checkScale = setInterval(() => {
+                    let matrix = new WebKitCSSMatrix(window.getComputedStyle($wrapper).transform);
+                    if (matrix.a === 1.4) {
+                        $loader.classList.add('loader--hide');
+                        $wrapper.classList.add('animation--show');
+                        $video.classList.add('intro__video-item--show');
 
                         setTimeout(() => {
-                            $name.classList.add('intro__name--show');
-                        }, 3030);
-                    }, introTransition);
+                            $video.play();
 
-                    clearInterval(checkScale);
-                }
-            }, 5);
+                            setTimeout(() => {
+                                $name.classList.add('intro__name--show');
+                            }, 3030);
+                        }, introTransition);
+
+                        clearInterval(checkScale);
+                    }
+                }, 5);
+            }
+
+
         });
 
         window.addEventListener('wheel', (event) => {
@@ -605,8 +611,6 @@ export function animation($wrapper) {
             const scrollHeight = window.innerHeight / 3 * 2;
             const offset = $chart.getBoundingClientRect().top - viewportHeight + ($chart.getBoundingClientRect().height / 2);
 
-            const $chartMask = $wrapper.querySelector('.portfolio__chart-mask');
-
             const percent = (offset * -1) / (scrollHeight / 100);
 
             if (offset < 0 && offset * -1 < scrollHeight) {
@@ -666,9 +670,13 @@ export function animation($wrapper) {
 
             setTextsShowClass();
 
-            setScalePortfolioTitle();
+            if ($portfolioDesc) {
+                setScalePortfolioTitle();
+            }
 
-            setChart();
+            if ($chartMask) {
+                setChart();
+            }
 
             setOwnerParallax();
 

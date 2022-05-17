@@ -1,3 +1,52 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.char-hover {
+  cursor: pointer;
+
+  $hover: '.char-hover:hover';
+
+  &__item {
+    position: relative;
+  }
+
+  &__item-inner {
+
+  }
+
+  &__item-inner-hover {
+    position: absolute;
+    @include absolute-fill;
+  }
+
+  &__item-inner-char {
+    display: inline-block;
+    transition-property: transform;
+    will-change: transform;
+    transition: transform .6s ease;
+    transition-delay: calc(var(--char-index) * 10ms);
+
+    #{$hover} & {
+      transform: translateY(-100%);
+    }
+  }
+
+  &__item-inner-char-hover {
+    display: inline-block;
+    transition-property: transform;
+    will-change: transform;
+    transition: transform .6s ease;
+    transition-delay: calc(var(--char-index) * 10ms);
+    transform: translateY(100%);
+
+    #{$hover} & {
+      transform: translateY(0);
+    }
+  }
+}
+
 //&__text {
 //  will-change: transform;
 //  transition: transform 900ms cubic-bezier(.25, .74, .22, .99);

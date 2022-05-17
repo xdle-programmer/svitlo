@@ -1,0 +1,47 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.case-intro {
+
+  &__background {
+  }
+
+  &__filter-text-wrapper {
+    position: relative;
+    width: 78%;
+  }
+
+  &__filter-text {
+    font-size: 10.7vw;
+    color: var(--main-color);
+    @include manrope;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 84%;
+
+    &--background {
+      color: var(--main-case-color-pseudo-opacity);
+    }
+
+    &--flashlight {
+      color: var(--main-case-color);
+      position: absolute;
+      @include absolute-fill;
+    }
+  }
+
+  &__filter-text-item {
+
+  }
+
+  &__block {
+  }
+
+  &__filter-text-wrapper {
+
+
+  }
+
+}

@@ -8,6 +8,8 @@ const $animation = document.querySelector('.animation');
 
 if ($wrapper) {
     loadIntro();
+} else {
+    startVideo();
 }
 
 function loadIntro() {
@@ -40,9 +42,9 @@ function loadIntro() {
                 startVideo();
             });
     }
+}
 
-    function startVideo() {
-        animationStart($animation);
-    }
+function startVideo() {
+    animationStart($animation);
 }
 
