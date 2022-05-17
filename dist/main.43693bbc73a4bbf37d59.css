@@ -358,6 +358,8 @@
     transform: translateX(70vw); }
   .animation__text-x-scroll--have-a-task {
     transform: translateX(50vw); }
+  .animation__text-x-scroll--user-experience {
+    transform: translateX(45vw); }
 
 .animation__title-wrapper {
   overflow: hidden; }
@@ -424,6 +426,12 @@
   src: url(../assets/fonts/manrope/Manrope-ExtraBold.ttf) format("ttf");
   font-style: normal;
   font-weight: 800; }
+
+@font-face {
+  font-family: 'Euclid';
+  src: url(../assets/fonts/euclidsquare/EuclidSquare-Regular.ttf) format("woff2");
+  font-style: normal;
+  font-weight: 400; }
 
 :root {
   --white-color: #fff;
@@ -602,6 +610,20 @@ button:focus, input:focus, textarea:focus {
     height: 100%;
     top: 0;
     left: 0; }
+
+.case-intro__counters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20vw 0;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.case-intro__counter {
+  font-size: 6vw;
+  font-family: 'Manrope', sans-serif;
+  color: var(--white-color); }
 
 .char-hover {
   cursor: pointer; }
@@ -1798,6 +1820,29 @@ button:focus, input:focus, textarea:focus {
     padding-right: 4vw;
     padding-top: 0.5vw; }
 
+.testimonial__block {
+  padding: 30vw 0; }
+
+.testimonial__item {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3vw;
+  color: var(--white-color); }
+  .testimonial__item--texting:after {
+    content: '|'; }
+
+.user-experience__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5vw;
+  padding-top: 10vw; }
+
+.user-experience__image {
+  width: 100%;
+  height: auto;
+  display: block; }
+
 .we-are {
   background: var(--black-color);
   color: var(--white-color);
@@ -1960,4 +2005,4 @@ button:focus, input:focus, textarea:focus {
       top: calc(100% + 1vw); }
 
 
-/*# sourceMappingURL=main.799fa993057b823fe3fb.css.map*/
+/*# sourceMappingURL=main.43693bbc73a4bbf37d59.css.map*/

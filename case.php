@@ -56,11 +56,40 @@
                     </div>
                 </div>
             </div>
+
+            <div class="case-intro__counters">
+                <div class="case-intro__counter animation__counter" data-animation-counter="166"></div>
+                <div class="case-intro__counter animation__counter" data-animation-counter="72"></div>
+            </div>
+
         </div>
         <div class="case-intro__block layout">
 
         </div>
 
+    </div>
+
+
+    <div class="animation__screen user-experience">
+        <div class="user-experience__block layout">
+            <div class="animation__text-x-scroll animation__text-x-scroll--user-experience">
+
+                <div class="user-experience__images">
+                    <img class="user-experience__image" src="./assets/cases/globalis/ux-1.png">
+                    <img class="user-experience__image" src="./assets/cases/globalis/ux-2.png">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="animation__screen testimonial">
+        <div class="testimonial__block layout">
+            <div class="testimonial__item animation__texting-item">
+                We accepted your project unanimously. The entire board of directors was pleased with the work done. You
+                exceeded all expectations, thank you!
+            </div>
+        </div>
     </div>
 
 </div>

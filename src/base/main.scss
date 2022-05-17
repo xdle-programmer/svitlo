@@ -45,6 +45,13 @@
   font-weight: 800;
 }
 
+@font-face {
+  font-family: 'Euclid';
+  src: url('../../assets/fonts/euclidsquare/EuclidSquare-Regular.ttf') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
 :root {
   --white-color: #fff;
   --black-color: #020305;

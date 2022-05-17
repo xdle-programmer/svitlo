@@ -2050,7 +2050,25 @@ function animation($wrapper) {
   const slideTextItemClass = 'animation__text-x-scroll-item';
   const screens = Array.from($wrapper.querySelectorAll(`.${screenClass}`));
   let $scrollHandler = document.querySelector('.animation__scroll-handler-wrapper');
-  const $chartMask = $wrapper.querySelector('.portfolio__chart-mask'); // Переменные для функций конструкторов
+  const $chartMask = $wrapper.querySelector('.portfolio__chart-mask');
+  const textingItemSelectors = Array.from($wrapper.querySelectorAll('.animation__texting-item'));
+  const textingItems = textingItemSelectors.map($textingItemSelector => {
+    return {
+      $selector: $textingItemSelector,
+      text: $textingItemSelector.innerText,
+      textLength: $textingItemSelector.innerText.length,
+      state: false
+    };
+  });
+  const counterItemSelectors = Array.from($wrapper.querySelectorAll('.animation__counter'));
+  const counterItems = counterItemSelectors.map($counterItemSelector => {
+    return {
+      $selector: $counterItemSelector,
+      count: $counterItemSelector.dataset.animationCounter,
+      state: false
+    };
+  });
+  const countingDuration = 1000; // Переменные для функций конструкторов
 
   let changeScreenPosition;
   let setEffects;
@@ -2622,6 +2640,110 @@ function animation($wrapper) {
           $logo.style.transform = `scale(${1})`;
         }
       });
+    } // Функция отпечатывания текста
+
+
+    function setTexting() {
+      textingItems.forEach((textingItem, index) => {
+        const {
+          $selector
+        } = textingItem;
+        const {
+          text
+        } = textingItem;
+        const {
+          textLength
+        } = textingItem;
+        const {
+          state
+        } = textingItem;
+        const offset = $selector.getBoundingClientRect().top - viewportHeight;
+
+        if (offset > 0) {
+          $selector.innerText = '';
+          textingItems[index].state = false;
+          $selector.classList.remove('.testimonial__item--texting');
+        } else if (offset < 0 && offset > -viewportHeight) {
+          if (!state) {
+            texting($selector, text, textLength);
+            textingItems[index].state = true;
+            $selector.classList.remove('testimonial__item--texting');
+          }
+        } else {
+          $selector.innerText = text;
+          $selector.classList.remove('testimonial__item--texting');
+        }
+      });
+    } // Функция растущего счетчика
+
+
+    function setCounters() {
+      counterItems.forEach((counterItem, index) => {
+        const {
+          $selector
+        } = counterItem;
+        const {
+          count
+        } = counterItem;
+        const {
+          state
+        } = counterItem;
+        const offset = $selector.getBoundingClientRect().top - viewportHeight;
+
+        if (offset > 0) {
+          $selector.innerText = '0%';
+          counterItems[index].state = false;
+        } else if (offset < 0 && offset > -viewportHeight) {
+          if (!state) {
+            counting($selector, count);
+            counterItems[index].state = true;
+          }
+        } else {
+          $selector.innerText = `${count}%`;
+        }
+      });
+    }
+
+    function texting($selector, text, textLength) {
+      let counter = 0;
+      addChar();
+
+      function addChar() {
+        $selector.innerText = text.slice(0, counter);
+        counter++;
+
+        if (counter % 2 === 0) {
+          $selector.classList.add('testimonial__item--texting');
+        } else {
+          $selector.classList.remove('testimonial__item--texting');
+        }
+
+        if (counter < textLength) {
+          setTimeout(() => {
+            addChar();
+          }, getRandomInt(30, 80));
+        } else {
+          $selector.classList.remove('testimonial__item--texting');
+        }
+      }
+    }
+
+    function counting($selector, count) {
+      let counter = 1;
+      let duration = countingDuration / count; // countingDuration
+
+      addChar();
+
+      function addChar() {
+        $selector.innerText = `${counter}%`;
+        counter++;
+
+        if (counter <= count) {
+          setTimeout(() => {
+            addChar();
+          }, duration);
+        }
+      }
     }
 
     function toggleEffects() {
@@ -2638,10 +2760,18 @@ function animation($wrapper) {
 
       setOwnerParallax();
       setLogoScale();
+      setTexting();
+      setCounters();
     }
 
     this.toggleEffects = toggleEffects;
   }
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 }
 
 /***/ }),
@@ -2754,7 +2884,6 @@ function flashlight($wrapper) {
   const maxWidth = $wrapper.getBoundingClientRect().width;
   const maxHeight = $wrapper.getBoundingClientRect().height;
   const transitionDuration = parseInt(window.getComputedStyle($wrapper).transitionDuration) * 1000;
-  console.log(transitionDuration);
   setPosition();
 
   function setPosition() {
@@ -3628,6 +3757,26 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.portfolio__s
 
 /***/ }),
 
+/***/ "./src/testimonial/testimonial.js":
+/*!****************************************!*\
+  !*** ./src/testimonial/testimonial.js ***!
+  \****************************************/
+/***/ (function() {
+
+
+
+/***/ }),
+
+/***/ "./src/user-experience/user-experience.js":
+/*!************************************************!*\
+  !*** ./src/user-experience/user-experience.js ***!
+  \************************************************/
+/***/ (function() {
+
+
+
+/***/ }),
+
 /***/ "./src/we-are/we-are.js":
 /*!******************************!*\
   !*** ./src/we-are/we-are.js ***!
@@ -3980,6 +4129,32 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************!*\
   !*** ./src/process/process.scss ***!
   \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/testimonial/testimonial.scss":
+/*!******************************************!*\
+  !*** ./src/testimonial/testimonial.scss ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/user-experience/user-experience.scss":
+/*!**************************************************!*\
+  !*** ./src/user-experience/user-experience.scss ***!
+  \**************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16995,6 +17170,8 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	__webpack_require__("./src/placeholder/placeholder.js");
 /******/ 	__webpack_require__("./src/portfolio/portfolio.js");
 /******/ 	__webpack_require__("./src/process/process.js");
+/******/ 	__webpack_require__("./src/testimonial/testimonial.js");
+/******/ 	__webpack_require__("./src/user-experience/user-experience.js");
 /******/ 	__webpack_require__("./src/we-are/we-are.js");
 /******/ 	__webpack_require__("./src/animation/animation.scss");
 /******/ 	__webpack_require__("./src/base/main.scss");
@@ -17021,8 +17198,10 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	__webpack_require__("./src/placeholder/placeholder.scss");
 /******/ 	__webpack_require__("./src/portfolio/portfolio.scss");
 /******/ 	__webpack_require__("./src/process/process.scss");
+/******/ 	__webpack_require__("./src/testimonial/testimonial.scss");
+/******/ 	__webpack_require__("./src/user-experience/user-experience.scss");
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/we-are/we-are.scss");
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.799fa993057b823fe3fb.js.map
+//# sourceMappingURL=main.43693bbc73a4bbf37d59.js.map

@@ -6,19 +6,4 @@
 .flashlight {
   transition-duration: 2000ms;
   transition-timing-function: ease-in-out;
-
-  //animation: mask-anim 2s linear;
-  //animation-iteration-count: infinite;
-  //
-  //@keyframes mask-anim {
-  //  0% {
-  //    clip-path: circle(150px at 500px 500px);
-  //  }
-  //  50% {
-  //    clip-path: circle(600px at 200px 200px);
-  //  }
-  //  100% {
-  //    clip-path: circle(150px at 1000px 500px);
-  //  }
-  //}
 }

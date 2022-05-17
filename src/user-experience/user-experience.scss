@@ -1,0 +1,21 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.user-experience {
+
+  &__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5vw;
+    padding-top: 10vw;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+

@@ -6,19 +6,17 @@ flashlights.forEach(($flashlight) => {
 
 function flashlight($wrapper) {
     const size = parseFloat($wrapper.dataset.flashlightSize);
-    const maxWidth = $wrapper.getBoundingClientRect().width
-    const maxHeight = $wrapper.getBoundingClientRect().height
-    const transitionDuration = parseInt(window.getComputedStyle($wrapper).transitionDuration) * 1000
+    const maxWidth = $wrapper.getBoundingClientRect().width;
+    const maxHeight = $wrapper.getBoundingClientRect().height;
+    const transitionDuration = parseInt(window.getComputedStyle($wrapper).transitionDuration) * 1000;
 
-    console.log(transitionDuration)
-
-    setPosition()
+    setPosition();
 
     function setPosition() {
 
         $wrapper.style.clipPath = `circle(${size}vw at ${getRandomInt(0, maxWidth)}px ${getRandomInt(0, maxHeight / 2)}px)`;
 
-        setTimeout(setPosition,transitionDuration)
+        setTimeout(setPosition, transitionDuration);
     }
 
 }
