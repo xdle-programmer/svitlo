@@ -49,14 +49,17 @@ export function animation($wrapper) {
     const $chartMask = $wrapper.querySelector('.portfolio__chart-mask');
     const textingItemSelectors = Array.from($wrapper.querySelectorAll('.animation__texting-item'));
     const textingItems = textingItemSelectors.map(($textingItemSelector) => {
-
         return {
             $selector: $textingItemSelector,
             text: $textingItemSelector.innerText,
             textLength: $textingItemSelector.innerText.length,
             state: false
         };
+    });
 
+    textingItems.forEach((textingItem) => {
+        const {$selector} = textingItem;
+        $selector.innerText = '';
     });
 
     const counterItemSelectors = Array.from($wrapper.querySelectorAll('.animation__counter'));
@@ -700,8 +703,6 @@ export function animation($wrapper) {
                 const offset = $selector.getBoundingClientRect().top - viewportHeight;
 
                 if (offset > 0) {
-                    $selector.innerText = '';
-                    textingItems[index].state = false;
                     $selector.classList.remove('.testimonial__item--texting');
                 } else if (offset < 0 && offset > -viewportHeight) {
                     if (!state) {
@@ -710,7 +711,6 @@ export function animation($wrapper) {
                         $selector.classList.remove('testimonial__item--texting');
                     }
                 } else {
-                    $selector.innerText = text;
                     $selector.classList.remove('testimonial__item--texting');
                 }
             });
@@ -766,7 +766,8 @@ export function animation($wrapper) {
 
         function counting($selector, count) {
             let counter = 1;
-            let duration = countingDuration / count;
+            // let duration = countingDuration / count;
+            let duration = 10;
 
             // countingDuration
 
@@ -813,7 +814,6 @@ export function animation($wrapper) {
 
 
 }
-
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);

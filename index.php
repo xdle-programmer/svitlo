@@ -387,6 +387,7 @@
 
                 <div class="process__items">
                     <div class="process__item">
+
                         <div class="process__item-number">
                             <div class="animation__text-wrapper">
                                 <div class="animation__text">

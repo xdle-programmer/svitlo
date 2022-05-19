@@ -5,17 +5,160 @@
 
 .user-experience {
 
+  &__block {
+    display: grid;
+    grid-template-columns: 25vw 65vw;
+    padding-top: 14vw;
+  }
+
+  &__block-name {
+    @include manrope;
+    font-weight: 500;
+    font-size: 1.3548vw;
+    color: var(--natural-text-color);
+  }
+
+  &__content {
+  }
+
+  &__title {
+    color: var(--natural-text-color);
+    @include manrope;
+    font-weight: 200;
+    font-size: 12.1417vw;
+    margin-top: 4vw;
+    letter-spacing: -0.033em;
+  }
+
+  &__title-line {
+    margin-top: -7vw;
+
+    &--dot {
+    }
+  }
+
+  &__desc {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    color: var(--main-text-color);
+    margin-top: 7.2vw;
+
+    &--fill {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__desc-item {
+    @include manrope;
+    font-size: 3.4392vw;
+    letter-spacing: -0.033em;
+
+    &--big {
+    }
+
+    &--small {
+      font-size: 1.4392vw;
+      margin-top: 0.3vw;
+    }
+  }
+
+  &__desc-item-line {
+    margin-top: -1.2vw;
+
+    &--small {
+      margin-top: -.6vw;
+    }
+  }
+
+  &__images-wrapper {
+    position: relative;
+    margin-bottom: 8vw;
+  }
+
+  &__images-wrapper-circle {
+    position: absolute;
+    left: 51vw;
+    top: -1vw;
+    width: 27.7748vw;
+    height: 27.7748vw;
+    background: var(--main-case-color);
+    border-radius: 50%;
+  }
+
   &__images {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 65vw);
     grid-gap: .5vw;
     padding-top: 10vw;
+
   }
 
   &__image {
     width: 100%;
     height: auto;
     display: block;
+  }
+
+  &__colors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 8vw;
+  }
+
+  &__colors-item {
+    position: relative;
+    padding-bottom: 85%;
+
+    &--main {
+      background: var(--natural-case-color);
+    }
+
+    &--natural {
+      background: var(--main-case-color);
+    }
+  }
+
+  &__colors-item-name {
+    position: absolute;
+    @include manrope;
+    font-size: 1.3548vw;
+    line-height: 100%;
+    letter-spacing: -0.033em;
+    left: 2vw;
+    top: 2vw;
+
+    &--main {
+      color: var(--main-text-color);
+    }
+
+    &--natural {
+      color: var(--natural-text-color);
+    }
+  }
+
+  &__colors-desc {
+    display: grid;
+    grid-template-columns: 46vw 1fr;
+    border-top: 0.1042vw solid var(--natural-text-color);
+    @include manrope;
+    font-weight: 200;
+    font-size: 2vw;
+    letter-spacing: -0.033em;
+    margin-top: 5.4vw;
+    padding-top: 2.7vw;
+  }
+
+  &__colors-desc-name {
+    color:  var(--natural-text-color);
+    margin-top: -.7vw;
+  }
+
+  &__colors-desc-text {
+    color: var(--main-text-color);
+  }
+
+  &__colors-desc-text-line {
+    margin-top: -.7vw;
   }
 }
 

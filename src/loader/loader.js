@@ -9,7 +9,7 @@ const $animation = document.querySelector('.animation');
 if ($wrapper) {
     loadIntro();
 } else {
-    startVideo();
+    // startVideo();
 }
 
 function loadIntro() {

@@ -73,7 +73,6 @@
 }
 
 html {
-  background: var(--black-color);
   height: 100px;
   overflow: hidden;
   position: fixed;
@@ -81,6 +80,13 @@ html {
   top: 0;
   right: 0;
   bottom: 0;
+
+  &.temp {
+    height: auto;
+    position: static;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
 }
 
 body {
@@ -97,11 +103,11 @@ body {
   right: 0;
   bottom: 0;
   @include kudryashev;
-  //max-height: 100vh;
-  //
-  //&.init {
-  //  max-height: none;
-  //}
+
+  .temp & {
+    height: auto;
+    position: static;
+  }
 
 }
 

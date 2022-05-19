@@ -8,9 +8,25 @@
   color: var(--white-color);
   padding-top: 14vw;
 
+  &--white {
+    background: var(--white-color);
+    color: var(--black-color);
+  }
+
+  &--case {
+    padding-top: 13vw;
+  }
+
+  $white: '.have-a-task--white';
+  $case: '.have-a-task--case';
+
   &__block {
     padding-left: 25vw;
     padding-bottom: 13.4vw;
+
+    #{$case} & {
+      padding-left: 1vw;
+    }
   }
 
   &__title-wrapper {
@@ -21,6 +37,20 @@
     font-size: 13.8613vw;
     letter-spacing: -0.047em;
     white-space: nowrap;
+
+    #{$case} & {
+      @include manrope;
+      font-weight: 700;
+      font-size: 11.8613vw;
+    }
+  }
+
+  &__title-line {
+    margin-top: -5vw;
+
+    &--2 {
+      padding-left: 26vw;
+    }
   }
 
   &__subtitle {
@@ -34,6 +64,12 @@
 
   &__form {
     padding-left: 1vw;
+
+    #{$case} & {
+      padding-left: 25vw;
+      padding-top: 6vw;
+    }
+
   }
 
   &__form-items {
@@ -41,6 +77,10 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 5vw;
     margin-bottom: 4.9vw;
+
+    #{$case} & {
+      margin-bottom: 1.9vw;
+    }
   }
 
   &__form-item {
@@ -58,6 +98,7 @@
     color: var(--black-color);
     position: relative;
     width: fit-content;
+
 
     &:after {
       @include pseudo-absolute();

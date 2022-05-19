@@ -2060,6 +2060,12 @@ function animation($wrapper) {
       state: false
     };
   });
+  textingItems.forEach(textingItem => {
+    const {
+      $selector
+    } = textingItem;
+    $selector.innerText = '';
+  });
   const counterItemSelectors = Array.from($wrapper.querySelectorAll('.animation__counter'));
   const counterItems = counterItemSelectors.map($counterItemSelector => {
     return {
@@ -2660,8 +2666,6 @@ function animation($wrapper) {
         const offset = $selector.getBoundingClientRect().top - viewportHeight;
 
         if (offset > 0) {
-          $selector.innerText = '';
-          textingItems[index].state = false;
           $selector.classList.remove('.testimonial__item--texting');
         } else if (offset < 0 && offset > -viewportHeight) {
           if (!state) {
@@ -2670,7 +2674,6 @@ function animation($wrapper) {
             $selector.classList.remove('testimonial__item--texting');
           }
         } else {
-          $selector.innerText = text;
           $selector.classList.remove('testimonial__item--texting');
         }
       });
@@ -2729,8 +2732,9 @@ function animation($wrapper) {
     }
 
     function counting($selector, count) {
-      let counter = 1;
-      let duration = countingDuration / count; // countingDuration
+      let counter = 1; // let duration = countingDuration / count;
+
+      let duration = 10; // countingDuration
 
       addChar();
 
@@ -2887,7 +2891,7 @@ function flashlight($wrapper) {
   setPosition();
 
   function setPosition() {
-    $wrapper.style.clipPath = `circle(${size}vw at ${getRandomInt(0, maxWidth)}px ${getRandomInt(0, maxHeight / 2)}px)`;
+    $wrapper.style.clipPath = `circle(${size}vw at ${getRandomInt(0, maxWidth)}px ${getRandomInt(0, maxHeight / 3)}px)`;
     setTimeout(setPosition, transitionDuration);
   }
 }
@@ -3340,8 +3344,7 @@ const $animation = document.querySelector('.animation');
 
 if ($wrapper) {
   loadIntro();
-} else {
-  startVideo();
+} else {// startVideo();
 }
 
 function loadIntro() {
@@ -17204,4 +17207,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.43693bbc73a4bbf37d59.js.map
+//# sourceMappingURL=main.02bf1f87a3d0badbcbda.js.map

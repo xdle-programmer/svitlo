@@ -14,7 +14,7 @@ function flashlight($wrapper) {
 
     function setPosition() {
 
-        $wrapper.style.clipPath = `circle(${size}vw at ${getRandomInt(0, maxWidth)}px ${getRandomInt(0, maxHeight / 2)}px)`;
+        $wrapper.style.clipPath = `circle(${size}vw at ${getRandomInt(0, maxWidth)}px ${getRandomInt(0, maxHeight / 3)}px)`;
 
         setTimeout(setPosition, transitionDuration);
     }

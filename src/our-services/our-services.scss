@@ -58,7 +58,10 @@
   }
 
   &__item-desc {
+    position: relative;
   }
+
+  $desc-hover: '.our-services__item-desc:hover';
 
   &__item-desc-title {
     font-size: 3.4392vw;

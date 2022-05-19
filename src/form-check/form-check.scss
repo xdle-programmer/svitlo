@@ -28,6 +28,9 @@
   $small-field: '.form-check__field--small';
   $textarea: '.placeholder--textarea';
 
+  $white-form: '.have-a-task--white';
+  $black-form: '.have-a-task--black';
+
   &__error {
     @include manrope;
     color: var(--white-color);
@@ -60,6 +63,13 @@
       visibility: hidden;
     }
 
+    #{$white-form} & {
+      color: var(--black-color);
+    }
+
+    #{$black-form} & {
+      color: var(--white-color);
+    }
 
   }
 
