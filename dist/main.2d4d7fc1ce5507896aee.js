@@ -10,9 +10,11 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "axios": function() { return /* binding */ axios; }
+/* harmony export */   "axios": function() { return /* binding */ axios; },
+/* harmony export */   "mobileViewPoint": function() { return /* binding */ mobileViewPoint; }
 /* harmony export */ });
 const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+const mobileViewPoint = 1279;
 
 /***/ }),
 
@@ -2005,7 +2007,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "animation": function() { return /* binding */ animation; },
 /* harmony export */   "animationStart": function() { return /* binding */ animationStart; }
 /* harmony export */ });
-// Рекурсивная проверка на загрузку и готовность рендера
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./index.js");
+ // Рекурсивная проверка на загрузку и готовность рендера
+
 function animationStart($animation) {
   if (document.readyState === 'complete') {
     requestAnimationFrame(() => {
@@ -2084,8 +2088,13 @@ function animation($wrapper) {
     addEventListeners();
     changeScreenPosition = new ChangeScreenPosition();
     setEffects = new SetEffects();
-    changeScreenPosition.init();
-    window.requestAnimationFrame(setAlgorithmicScroll);
+
+    if (window.innerWidth > _index__WEBPACK_IMPORTED_MODULE_0__.mobileViewPoint) {
+      window.requestAnimationFrame(setAlgorithmicScroll);
+      changeScreenPosition.init();
+    } else {
+      $wrapper.dispatchEvent(new Event('init'));
+    }
   } // Функция установки событий
 
 
@@ -2122,84 +2131,91 @@ function animation($wrapper) {
         }, 5);
       }
     });
-    window.addEventListener('wheel', event => {
-      if (detectTrackPad(event)) {
-        handlerScroll(event);
-        return;
-      }
 
-      calcAlgorithmicScroll(event.deltaY);
-    });
-    window.addEventListener('touchstart', event => {
-      touchActive = true;
-      touchLast = event.touches[0].screenY;
-    });
-    window.addEventListener('touchend', () => {
-      touchActive = false;
-    });
-    window.addEventListener('touchmove', event => {
-      if (touchActive) {
-        let touchShift = touchLast - event.touches[0].screenY;
-        calcAlgorithmicScroll(touchShift * 5);
+    if (window.innerWidth > _index__WEBPACK_IMPORTED_MODULE_0__.mobileViewPoint) {
+      window.addEventListener('wheel', event => {
+        if (detectTrackPad(event)) {
+          handlerScroll(event);
+          return;
+        }
+
+        calcAlgorithmicScroll(event.deltaY);
+      });
+      window.addEventListener('touchstart', event => {
+        touchActive = true;
         touchLast = event.touches[0].screenY;
-      }
-    });
-    window.addEventListener('keydown', event => {
-      if (event.code === 'Space' || event.code === 'PageDown') {
-        calcAlgorithmicScroll(viewportHeight);
-      }
+      });
+      window.addEventListener('touchend', () => {
+        touchActive = false;
+      });
+      window.addEventListener('touchmove', event => {
+        if (touchActive) {
+          let touchShift = touchLast - event.touches[0].screenY;
+          calcAlgorithmicScroll(touchShift * 5);
+          touchLast = event.touches[0].screenY;
+        }
+      });
+      window.addEventListener('keydown', event => {
+        if (event.code === 'Space' || event.code === 'PageDown') {
+          calcAlgorithmicScroll(viewportHeight);
+        }
 
-      if (event.code === 'PageUp') {
-        calcAlgorithmicScroll(-viewportHeight);
-      }
+        if (event.code === 'PageUp') {
+          calcAlgorithmicScroll(-viewportHeight);
+        }
 
-      if (event.code === 'Home') {
-        calcAlgorithmicScroll(-(scrollPosition + viewportHeight));
-      }
+        if (event.code === 'Home') {
+          calcAlgorithmicScroll(-(scrollPosition + viewportHeight));
+        }
 
-      if (event.code === 'End') {
-        calcAlgorithmicScroll(originalHeight);
-      }
+        if (event.code === 'End') {
+          calcAlgorithmicScroll(originalHeight);
+        }
 
-      if (event.code === 'ArrowDown') {
-        calcAlgorithmicScroll(viewportHeight * .1);
-      }
+        if (event.code === 'ArrowDown') {
+          calcAlgorithmicScroll(viewportHeight * .1);
+        }
 
-      if (event.code === 'ArrowUp') {
-        calcAlgorithmicScroll(-(viewportHeight * .1));
-      }
-    });
-    $scrollHandler.addEventListener('mousedown', event => {
-      event.preventDefault();
-      scrollBarDragged = true;
-      scrollBarLast = event.clientY;
-    });
-    window.addEventListener('mouseup', () => {
-      scrollBarDragged = false;
-    });
-    window.addEventListener('mousemove', event => {
-      event.preventDefault();
-      let inScreen = true;
-
-      if (event.clientY > viewportHeight || event.clientY < 0) {
-        inScreen = false;
-      }
-
-      if (event.clientX > viewportWidth || event.clientX < 0) {
-        inScreen = false;
-      }
-
-      if (!inScreen) {
-        scrollBarDragged = false;
-      }
-
-      if (scrollBarDragged) {
-        let scrollBarDragShift = event.clientY - scrollBarLast;
-        let scrollPercent = scrollBarDragShift / (scrollBarHeight / 100);
-        calcAlgorithmicScroll(scrollPercent * (originalHeight / 100));
+        if (event.code === 'ArrowUp') {
+          calcAlgorithmicScroll(-(viewportHeight * .1));
+        }
+      });
+      $scrollHandler.addEventListener('mousedown', event => {
+        event.preventDefault();
+        scrollBarDragged = true;
         scrollBarLast = event.clientY;
-      }
-    });
+      });
+      window.addEventListener('mouseup', () => {
+        scrollBarDragged = false;
+      });
+      window.addEventListener('mousemove', event => {
+        event.preventDefault();
+        let inScreen = true;
+
+        if (event.clientY > viewportHeight || event.clientY < 0) {
+          inScreen = false;
+        }
+
+        if (event.clientX > viewportWidth || event.clientX < 0) {
+          inScreen = false;
+        }
+
+        if (!inScreen) {
+          scrollBarDragged = false;
+        }
+
+        if (scrollBarDragged) {
+          let scrollBarDragShift = event.clientY - scrollBarLast;
+          let scrollPercent = scrollBarDragShift / (scrollBarHeight / 100);
+          calcAlgorithmicScroll(scrollPercent * (originalHeight / 100));
+          scrollBarLast = event.clientY;
+        }
+      });
+    } else {
+      window.addEventListener('scroll', event => {
+        setEffects.toggleEffects();
+      });
+    }
   } // Функция рекурсии алгоритмического скролла
 
 
@@ -3344,8 +3360,10 @@ const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 const $wrapper = document.querySelector('.loader');
 const $animation = document.querySelector('.animation');
 
-if ($wrapper) {// loadIntro();
-} else {// startVideo();
+if ($wrapper) {
+  loadIntro();
+} else {
+  startVideo();
 }
 
 function loadIntro() {
@@ -17273,8 +17291,8 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_require__("./index.js");
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	__webpack_require__("./index.js");
 /******/ 	__webpack_require__("./src/animation/animation.js");
 /******/ 	__webpack_require__("./src/businesses/businesses.js");
 /******/ 	__webpack_require__("./src/case-intro/case-intro.js");
@@ -17331,4 +17349,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.62050bfc02f4581a3a45.js.map
+//# sourceMappingURL=main.2d4d7fc1ce5507896aee.js.map

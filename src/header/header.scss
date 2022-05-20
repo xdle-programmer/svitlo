@@ -14,10 +14,18 @@
     @include flex-row-center;
     justify-content: space-between;
     padding: 3.5vw 0;
+
+    @include tablet-big-screen {
+      //padding: 1.5vw 0;
+    }
   }
 
   &__logo {
     width: 2.5013vw;
+
+    @include tablet-big-screen {
+      width: 5.5vw;
+    }
   }
 
   &__logo-img {
@@ -32,6 +40,10 @@
 
   &__menu {
     @include flex-row-center;
+
+    @include tablet-big-screen {
+      margin-top: -3vw;
+    }
   }
 
   &__menu-icon {
@@ -40,6 +52,12 @@
     display: block;
     margin-right: 1vw;
     margin-top: 0.8vw;
+
+    @include tablet-big-screen {
+      width: 4vw;
+      margin-right: 2vw;
+      margin-top: 2vw;
+    }
   }
 
   &__menu-icon-item {
@@ -49,5 +67,9 @@
   &__menu-text {
     color: var(--white-color);
     font-size: 1.8vw;
+
+    @include tablet-big-screen {
+      font-size: 4.8vw;
+    }
   }
 }

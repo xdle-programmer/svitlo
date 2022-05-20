@@ -1,3 +1,5 @@
+import {mobileViewPoint} from "../../index";
+
 // Рекурсивная проверка на загрузку и готовность рендера
 export function animationStart($animation) {
     if (document.readyState === 'complete') {
@@ -90,9 +92,13 @@ export function animation($wrapper) {
 
         setEffects = new SetEffects();
 
-        changeScreenPosition.init();
+        if (window.innerWidth > mobileViewPoint) {
+            window.requestAnimationFrame(setAlgorithmicScroll);
 
-        window.requestAnimationFrame(setAlgorithmicScroll);
+            changeScreenPosition.init();
+        } else {
+            $wrapper.dispatchEvent(new Event('init'));
+        }
     }
 
     // Функция установки событий
@@ -138,94 +144,103 @@ export function animation($wrapper) {
 
         });
 
-        window.addEventListener('wheel', (event) => {
 
-            if (detectTrackPad(event)) {
-                handlerScroll(event);
-                return;
-            }
+        if (window.innerWidth > mobileViewPoint) {
+            window.addEventListener('wheel', (event) => {
 
-            calcAlgorithmicScroll(event.deltaY);
-        });
+                if (detectTrackPad(event)) {
+                    handlerScroll(event);
+                    return;
+                }
 
-        window.addEventListener('touchstart', (event) => {
-            touchActive = true;
-            touchLast = event.touches[0].screenY;
-        });
+                calcAlgorithmicScroll(event.deltaY);
+            });
 
-        window.addEventListener('touchend', () => {
-            touchActive = false;
-        });
-
-        window.addEventListener('touchmove', (event) => {
-            if (touchActive) {
-                let touchShift = touchLast - event.touches[0].screenY;
-                calcAlgorithmicScroll(touchShift * 5);
+            window.addEventListener('touchstart', (event) => {
+                touchActive = true;
                 touchLast = event.touches[0].screenY;
-            }
-        });
+            });
 
-        window.addEventListener('keydown', (event) => {
-            if (event.code === 'Space' || event.code === 'PageDown') {
-                calcAlgorithmicScroll(viewportHeight);
-            }
+            window.addEventListener('touchend', () => {
+                touchActive = false;
+            });
 
-            if (event.code === 'PageUp') {
-                calcAlgorithmicScroll(-viewportHeight);
-            }
+            window.addEventListener('touchmove', (event) => {
+                if (touchActive) {
+                    let touchShift = touchLast - event.touches[0].screenY;
+                    calcAlgorithmicScroll(touchShift * 5);
+                    touchLast = event.touches[0].screenY;
+                }
+            });
 
-            if (event.code === 'Home') {
-                calcAlgorithmicScroll(-(scrollPosition + viewportHeight));
-            }
+            window.addEventListener('keydown', (event) => {
+                if (event.code === 'Space' || event.code === 'PageDown') {
+                    calcAlgorithmicScroll(viewportHeight);
+                }
 
-            if (event.code === 'End') {
-                calcAlgorithmicScroll(originalHeight);
-            }
+                if (event.code === 'PageUp') {
+                    calcAlgorithmicScroll(-viewportHeight);
+                }
 
-            if (event.code === 'ArrowDown') {
-                calcAlgorithmicScroll(viewportHeight * .1);
-            }
+                if (event.code === 'Home') {
+                    calcAlgorithmicScroll(-(scrollPosition + viewportHeight));
+                }
 
-            if (event.code === 'ArrowUp') {
-                calcAlgorithmicScroll(-(viewportHeight * .1));
-            }
-        });
+                if (event.code === 'End') {
+                    calcAlgorithmicScroll(originalHeight);
+                }
 
-        $scrollHandler.addEventListener('mousedown', (event) => {
-            event.preventDefault();
-            scrollBarDragged = true;
-            scrollBarLast = event.clientY;
-        });
+                if (event.code === 'ArrowDown') {
+                    calcAlgorithmicScroll(viewportHeight * .1);
+                }
 
-        window.addEventListener('mouseup', () => {
-            scrollBarDragged = false;
-        });
+                if (event.code === 'ArrowUp') {
+                    calcAlgorithmicScroll(-(viewportHeight * .1));
+                }
+            });
 
-        window.addEventListener('mousemove', (event) => {
-            event.preventDefault();
-
-            let inScreen = true;
-
-            if (event.clientY > viewportHeight || event.clientY < 0) {
-                inScreen = false;
-            }
-
-            if (event.clientX > viewportWidth || event.clientX < 0) {
-                inScreen = false;
-            }
-
-            if (!inScreen) {
-                scrollBarDragged = false;
-            }
-
-            if (scrollBarDragged) {
-                let scrollBarDragShift = event.clientY - scrollBarLast;
-                let scrollPercent = scrollBarDragShift / (scrollBarHeight / 100);
-
-                calcAlgorithmicScroll(scrollPercent * (originalHeight / 100));
+            $scrollHandler.addEventListener('mousedown', (event) => {
+                event.preventDefault();
+                scrollBarDragged = true;
                 scrollBarLast = event.clientY;
-            }
-        });
+            });
+
+            window.addEventListener('mouseup', () => {
+                scrollBarDragged = false;
+            });
+
+            window.addEventListener('mousemove', (event) => {
+                event.preventDefault();
+
+                let inScreen = true;
+
+                if (event.clientY > viewportHeight || event.clientY < 0) {
+                    inScreen = false;
+                }
+
+                if (event.clientX > viewportWidth || event.clientX < 0) {
+                    inScreen = false;
+                }
+
+                if (!inScreen) {
+                    scrollBarDragged = false;
+                }
+
+                if (scrollBarDragged) {
+                    let scrollBarDragShift = event.clientY - scrollBarLast;
+                    let scrollPercent = scrollBarDragShift / (scrollBarHeight / 100);
+
+                    calcAlgorithmicScroll(scrollPercent * (originalHeight / 100));
+                    scrollBarLast = event.clientY;
+                }
+            });
+        } else {
+            window.addEventListener('scroll', (event) => {
+                setEffects.toggleEffects();
+            });
+        }
+
+
     }
 
     // Функция рекурсии алгоритмического скролла

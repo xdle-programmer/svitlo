@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="background: #020305" class="temp">
+<html lang="ru" style="background: #020305">
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>

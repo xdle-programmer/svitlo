@@ -4,7 +4,6 @@
 @import "../base/media-queries";
 
 .loader {
-  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -13,9 +12,8 @@
   bottom: 0;
   @include flex-column-center;
   background: var(--black-color);
-  //opacity: 1 !important;
-  visibility: hidden;
-
+  opacity: 1 !important;
+  visibility: visible;
   transition: opacity 300ms ease-out;
 
   &--hide {

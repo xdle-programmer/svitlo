@@ -17,6 +17,11 @@
     margin-left: -72.8vw;
     margin-top: -3.888vw;
     margin-bottom: 2vw;
+
+    @include tablet-big-screen {
+      margin-left: 0;
+      margin-bottom: 9vw;
+    }
   }
 
   &__title {
@@ -24,6 +29,11 @@
     letter-spacing: -0.05em;
     color: var(--white-color);
     white-space: nowrap;
+
+    @include tablet-big-screen {
+      line-height: 93%;
+      white-space: normal;
+    }
   }
 
   &__desc {
@@ -31,6 +41,11 @@
     justify-content: space-between;
     padding-right: 1vw;
     margin-bottom: 12.3vw;
+
+    @include tablet-big-screen {
+      flex-direction: column;
+      margin-bottom: 25vw;
+    }
   }
 
   &__desc-item {
@@ -38,6 +53,11 @@
     font-size: 3.4392vw;
     margin-top: -1.1vw;
     letter-spacing: -0.033em;
+
+    @include tablet-big-screen {
+      font-size: 6.5vw;
+      margin-top: 7vw;
+    }
 
     &--1 {
       color: var(--white-color);
@@ -69,10 +89,19 @@
     //border: 0.15vw solid var(--white-color);
     left: 0;
     top: -2vw;
+    stroke: var(--white-color);
+
+    @include tablet-big-screen {
+      left: auto;
+      right: 0;
+      top: -10vw;
+      width: 17vw;
+      height: 17vw;
+    }
 
     circle {
       fill: none;
-      stroke: var(--black-color);
+      stroke: var(--white-color);
       stroke-width: 0.15vw;
       stroke-dasharray: 314;
       stroke-dashoffset: 314;
@@ -90,6 +119,12 @@
     &--2 {
       left: 5.4vw;
       transform: rotate(-90deg);
+
+      @include tablet-big-screen {
+        left: auto;
+        right: 10vw;
+        top: -10vw;
+      }
     }
   }
 
@@ -99,7 +134,11 @@
     line-height: 80%;
     letter-spacing: -0.033em;
     color: var(--black-color);
-    margin-left: 26vw
+    margin-left: 26vw;
+
+    @include tablet-big-screen {
+      margin-left: 0;
+    }
   }
 
   &__subtitle {
@@ -107,6 +146,12 @@
     flex-wrap: wrap;
     align-items: flex-end;
     margin-top: 9vw;
+
+    @include tablet-big-screen {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 15vw;
+    }
   }
 
   &__subtitle-item {
@@ -115,15 +160,29 @@
     margin-top: -8vw;
     letter-spacing: -0.05em;
 
+    @include tablet-big-screen {
+      font-size: 14.1417vw;
+      margin-top: -6vw;
+    }
+
     &--1 {
       font-weight: 700;
       margin-left: 25.5vw;
       margin-bottom: 2vw;
+
+      @include tablet-big-screen {
+        margin-left: 0;
+      }
     }
 
     &--2 {
       font-weight: 700;
       margin-right: 2vw;
+
+      @include tablet-big-screen {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
 
     &--3 {
@@ -133,6 +192,15 @@
       font-size: 1.5112vw;
       width: 22.2vw;
       margin-bottom: 3.2vw;
+
+      @include tablet-big-screen {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        font-size: 5.5112vw;
+        width: 100%;
+        margin-top: 2vw;
+      }
     }
   }
 

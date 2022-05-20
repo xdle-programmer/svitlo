@@ -4,38 +4,64 @@
 @import "../base/media-queries";
 
 .process {
-  //padding-top: 14vw;
   padding-top: 10vw;
   padding-bottom: 7vw;
   background: var(--white-color);
-  //position: relative;
 
   &__block {
   }
 
   &__icon {
     position: absolute;
-    width: 12.1vw;
-    top: 10.7vw;
-    right: -0.2vw;
+    width: 16.1vw;
+    top: 1.7vw;
+    right: -4.2vw;
+
+    @include tablet-big-screen {
+      width: 46.1vw;
+      top: 3.7vw;
+      right: -4.2vw;
+    }
   }
 
   &__title-block {
     @include flex-row;
     align-items: flex-end;
     margin-bottom: 11.3vw;
+
+    @include tablet-big-screen {
+      @include flex-column;
+    }
   }
 
   &__title-wrapper {
     margin-left: -36.25vw;
     margin-bottom: 2vw;
+
+    @include tablet-big-screen {
+      margin-left: 0;
+    }
   }
 
   &__title {
     font-size: 20.2188vw;
     letter-spacing: -0.05em;
     white-space: nowrap;
+    @include flex-row;
 
+    @include tablet-big-screen {
+      font-size: 22.5638vw;
+      white-space: normal;
+      @include flex-column;
+      margin-top: 28vw;
+    }
+  }
+
+  &__title-line {
+
+    @include tablet-big-screen {
+      margin-top: -17vw;
+    }
   }
 
   &__subtitle {
@@ -46,6 +72,13 @@
     margin-left: 5.6vw;
     width: 10vw;
     margin-bottom: 1vw;
+
+    @include tablet-big-screen {
+      margin-left: 0;
+      width: 69%;
+      margin-top: 4vw;
+      font-size: 6vw;
+    }
   }
 
   &__items {
@@ -54,6 +87,11 @@
   &__item {
     display: grid;
     grid-template-columns: 26vw 1fr;
+
+    @include tablet-big-screen {
+      grid-template-columns: 1fr;
+      position: relative;
+    }
   }
 
   &__item-number {
@@ -61,6 +99,14 @@
     font-size: 1.1464vw;
     letter-spacing: -0.033em;
     padding-top: 2.5vw;
+
+    @include tablet-big-screen {
+      position: absolute;
+      font-size: 4vw;
+      padding-top: 0;
+      top: 28.4vw;
+      left: 0;
+    }
   }
 
   &__item-desc {
@@ -69,14 +115,23 @@
     padding-bottom: 5.2vw;
     display: grid;
     grid-template-columns: 1fr 29.3vw;
+
+    @include tablet-big-screen {
+      grid-template-columns: 1fr;
+      border-top: .6vw solid var(--black-color);
+      padding-top: 8vw;
+    }
   }
 
   &__item-desc-title {
     @include manrope;
     font-weight: 700;
     font-size: 3.4392vw;
-    line-height: 100%;
     letter-spacing: -0.033em;
+
+    @include tablet-big-screen {
+      font-size: 9.5vw;
+    }
   }
 
   &__item-desc-text {
@@ -87,5 +142,12 @@
     letter-spacing: -0.033em;
     padding-right: 4vw;
     padding-top: 0.5vw;
+
+    @include tablet-big-screen {
+      padding-right: 0;
+      font-size: 4vw;
+      padding-left: 15vw;
+      padding-top: 8vw;
+    }
   }
 }

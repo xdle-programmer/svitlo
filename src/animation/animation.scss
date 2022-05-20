@@ -72,10 +72,11 @@
     transition: none;
     transform: matrix(1.00, 0.00, 0.00, 1.00, 0, 0);
 
-    .temp & {
+    @include tablet-big-screen {
       height: auto;
       position: static;
     }
+
   }
 
   $ready-title: '.animation__block--ready-title';
@@ -89,27 +90,47 @@
 
   &__text-x-scroll {
     transition: transform;
-    transition: none !important;
+    //transition: none !important;
     transition-duration: 300ms;
     contain: content;
     will-change: transform;
     transition-timing-function: cubic-bezier(.25, .74, .22, .99);
     line-height: normal;
 
+    @include tablet-big-screen {
+      contain: initial;
+    }
+
     &--business {
       transform: translateX(100vw);
+
+      @include tablet-big-screen {
+        transform: none;
+      }
     }
 
     &--process {
       transform: translateX(70vw);
+
+      @include tablet-big-screen {
+        transform: none;
+      }
     }
 
     &--have-a-task {
       transform: translateX(50vw);
+
+      @include tablet-big-screen {
+        transform: none;
+      }
     }
 
     &--user-experience {
       transform: translateX(45vw);
+
+      @include tablet-big-screen {
+        transform: none;
+      }
     }
 
   }
@@ -122,7 +143,7 @@
   &__title {
     will-change: transform;
     transition: transform 1300ms cubic-bezier(.25, .74, .22, .99);
-    //transform: translate3d(0, 100%, 0);!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    transform: translate3d(0, 100%, 0);
     transform-origin: top right;
 
     &--active {
@@ -137,7 +158,7 @@
   &__text {
     will-change: transform;
     transition: transform 900ms cubic-bezier(.25, .74, .22, .99);
-    //transform: translate3d(0, 100%, 0);!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    transform: translate3d(0, 100%, 0);
     transform-origin: top right;
     transition-delay: .1s;
     display: flex;

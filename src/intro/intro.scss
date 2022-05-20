@@ -8,6 +8,10 @@
   color: var(--white-color);
   padding-bottom: 30vw;
 
+  @include tablet-big-screen {
+    padding-bottom: 8vw;
+  }
+
   &__block {
   }
 
@@ -20,12 +24,21 @@
     top: 29.39030745vw;
     left: 0;
     z-index: 1;
+
+    @include tablet-big-screen {
+      top: 120vw;
+    }
   }
 
   &__desc-title {
     font-size: 3.439291298vw;
     line-height: 106%;
     margin-bottom: 2.449192288vw;
+
+    @include tablet-big-screen {
+      font-size: 11.5vw;
+      margin-bottom: 5vw;
+    }
   }
 
   &__desc-text {
@@ -33,6 +46,10 @@
     font-size: 1.719645649vw;
     @include manrope;
     letter-spacing: -0.033em;
+
+    @include tablet-big-screen {
+      font-size: 7vw;
+    }
   }
 
   $name-show: '.intro__name--show';
@@ -47,6 +64,14 @@
 
     &--show {
       opacity: 1;
+    }
+
+    @include tablet-big-screen {
+      opacity: 1;
+      top: 212vw;
+      width: 100%;
+      text-align: right;
+      right: 0;
     }
   }
 
@@ -64,6 +89,10 @@
     #{$name-show} & {
       transform: translateX(100vw);
     }
+
+    @include tablet-big-screen {
+      display: none;
+    }
   }
 
   &__name-title {
@@ -72,6 +101,10 @@
     letter-spacing: -0.05em;
     @include flex-row;
     align-items: baseline;
+
+    @include tablet-big-screen {
+      display: none;
+    }
   }
 
   &__name-title-letter {
@@ -94,12 +127,22 @@
     font-size: 1.146430433vw;
     line-height: 120%;
     letter-spacing: -0.033em;
+
+    @include tablet-big-screen {
+      font-weight: 400;
+      font-size: 5vw;
+    }
   }
 
   &__video {
     position: relative;
     width: 95.83116206vw;
     margin: 0 -3vw;
+
+    @include tablet-big-screen {
+      width: 250vw;
+      margin: 0 -76vw;
+    }
   }
 
   &__video-item-wrapper {
@@ -117,6 +160,10 @@
 
   &__about-block {
     position: relative;
+
+    @include tablet-big-screen {
+      margin-top: 106vw;
+    }
   }
 
   &__about-magnet {
@@ -124,11 +171,21 @@
     left: -10.0052vw;
     width: calc(100% + (10.0052vw * 2));
     top: -20vw;
+
+    @include tablet-big-screen {
+      width: calc(350% + (10.0052vw * 2));
+      left: auto;
+      right: -51vw;
+    }
   }
 
   &__about-button-block {
     margin-left: 60.5vw;
     position: relative;
+
+    @include tablet-big-screen {
+      margin-left: 0;
+    }
   }
 
   &__about-button-text {
@@ -139,6 +196,10 @@
     writing-mode: vertical-rl;
     line-height: 100%;
     color: var(--sub-main-color);
+
+    @include tablet-big-screen {
+      font-size: 12.5vw;
+    }
   }
 
   &__about-button-item {
@@ -152,6 +213,11 @@
     top: 8.2vw;
     cursor: pointer;
     z-index: 1;
+
+    @include tablet-big-screen {
+      left: 70vw;
+      top: 9vw;
+    }
   }
 
   $button-hover: '.intro__about-button-item:hover';
@@ -168,8 +234,13 @@
     transition: all .3s ease-out;
 
     #{$button-hover} & {
-      transform: scale(1.3)!important;
+      transform: scale(1.3) !important;
       fill: none;
+    }
+
+    @include tablet-big-screen {
+      width: 6vw;
+      height: 6vw;
     }
   }
 
@@ -210,6 +281,10 @@
     margin-top: 1vw;
     line-height: 106%;
     position: relative;
+
+    @include tablet-big-screen {
+      margin-top: 16vw;
+    }
   }
 
   &__about-title-temp {
@@ -240,6 +315,12 @@
     @include flex-row;
     padding-left: 26vw;
     padding-top: 4vw;
+
+    @include tablet-big-screen {
+      flex-direction: column;
+      font-size: 7.5vw;
+      padding-left: 19vw;
+    }
   }
 
   &__about-desc-item {
@@ -249,6 +330,10 @@
     &--2 {
       font-weight: 700;
       margin-left: 9vw;
+
+      @include tablet-big-screen {
+        margin-left: 0;
+      }
     }
   }
 
@@ -262,6 +347,11 @@
     width: 50vw;
     margin-top: 2vw;
     align-items: center;
+
+    @include tablet-big-screen {
+      width: 100%;
+      margin-top: 14vw;
+    }
   }
 
   &__about-link-text {
@@ -271,6 +361,10 @@
     line-height: 100%;
     letter-spacing: -0.033em;
     color: var(--main-color);
+
+    @include tablet-big-screen {
+      font-size: 18vw;
+    }
   }
 
   &__about-link-icon {
@@ -278,6 +372,12 @@
     height: 1.5112vw;
     margin-left: 3vw;
     margin-top: 2vw;
+
+
+    @include tablet-big-screen {
+      width: 4vw;
+      height: 4vw;
+    }
   }
 
 }

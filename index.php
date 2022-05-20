@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="background: #020305" class="temp">
+<html lang="ru" style="background: #020305">
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
@@ -51,7 +51,7 @@
     </div>
 </div>
 
-<div class="animation" style="opacity: 1;">
+<div class="animation" style="opacity: 0;">
 
     <div class="animation__scroll">
         <div class="animation__scroll-handler-wrapper">
@@ -226,11 +226,11 @@
                         <div class="businesses__icon">
                             <svg class="businesses__icon-item businesses__icon-item--1"
                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="50"/>
+                                <circle cx="50" cy="50" r="49"/>
                             </svg>
                             <svg class="businesses__icon-item businesses__icon-item--2"
                                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="50"/>
+                                <circle cx="50" cy="50" r="49"/>
                             </svg>
                         </div>
                         <div class="businesses__icon-title animation__title-wrapper">
@@ -370,7 +370,7 @@
     <div class="animation__screen process animation__screen--change-background">
         <div class="process__block layout">
             <div class="animation__block animation__block--ready-title">
-                <div class="process__icon animation__opacity" style="display: none">
+                <div class="process__icon animation__opacity">
                     <div class="logo-circle">
                         <div class="logo-circle__item">
                             <img class="logo-circle__text" src="./assets/images/circle-text.svg">
@@ -380,7 +380,10 @@
                 </div>
                 <div class="process__title-block">
                     <div class="animation__text-x-scroll animation__text-x-scroll--process process__title-wrapper">
-                        <div class="process__title animation__text-x-scroll-item">Our&nbsp;process&nbsp;</div>
+                        <div class="process__title animation__text-x-scroll-item">
+                            <div class="process__title-line">Our&nbsp;</div>
+                            <div class="process__title-line">process&nbsp;</div>
+                        </div>
                     </div>
                     <div class="process__subtitle animation__text-wrapper">
                         <div class="animation__text">
@@ -588,10 +591,7 @@
             <div class="portfolio__title">
                 <div class="portfolio__title-text">
                     <div class="animation__title-wrapper">
-                        <div class="animation__title portfolio__title-text-line">
-                            Portfolio
-                            <img class="portfolio__title-icon" src="./assets/icons/rotate.svg">
-                        </div>
+                        <div class="animation__title portfolio__title-text-line">Portfolio</div>
                     </div>
                 </div>
 
