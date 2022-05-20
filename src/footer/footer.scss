@@ -9,6 +9,11 @@
   padding-top: 2vw;
   padding-bottom: 7vw;
 
+  @include tablet-big-screen {
+    padding-top: 11vw;
+    padding-bottom: 17vw;
+  }
+
   &__text-row {
     margin-bottom: 7.9vw;
   }
@@ -46,9 +51,19 @@
     @include flex-row;
     justify-content: space-between;
     margin-bottom: 9.3vw;
+
+    @include tablet-big-screen {
+      flex-wrap: wrap;
+      margin-top: 19vw;
+    }
   }
 
   &__logo {
+
+    @include tablet-big-screen {
+      width: 12vw;
+    }
+
   }
 
   &__desc {
@@ -57,11 +72,21 @@
     font-size: 1.7196vw;
     line-height: 100%;
     letter-spacing: -0.033em;
+
+    @include tablet-big-screen {
+      width: 50vw;
+      font-size: 7vw;
+    }
   }
 
   &__contacts {
     @include manrope;
     line-height: 100%;
+
+    @include tablet-big-screen {
+      width: 100%;
+      margin-top: 12vw;
+    }
   }
 
   &__contacts-phone {
@@ -72,6 +97,10 @@
     display: block;
     line-height: 100%;
     margin-bottom: 2.5vw;
+
+    @include tablet-big-screen {
+      font-size: 13vw;
+    }
   }
 
   &__contacts-mail {
@@ -82,6 +111,10 @@
     color: var(--white-color);
     display: block;
     margin-bottom: .7vw;
+
+    @include tablet-big-screen {
+      font-size: 5vw;
+    }
   }
 
   &__contacts-copyright {
@@ -114,6 +147,10 @@
       left: 0;
       top: calc(100% + 1vw);
     }
+
+    @include tablet-big-screen {
+      display: none;
+    }
   }
 
   &__social {
@@ -126,6 +163,11 @@
     height: 5.75vw;
     position: relative;
     @include flex-row-center;
+
+    @include tablet-big-screen {
+      width: 17vw;
+      height: 17vw;
+    }
 
     &:after {
       @include pseudo-absolute;
@@ -144,6 +186,11 @@
     height: 1.2vw;
     object-fit: contain;
     object-position: center;
+
+    @include tablet-big-screen {
+      width: 6vw;
+      height: 6vw;
+    }
   }
 
   &__social-item-img-hover {

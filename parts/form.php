@@ -37,8 +37,8 @@
     </div>
 
     <div class="have-a-task__form-button form-check__button">
-        <div class="animation__text-wrapper char-hover">
-            <div class="animation__text char-hover__item">
+        <div class="char-hover">
+            <div class="char-hover__item">
 
                 Discuss the project.
 

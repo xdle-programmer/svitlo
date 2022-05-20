@@ -606,28 +606,9 @@
         </div>
 
         <div class="portfolio__slider">
-
-            <div class="swiper">
-                <div class="swiper-pagination"></div>
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
-                        <div class="portfolio__slider-img" style="background: #768f94"></div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="portfolio__slider-img" style="background: #768f94"></div>
-                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="portfolio__slider-img" style="background: #768f94"></div>
-                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
-                    </div>
-                </div>
-            </div>
-
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/parts/slider.php';
+            echo createSlider('globalis');
+            ?>
         </div>
 
         <div class="animation__block animation__block--ready-title">
@@ -654,7 +635,7 @@
 
                     <div class="animation__text-wrapper portfolio__desc-item-inner">
                         <div class="animation__text portfolio__desc-item-inner-line">
-                            more,
+                            more,&nbsp;
                         </div>
                         <div class="animation__text portfolio__desc-item-inner-line portfolio__desc-item-inner-line--main-color">
                             solutions
@@ -750,10 +731,12 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__link-item">
+            <div class="portfolio__link-item" data-modal-open="modal-form">
                 <div class="animation__title-wrapper">
-                    <div class="animation__title">
-                        Let's discuss.
+                    <div class="animation__title char-hover">
+                        <div class="char-hover__item">
+                            Let's discuss.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -802,10 +785,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="our-services__item-link">
+                    <div class="our-services__item-link" data-modal-open="modal-form">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Let's discuss
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Let's discuss
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -845,10 +830,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="our-services__item-link">
+                    <div class="our-services__item-link" data-modal-open="modal-form">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Let's discuss
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Let's discuss
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -883,10 +870,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="our-services__item-link">
+                    <div class="our-services__item-link" data-modal-open="modal-form">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Let's discuss
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Let's discuss
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -916,10 +905,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="our-services__item-link">
+                    <div class="our-services__item-link" data-modal-open="modal-form">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Let's discuss
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Let's discuss
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -950,10 +941,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="our-services__item-link">
+                    <div class="our-services__item-link" data-modal-open="modal-form">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Let's discuss
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Let's discuss
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -984,10 +977,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="our-services__item-link">
+                    <div class="our-services__item-link" data-modal-open="modal-form">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Let's discuss
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Let's discuss
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1022,10 +1017,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="our-services__item-link">
+                    <div class="our-services__item-link" data-modal-open="modal-form">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Let's discuss
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Let's discuss
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1305,10 +1302,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="we-are__link-desc-item">
+                        <div class="we-are__link-desc-item" data-modal-open="modal-form">
                             <div class="animation__text-wrapper">
-                                <div class="animation__text">
-                                    Let's discuss.
+                                <div class="animation__text char-hover">
+                                    <div class="char-hover__item">
+                                        Let's discuss.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1392,7 +1391,7 @@
 
             <div class="animation__block animation__block--ready-title">
                 <div class="animation__text-x-scroll animation__text-x-scroll--have-a-task have-a-task__title-wrapper">
-                    <div class="have-a-task__title animation__text-x-scroll-item">Have a task?</div>
+                    <div class="have-a-task__title animation__text-x-scroll-item">Have a&nbsp;task?</div>
                 </div>
                 <div class="have-a-task__subtitle">
                     <div class="animation__text-wrapper">
@@ -1442,8 +1441,10 @@
 
                     <div class="have-a-task__form-button form-check__button">
                         <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Discuss the project.
+                            <div class="animation__text char-hover">
+                                <div class="char-hover__item">
+                                    Discuss the project.
+                                </div>
                             </div>
                         </div>
                     </div>

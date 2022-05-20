@@ -50,16 +50,34 @@
   }
 
   &__slider {
-    height: 700px;
     margin-bottom: 4.4vw;
-    padding: 0 30px;
+    padding: 0 1.5vw;
     width: 100%;
     position: relative;
     overflow: hidden;
 
+
     .swiper {
       width: 100%;
-      height: 550px;
+      height: 40vw;
+
+      &--desktop {
+
+        @include tablet-big-screen {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+
+        @include tablet-big-screen {
+          display: block;
+          width: 200vw;
+          margin: 3vw -50vw;
+          height: 50vw;
+        }
+      }
     }
 
     .swiper-pagination {
@@ -79,9 +97,13 @@
     }
   }
 
+  &__slider-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   &__slider-img {
-    //width: 100%;
-    //height: 24.4919vw;\
     width: 100%;
     height: 100%;
     display: block;
@@ -92,10 +114,18 @@
 
   &__desc {
     @include flex-row;
-    padding-left: 55vw;
-    margin-bottom: 2vw;
+    padding-left: 11vw;
     position: relative;
-    padding-top: 40vw;
+    padding-top: 4vw;
+    margin-bottom: -7vw;
+    z-index: 6;
+
+
+    @include tablet-big-screen {
+      padding-top: 2vw;
+      padding-left: 0;
+      @include flex-column;
+    }
   }
 
   &__desc-item {
@@ -103,21 +133,25 @@
     letter-spacing: -0.033em;
 
     &--1 {
-      font-size: 8.4392vw;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      padding-top: 0;
-      transform-origin: left;
-      z-index: 4;
-      transform: translateX(-50%)
+      font-size: 3.4392vw;
+
+      @include tablet-big-screen {
+        font-size: 7.5vw;
+        width: 100%;
+      }
     }
 
     &--2 {
       font-size: 1.7196vw;
       margin-left: 6vw;
       width: 18.5vw;
+
+      @include tablet-big-screen {
+        font-size: 4vw;
+        width: 100%;
+        margin-top: 6vw;
+        margin-left: 0;
+      }
     }
 
   }
@@ -130,7 +164,7 @@
     display: flex;
 
     #{$desc-item-1} & {
-      margin-top: -3.9vw;
+      margin-top: -1.5vw;
     }
 
     &--2 {
@@ -143,6 +177,10 @@
   }
 
   &__desc-item-inner-line {
+
+    &--main-color {
+      color: var(--main-color);
+    }
 
   }
 
@@ -269,6 +307,12 @@
     line-height: 100%;
     letter-spacing: -0.033em;
     padding-left: 26.5vw;
+
+    @include tablet-big-screen {
+      padding-left: 0;
+      font-size: 8.5vw;
+      margin-top: 10vw;
+    }
   }
 
   &__link-title {
@@ -284,6 +328,10 @@
     position: relative;
     width: fit-content;
 
+    @include tablet-big-screen {
+      font-size: 11.5vw;
+    }
+
     &:after {
       @include pseudo-absolute();
       width: 100%;
@@ -292,5 +340,6 @@
       left: 0;
       top: calc(100% + 1vw);
     }
+
   }
 }

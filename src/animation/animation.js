@@ -626,29 +626,6 @@ export function animation($wrapper) {
             }
         }
 
-        // Функция масштабирования заголовка портфолио
-        function setScalePortfolioTitle() {
-            const scrollHeight = window.innerHeight / 3;
-            const offset = $portfolioDesc.getBoundingClientRect().top;
-            const scaleMax = 1;
-            const scaleMin = .7;
-            const translateMax = 0;
-
-            const translateMin = 61;
-
-            if (offset < 0 && offset * -1 < scrollHeight) {
-                const percent = (offset * -1) / (scrollHeight / 100);
-                const scale = ((scaleMin - scaleMax) / 100 * percent) + 1;
-                const translate = (translateMin - translateMax) / 100 * percent;
-
-                $portfolioDescTitle.style.transform = `translateX(-50%) scale(${scale}) translateY(${translate}vw)`;
-            } else if (offset > 0) {
-                $portfolioDescTitle.style.transform = `translateX(-50%)`;
-            } else {
-                $portfolioDescTitle.style.transform = `translateX(-50%) scale(${scaleMin}) translateY(${translateMin}vw)`;
-            }
-        }
-
         // Функция отрисовки чарта
         function setChart() {
             const scrollHeight = window.innerHeight / 3 * 2;
@@ -805,10 +782,6 @@ export function animation($wrapper) {
             setTitleShowClass();
 
             setTextsShowClass();
-
-            if ($portfolioDesc) {
-                setScalePortfolioTitle();
-            }
 
             if ($chartMask) {
                 setChart();
