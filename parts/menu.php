@@ -1,4 +1,4 @@
-<div class="modal modal--open modal--show" id="modal-menu">
+<div class="modal" id="modal-menu">
     <div class="modal__content">
         <div class="modal__close" data-modal-close>
             <svg viewBox="0 0 100 100" class="modal__close-icon-hover">
@@ -11,7 +11,32 @@
         </div>
 
         <div class="menu">
+            <div class="menu__background"></div>
+            <div class="menu__block layout">
+                <div class="menu__main">
+                    <div class="menu__main-item menu__main-item--1">Portolio</div>
+                    <div class="menu__main-item menu__main-item--2">Process</div>
+                    <div class="menu__main-item menu__main-item--3">Services</div>
+                </div>
 
+                <div class="menu__bottom">
+                    <div class="menu__bottom-links">
+                        <div class="menu__bottom-links-item">About us</div>
+                        <div class="menu__bottom-links-item">Clients</div>
+                        <div class="menu__bottom-links-item">Contact us</div>
+                    </div>
+
+                    <div class="menu__bottom-contacts">
+                        <div class="menu__bottom-contacts-mail">hello@svitlo-production.com</div>
+                        <div class="menu__bottom-contacts-form-button">
+                            <div class="char-hover">
+                                <div class="char-hover__item">Let's discuss.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>

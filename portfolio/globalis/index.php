@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="background: #020305" class="temp open-modal">
+<html lang="ru" style="background: #020305" class="temp">
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
@@ -33,6 +33,7 @@
 </head>
 <body>
 
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
 
 <div class="animation">
 

@@ -2813,7 +2813,6 @@ function caseIntro($wrapper) {}
 /***/ (function() {
 
 const charHoverAll = Array.from(document.querySelectorAll('.char-hover'));
-console.log(charHoverAll);
 charHoverAll.forEach($charHover => {
   charHover($charHover);
 });
@@ -2821,7 +2820,9 @@ charHoverAll.forEach($charHover => {
 function charHover($wrapper) {
   let items = $wrapper.querySelectorAll('.char-hover__item');
   items.forEach($item => {
-    const text = $item.innerText;
+    const text = $item.innerHTML.trim();
+    console.log(text);
+    console.log($item);
     $item.innerHTML = '';
     let $itemInner = document.createElement('div');
     $itemInner.classList.add('char-hover__item-inner');
@@ -17330,4 +17331,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.fc37b4bd1b5b664fa8f0.js.map
+//# sourceMappingURL=main.62050bfc02f4581a3a45.js.map

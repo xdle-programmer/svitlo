@@ -1,7 +1,5 @@
 const charHoverAll = Array.from(document.querySelectorAll('.char-hover'));
 
-console.log(charHoverAll)
-
 charHoverAll.forEach(($charHover) => {
     charHover($charHover);
 });
@@ -10,7 +8,10 @@ function charHover($wrapper) {
     let items = $wrapper.querySelectorAll('.char-hover__item');
 
     items.forEach(($item) => {
-        const text = $item.innerText;
+        const text = $item.innerHTML.trim();
+
+        console.log(text)
+        console.log($item)
 
         $item.innerHTML = '';
 

@@ -23,6 +23,8 @@
 </head>
 <body>
 
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
+
 <div class="loader" style="opacity: 0">
     <div class="loader__block layout">
 
@@ -351,10 +353,12 @@
                         </div>
                     </div>
 
-                    <div class="lets-discuss__link-item char-hover">
-                        <div class="animation__title-wrapper">
-                            <div class="animation__title char-hover__item">
-                                Let's discuss.
+                    <div class="lets-discuss__link-item">
+                        <div class="char-hover">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title char-hover__item">
+                                    Let's discuss.
+                                </div>
                             </div>
                         </div>
                     </div>
