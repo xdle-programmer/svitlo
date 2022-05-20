@@ -5,6 +5,7 @@
 
 .char-hover {
   cursor: pointer;
+  overflow: hidden;
 
   $hover: '.char-hover:hover';
 

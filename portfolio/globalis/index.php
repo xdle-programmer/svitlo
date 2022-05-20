@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="background: #020305" class="temp">
+<html lang="ru" style="background: #020305" class="temp open-modal">
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
@@ -410,52 +410,8 @@
                     </div>
                 </div>
 
-                <div class="have-a-task__form form-check">
-                    <div class="have-a-task__form-items">
-                        <div class="have-a-task__form-item">
-                            <div class="have-a-task__form-item-field">
-                                <div class="placeholder form-check__field" data-elem="input"
-                                     data-rule="input-empty">
-                                    <input class="input placeholder__input" placeholder="Name">
-                                    <div class="placeholder__item">Name</div>
-                                </div>
-                            </div>
+                <?php require('../../parts/form.php'); ?>
 
-                            <div class="have-a-task__form-item-field">
-                                <div class="placeholder form-check__field" data-elem="input"
-                                     data-rule="input-empty">
-                                    <input class="input placeholder__input" placeholder="Phone">
-                                    <div class="placeholder__item">Phone</div>
-                                </div>
-                            </div>
-
-                            <div class="have-a-task__form-item-field">
-                                <div class="placeholder form-check__field" data-elem="input"
-                                     data-rule="input-empty">
-                                    <input class="input placeholder__input" placeholder="E-mail">
-                                    <div class="placeholder__item">E-mail</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="have-a-task__form-item">
-                            <div class="placeholder placeholder--textarea"
-                                 data-elem="textarea"
-                                 data-rule="input-empty">
-                                <textarea class="input input--textarea placeholder__input"
-                                          placeholder="How can we help you"></textarea>
-                                <div class="placeholder__item">How can we help you</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="have-a-task__form-button form-check__button">
-                        <div class="animation__text-wrapper">
-                            <div class="animation__text">
-                                Discuss the project.
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -507,103 +463,13 @@
         </div>
     </div>
 
-    <div class="animation__screen footer">
-        <div class="clients__text-row">
-            <div class="clients__text-row-line clients__text-row-line--1">
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-            </div>
-            <div class="clients__text-row-line clients__text-row-line--2">
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-                <div class="clients__text-row-item">Svitlo.Production</div>
-            </div>
-        </div>
-
-        <div class="footer__block animation__block animation__block--ready-title layout">
-            <div class="footer__top">
-                <img class="footer__logo" src="../../assets/images/logo-white.svg">
-                <div class="footer__desc">
-
-                    <div class="animation__text-wrapper">
-                        <div class="animation__text">
-                            We will make
-                        </div>
-                    </div>
-                    <div class="animation__text-wrapper">
-                        <div class="animation__text">
-                            your digital
-                        </div>
-                    </div>
-                    <div class="animation__text-wrapper">
-                        <div class="animation__text">
-                            side of business
-                        </div>
-                    </div>
-                    <div class="animation__text-wrapper">
-                        <div class="animation__text">
-                            attractive to
-                        </div>
-                    </div>
-                    <div class="animation__text-wrapper">
-                        <div class="animation__text">
-                            your clients.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer__contacts">
-                    <a href="tel:+380730667577" class="footer__contacts-phone">380 73 066 75 77</a>
-                    <a href="mailto:hello@svitlo-production.com"
-                       class="footer__contacts-mail">hello@svitlo-production.com</a>
-                    <div class="footer__contacts-copyright">© Svitlo.Production 2022</div>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <div class="footer__link">
-                    Let's discuss.
-                </div>
-                <div class="footer__social">
-                    <a href="#" class="footer__social-item">
-                        <img class="footer__social-item-img" src="../../assets/icons/whatsapp.svg">
-                    </a>
-                    <a href="#" class="footer__social-item">
-                        <img class="footer__social-item-img" src="../../assets/icons/instagram.svg">
-                    </a>
-                    <a href="#" class="footer__social-item">
-                        <img class="footer__social-item-img" src="../../assets/icons/linkedin.svg">
-                    </a>
-                    <a href="#" class="footer__social-item">
-                        <img class="footer__social-item-img" src="../../assets/icons/behance.svg">
-                    </a>
-                    <a href="#" class="footer__social-item">
-                        <img class="footer__social-item-img" src="../../assets/icons/dribbble.svg">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php require('../../parts/footer.php'); ?>
 
 </div>
+
+<?php require('../../parts/modal-form.php'); ?>
+
+<?php require('../../parts/menu.php'); ?>
 
 <script src="../../dist/<?= $js ?>"></script>
 

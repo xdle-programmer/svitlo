@@ -17,8 +17,13 @@
     padding-top: 13vw;
   }
 
+  &--modal {
+    padding-top: 1vw;
+  }
+
   $white: '.have-a-task--white';
   $case: '.have-a-task--case';
+  $modal: '.have-a-task--modal';
 
   &__block {
     padding-left: 25vw;
@@ -26,6 +31,11 @@
 
     #{$case} & {
       padding-left: 1vw;
+    }
+
+    #{$modal} & {
+      padding-left: 0;
+      padding-bottom: 5.4vw;
     }
   }
 
@@ -43,6 +53,11 @@
       font-weight: 700;
       font-size: 11.8613vw;
     }
+
+    #{$modal} & {
+      font-size: 10.8613vw;
+    }
+
   }
 
   &__title-line {
@@ -60,6 +75,11 @@
     letter-spacing: -0.033em;
     padding-left: 1vw;
     margin-bottom: 8vw;
+
+    #{$modal} & {
+      width: 18vw;
+      margin-bottom: 0;
+    }
   }
 
   &__form {
@@ -68,6 +88,11 @@
     #{$case} & {
       padding-left: 25vw;
       padding-top: 6vw;
+    }
+
+    #{$modal} & {
+      padding-left: 33vw;
+      margin-top: -5vw;
     }
 
   }
@@ -79,6 +104,10 @@
     margin-bottom: 4.9vw;
 
     #{$case} & {
+      margin-bottom: 1.9vw;
+    }
+
+    #{$modal} & {
       margin-bottom: 1.9vw;
     }
   }
@@ -100,6 +129,10 @@
     width: fit-content;
 
 
+    #{$modal} & {
+      font-size: 4.6279vw;
+    }
+
     &:after {
       @include pseudo-absolute();
       width: 100%;
@@ -107,6 +140,10 @@
       background: var(--black-color);
       left: 0;
       top: calc(100% + 1vw);
+
+      #{$modal} & {
+        height: 0.45vw;
+      }
     }
   }
 }

@@ -137,10 +137,27 @@
     }
   }
 
+  $social-item-hover: '.footer__social-item:hover';
+
   &__social-item-img {
     width: 1.2vw;
     height: 1.2vw;
     object-fit: contain;
     object-position: center;
+  }
+
+  &__social-item-img-hover {
+    position: absolute;
+    @include absolute-center;
+    width: 117%;
+    height: 117%;
+    z-index: 1;
+    stroke-dasharray: 302;
+    stroke-dashoffset: 302;
+    transition: all ease-out .5s;
+
+    #{$social-item-hover} & {
+      stroke-dashoffset: 0;
+    }
   }
 }

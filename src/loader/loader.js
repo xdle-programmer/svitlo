@@ -7,7 +7,7 @@ const $wrapper = document.querySelector('.loader');
 const $animation = document.querySelector('.animation');
 
 if ($wrapper) {
-    loadIntro();
+    // loadIntro();
 } else {
     // startVideo();
 }

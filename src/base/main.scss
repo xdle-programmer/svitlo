@@ -81,6 +81,11 @@ html {
   right: 0;
   bottom: 0;
 
+  &.open-modal {
+    height: 0!important;
+    overflow: hidden!important;
+  }
+
   &.temp {
     height: auto;
     position: static;
@@ -107,6 +112,7 @@ body {
   .temp & {
     height: auto;
     position: static;
+    overflow: hidden;
   }
 
 }

@@ -1,5 +1,7 @@
 const charHoverAll = Array.from(document.querySelectorAll('.char-hover'));
 
+console.log(charHoverAll)
+
 charHoverAll.forEach(($charHover) => {
     charHover($charHover);
 });
