@@ -374,7 +374,7 @@
         </div>
     </div>
 
-    <div class="animation__screen process animation__screen--change-background">
+    <div class="animation__screen process animation__screen--change-background" id="process">
         <div class="process__block layout">
             <div class="animation__block">
                 <div class="process__icon animation__opacity">
@@ -593,7 +593,7 @@
         </div>
     </div>
 
-    <div class="animation__screen portfolio animation__screen--change-background">
+    <div class="animation__screen portfolio animation__screen--change-background" id="portfolio">
         <div class="animation__block portfolio__title-block layout">
             <div class="portfolio__title">
                 <div class="portfolio__title-text">
@@ -750,7 +750,7 @@
         </div>
     </div>
 
-    <div class="animation__screen our-services">
+    <div class="animation__screen our-services" id="services">
         <div class="our-services__block layout animation__block">
             <div class="our-services__title">
                 <div class="our-services__title-item">
@@ -1039,7 +1039,7 @@
         </div>
     </div>
 
-    <div class="animation__screen we-are">
+    <div class="animation__screen we-are" id="about-as">
         <div class="we-are__block layout animation__block">
             <div class="we-are__subtitle">
                 <div class="we-are__subtitle-item">
@@ -1324,7 +1324,7 @@
         </div>
     </div>
 
-    <div class="animation__screen clients">
+    <div class="animation__screen clients" id="clients">
         <div class="clients__text-row">
             <div class="clients__text-row-line clients__text-row-line--1">
                 <div class="clients__text-row-item">Svitlo.Production</div>

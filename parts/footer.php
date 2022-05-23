@@ -1,4 +1,4 @@
-<div class="animation__screen footer">
+<div class="animation__screen footer" id="contact-as">
     <div class="clients__text-row">
         <div class="clients__text-row-line clients__text-row-line--1">
             <div class="clients__text-row-item">Svitlo.Production</div>

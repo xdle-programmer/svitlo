@@ -251,8 +251,8 @@
                     <div class="animation__text-x-scroll animation__text-x-scroll--user-experience">
 
                         <div class="user-experience__images">
-                            <img class="user-experience__image" src="../../assets/cases/globalis/ux-1.png">
-                            <img class="user-experience__image" src="../../assets/cases/globalis/ux-2.png">
+                            <img class="user-experience__image" src="./assets/images/ux-1.png" alt="user-experience">
+                            <img class="user-experience__image" src="./assets/images/ux-2.png" alt="user-experience">
                         </div>
 
                     </div>

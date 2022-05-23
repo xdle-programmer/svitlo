@@ -2082,6 +2082,7 @@ function animation($wrapper) {
 
   let changeScreenPosition;
   let setEffects;
+  let anchorScreenPositions = {};
   init(); // Функция инициализации
 
   function init() {
@@ -2127,12 +2128,27 @@ function animation($wrapper) {
               }, 3030);
             }, introTransition);
             clearInterval(checkScale);
+
+            if (window.innerWidth > _index__WEBPACK_IMPORTED_MODULE_0__.mobileViewPoint) {
+              const hash = window.location.hash;
+              let target = '';
+
+              if (hash !== '') {
+                target = hash.split('#')[1];
+                scrollToNameFromHash(target);
+              }
+            } else {
+              setEffects.toggleEffects();
+            }
           }
         }, 5);
       }
     });
 
     if (window.innerWidth > _index__WEBPACK_IMPORTED_MODULE_0__.mobileViewPoint) {
+      $wrapper.addEventListener('scroll-menu', event => {
+        scrollToNameFromHash(event.detail.dataLink);
+      });
       window.addEventListener('wheel', event => {
         if (detectTrackPad(event)) {
           handlerScroll(event);
@@ -2216,6 +2232,10 @@ function animation($wrapper) {
         setEffects.toggleEffects();
       });
     }
+  }
+
+  function scrollToNameFromHash(target) {
+    shiftScroll = [(anchorScreenPositions[target] - scrollPosition) / smoothCoefficient + 1];
   } // Функция рекурсии алгоритмического скролла
 
 
@@ -2327,9 +2347,15 @@ function animation($wrapper) {
         slideTextScrollHeight,
         changeBackgroundState: false
       });
+
+      if ($screen.id) {
+        anchorScreenPositions[$screen.id] = height;
+      }
+
       height += screenHeight;
     }
 
+    console.log(anchorScreenPositions);
     originalHeight = height - viewportHeight;
     scrollBarHeight = viewportHeight - $scrollHandler.getBoundingClientRect().height;
     setBodyHeight();
@@ -3662,6 +3688,55 @@ function magnet($wrapper) {
   function count(arr) {
     return arr.reduce((acc, num) => acc + num, 0);
   }
+}
+
+/***/ }),
+
+/***/ "./src/menu/menu.js":
+/*!**************************!*\
+  !*** ./src/menu/menu.js ***!
+  \**************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../index */ "./index.js");
+// data-modal-close data-menu-redirect="portfolio">
+
+const $menu = document.querySelector('.menu');
+
+if ($menu) {
+  menu($menu);
+}
+
+function menu($wrapper) {
+  const links = $wrapper.querySelectorAll('[data-menu-redirect]');
+  const currentLocations = window.location.href.split('#')[0];
+  const clearUrl = window.location.href.substring(window.location.origin.length, currentLocations.length);
+  let mainPage = true;
+
+  if (clearUrl.length > 1) {
+    mainPage = false;
+  }
+
+  links.forEach($link => {
+    const dataLink = $link.dataset.menuRedirect;
+
+    if (mainPage && window.innerWidth > _index__WEBPACK_IMPORTED_MODULE_0__.mobileViewPoint) {
+      console.log(123123);
+      $link.addEventListener('click', () => {
+        document.querySelector('.animation').dispatchEvent(new CustomEvent('scroll-menu', {
+          detail: {
+            dataLink
+          }
+        }));
+      });
+    } else {
+      $link.addEventListener('click', () => {
+        window.location.href = `/#${dataLink}`;
+      });
+    }
+  });
 }
 
 /***/ }),
@@ -17316,6 +17391,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	__webpack_require__("./src/load/load.js");
 /******/ 	__webpack_require__("./src/loader/loader.js");
 /******/ 	__webpack_require__("./src/magnet/magnet.js");
+/******/ 	__webpack_require__("./src/menu/menu.js");
 /******/ 	__webpack_require__("./src/modal/modal.js");
 /******/ 	__webpack_require__("./src/our-services/our-services.js");
 /******/ 	__webpack_require__("./src/placeholder/placeholder.js");
@@ -17357,4 +17433,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.c9fc0b8e7611c7fff546.js.map
+//# sourceMappingURL=main.1b81a92d1c9c699edcc5.js.map

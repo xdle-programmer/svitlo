@@ -81,6 +81,8 @@ export function animation($wrapper) {
     let changeScreenPosition;
     let setEffects;
 
+    let anchorScreenPositions = {};
+
 
     init();
 
@@ -137,15 +139,28 @@ export function animation($wrapper) {
                         }, introTransition);
 
                         clearInterval(checkScale);
+
+                        if (window.innerWidth > mobileViewPoint) {
+                            const hash = window.location.hash;
+                            let target = '';
+
+                            if (hash !== '') {
+                                target = hash.split('#')[1];
+                                scrollToNameFromHash(target);
+                            }
+                        } else {
+                            setEffects.toggleEffects();
+                        }
                     }
                 }, 5);
             }
-
-
         });
 
-
         if (window.innerWidth > mobileViewPoint) {
+            $wrapper.addEventListener('scroll-menu', (event) => {
+                scrollToNameFromHash(event.detail.dataLink);
+            });
+
             window.addEventListener('wheel', (event) => {
 
                 if (detectTrackPad(event)) {
@@ -239,8 +254,10 @@ export function animation($wrapper) {
                 setEffects.toggleEffects();
             });
         }
+    }
 
-
+    function scrollToNameFromHash(target) {
+        shiftScroll = [(anchorScreenPositions[target] - scrollPosition) / smoothCoefficient + 1];
     }
 
     // Функция рекурсии алгоритмического скролла
@@ -356,8 +373,14 @@ export function animation($wrapper) {
                 changeBackgroundState: false
             });
 
+            if ($screen.id) {
+                anchorScreenPositions[$screen.id] = height;
+            }
+
             height += screenHeight;
         }
+
+        console.log(anchorScreenPositions);
 
         originalHeight = height - viewportHeight;
 
