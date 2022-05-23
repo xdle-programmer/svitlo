@@ -10,25 +10,19 @@
   min-height: 100%;
 
 
-  //&:after {
-  //  @include pseudo-absolute;
-  //  border-radius: 50%;
-  //  width: 22.5638vw;
-  //  height: 22.5638vw;
-  //  left: 64.2522vw;
-  //  top: 17.3527vw;
-  //  background: var(--main-color);
-  //  filter: blur(250px);
-  //  transform: rotate(14.5deg);
-  //  transition: opacity #{$background-transition}ms ease-out;
-  //  opacity: 0;
-  //
-  //  #{$show} & {
-  //    opacity: 1;
-  //    transition-delay: #{$background-transition}ms;
-  //  }
-  //}
+  &__light {
+    position: absolute;
+    border-radius: 50%;
+    width: 23vw;
+    height: 23vw;
+    left: calc(50% - 11.5vw);
+    top: calc(50% - 11.5vh);
+    background: var(--main-color);
+    filter: blur(180px);
 
+    transition-duration: 10000ms;
+    transition-timing-function: ease-in-out;
+  }
 
   &__block {
     color: var(--white-color);

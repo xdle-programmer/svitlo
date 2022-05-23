@@ -9,6 +9,10 @@
     display: grid;
     grid-template-columns: 25vw 65vw;
     padding-top: 14vw;
+
+    &--second {
+      padding-top: 0;
+    }
   }
 
   &__block-name {
@@ -77,12 +81,16 @@
 
   &__images-wrapper-circle {
     position: absolute;
-    left: 51vw;
-    top: -1vw;
+    left: 61vw;
+    top: 1vw;
     width: 27.7748vw;
     height: 27.7748vw;
     background: var(--main-case-color);
     border-radius: 50%;
+  }
+
+  &__images-inner {
+    transform: translateX(-45vw);
   }
 
   &__images {
@@ -90,7 +98,6 @@
     grid-template-columns: repeat(2, 65vw);
     grid-gap: .5vw;
     padding-top: 10vw;
-
   }
 
   &__image {
@@ -149,7 +156,7 @@
   }
 
   &__colors-desc-name {
-    color:  var(--natural-text-color);
+    color: var(--natural-text-color);
     margin-top: -.7vw;
   }
 

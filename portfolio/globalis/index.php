@@ -88,7 +88,11 @@
 
             <div class="case-intro__cover">
                 <div class="case-intro__title">Globalis</div>
-                <img class="case-intro__img" src="./assets/images/intro-cover.jpg">
+
+                <div class="case-intro__img-wrapper animation__img-parallax">
+                    <img class="case-intro__img animation__img-parallax-item" src="./assets/images/intro-cover.jpg">
+                </div>
+
                 <div class="case-intro__results">
                     <div class="case-intro__results-title">Results:</div>
                     <div class="case-intro__counters">
@@ -177,6 +181,7 @@
 
     </div>
 
+
     <div class="animation__screen user-experience">
         <div class="user-experience__block layout">
 
@@ -246,20 +251,33 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <div class="animation__screen user-experience">
+        <div class="user-experience__block user-experience__block--second layout">
+
+            <div class="user-experience__content">
                 <div class="user-experience__images-wrapper">
                     <div class="user-experience__images-wrapper-circle"></div>
-                    <div class="animation__text-x-scroll animation__text-x-scroll--user-experience">
-
-                        <div class="user-experience__images">
-                            <img class="user-experience__image" src="./assets/images/ux-1.png" alt="user-experience">
-                            <img class="user-experience__image" src="./assets/images/ux-2.png" alt="user-experience">
+                    <div class="user-experience__images-inner">
+                        <div class="animation__text-x-scroll animation__text-x-scroll--user-experience">
+                            <div class="user-experience__images animation__text-x-scroll-item">
+                                <img class="user-experience__image" src="./assets/images/ux-1.png"
+                                     alt="user-experience">
+                                <img class="user-experience__image" src="./assets/images/ux-2.png"
+                                     alt="user-experience">
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-        <div class="user-experience__block layout">
+    </div>
+
+    <div class="animation__screen user-experience">
+        <div class="user-experience__block user-experience__block--second layout">
 
             <div class="user-experience__block-name">UI</div>
 

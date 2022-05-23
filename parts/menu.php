@@ -14,6 +14,9 @@
         </div>
 
         <div class="menu">
+
+            <div class="menu__light"></div>
+
             <div class="menu__block layout">
                 <div class="menu__main">
                     <div class="menu__main-item menu__main-item--1" data-modal-close data-menu-redirect="portfolio">

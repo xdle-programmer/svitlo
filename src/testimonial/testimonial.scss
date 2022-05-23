@@ -115,6 +115,9 @@
     position: absolute;
     left: -29vw;
     top: 10vw;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
 
     & .case-intro__filter-text {
       font-size: 8.6503vw;

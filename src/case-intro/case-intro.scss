@@ -14,6 +14,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 60vw, 0 60vw);
   }
 
   &__filter-text {
@@ -123,11 +124,19 @@
     margin-bottom: 1vw;
   }
 
-  &__img {
-    display: block;
-    height: auto;
+  &__img-wrapper {
     width: calc(100% + (10.0052vw * 2));
     margin: 0 -10.0052vw;
+    height: 32vw;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 42vw;
+    object-fit: cover;
   }
 
   &__results {

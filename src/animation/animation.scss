@@ -91,9 +91,7 @@
 
   &__text-x-scroll {
     transition: transform;
-    //transition: none !important;
     transition-duration: 300ms;
-    contain: content;
     will-change: transform;
     transition-timing-function: cubic-bezier(.25, .74, .22, .99);
     line-height: normal;
@@ -127,7 +125,7 @@
     }
 
     &--user-experience {
-      transform: translateX(45vw);
+      transform: translateX(120vw);
 
       @include tablet-big-screen {
         transform: none;

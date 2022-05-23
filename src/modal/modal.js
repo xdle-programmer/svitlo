@@ -75,11 +75,21 @@ class Modals {
 
         setTimeout(() => {
             this.modalsArray.get(id).classList.add(Modals.modalShowClass);
+
+            if (this.modalsArray.get(id).querySelector('.modal__youtube-wrapper')) {
+                const $clone = document.importNode(this.modalsArray.get(id).querySelector('.modal__youtube-template').content, true);
+
+                this.modalsArray.get(id).querySelector('.modal__youtube').appendChild($clone);
+            }
         }, this.transitionDuration);
     }
 
     closeCurrent($modal) {
         $modal.classList.remove(Modals.modalShowClass);
+
+        if ($modal.querySelector('.modal__youtube-wrapper')) {
+            $modal.querySelector('.modal__youtube').innerHTML = '';
+        }
 
         setTimeout(() => {
             $modal.classList.remove(Modals.modalOpenClass);

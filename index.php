@@ -95,7 +95,8 @@
                         <canvas class="magnet__canvas"></canvas>
                     </div>
                 </div>
-                <div class="intro__about-button-block">
+
+                <div class="intro__about-button-block" data-modal-open="modal-showreel">
                     <div class="intro__about-button-text">
                         <div class="intro__about-button-text-item">View</div>
                         <div class="intro__about-button-text-item">showreel</div>
@@ -1465,6 +1466,8 @@
 </div>
 
 <?php require('./parts/modal-form.php'); ?>
+
+<?php require('./parts/modal-showreel.php'); ?>
 
 <?php require('./parts/menu.php'); ?>
 

@@ -58,9 +58,14 @@ export function animation($wrapper) {
             state: false
         };
     });
+    const coverImgParallaxItems = Array.from($wrapper.querySelectorAll('.animation__img-parallax'));
 
     textingItems.forEach((textingItem) => {
         const {$selector} = textingItem;
+
+        $selector.style.height = `${$selector.getBoundingClientRect().height}px`
+        $selector.style.width = `${$selector.getBoundingClientRect().width}px`
+
         $selector.innerText = '';
     });
 
@@ -380,8 +385,6 @@ export function animation($wrapper) {
             height += screenHeight;
         }
 
-        console.log(anchorScreenPositions);
-
         originalHeight = height - viewportHeight;
 
         scrollBarHeight = viewportHeight - $scrollHandler.getBoundingClientRect().height;
@@ -665,6 +668,29 @@ export function animation($wrapper) {
             }
         }
 
+        // Функция отрисовки парралакса на ковере в кейсах
+        function setCaseCoverParallax() {
+            coverImgParallaxItems.forEach(($coverImgParallaxItem) => {
+                const scrollHeight = window.innerHeight  + $coverImgParallaxItem.getBoundingClientRect().height;
+                const $photo = $coverImgParallaxItem.querySelector('.animation__img-parallax-item');
+                const offset = $coverImgParallaxItem.getBoundingClientRect().top - viewportHeight;
+
+                const shiftHeight = $coverImgParallaxItem.getBoundingClientRect().height - $photo.getBoundingClientRect().height
+
+                const percent = (offset * -1) / (scrollHeight / 100);
+
+                if (percent < 0) {
+                    $photo.style.transform = `translateY(0)`;
+                } else if (percent > 0 && percent < 100) {
+                    console.log((shiftHeight / 100) * percent)
+
+                    $photo.style.transform = `translateY(${(shiftHeight / 100) * percent}px)`;
+                } else {
+                    $photo.style.transform = `translateY(-${shiftHeight}px)`;
+                }
+            });
+        }
+
         // Функция отрисовки парралакса на оунерах
         function setOwnerParallax() {
             owners.forEach(($owner) => {
@@ -811,6 +837,8 @@ export function animation($wrapper) {
             }
 
             // setOwnerParallax();
+
+            setCaseCoverParallax()
 
             setLogoScale();
 
