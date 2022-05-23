@@ -17,12 +17,17 @@ function createSlider($exclude)
         $desktopHtml .= '
             <div class="swiper-slide">
                 <a href="/portfolio/' . $slide . '/" class="portfolio__slider-link">
-                    <img class="portfolio__slider-img" src="/assets/cases/' . $slide . '.jpg">
+                    <img class="portfolio__slider-img" src="/assets/cases/' . $slide . '.png">
                 </a>
             </div>';
     }
 
-    $desktopHtml .= '</div></div>';
+    $desktopHtml .= '</div>';
+    $desktopHtml .= '</div>';
+    $desktopHtml .= '<div class="portfolio__slider-nav">';
+    $desktopHtml .= '<div class="portfolio__slider-nav-button portfolio__slider-nav-button--prev"></div>';
+    $desktopHtml .= '<div class="portfolio__slider-nav-button portfolio__slider-nav-button--next"></div>';
+    $desktopHtml .= '</div>';
 
     $mobileHtmlTop = '<div class="swiper swiper--mobile"><div class="swiper-pagination"></div><div class="swiper-wrapper">';
 
@@ -30,7 +35,7 @@ function createSlider($exclude)
         $mobileHtmlTop .= '
             <div class="swiper-slide">
                 <a href="/portfolio/' . $slide . '/" class="portfolio__slider-link">
-                    <img class="portfolio__slider-img" src="/assets/cases/' . $slide . '.jpg">
+                    <img class="portfolio__slider-img" src="/assets/cases/' . $slide . '.png">
                 </a>
             </div>';
     }
@@ -43,7 +48,7 @@ function createSlider($exclude)
         $mobileHtmlBottom .= '
             <div class="swiper-slide">
                 <a href="/portfolio/' . $slide . '/" class="portfolio__slider-link">
-                    <img class="portfolio__slider-img" src="/assets/cases/' . $slide . '.jpg">
+                    <img class="portfolio__slider-img" src="/assets/cases/' . $slide . '.png">
                 </a>
             </div>';
     }

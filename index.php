@@ -615,7 +615,7 @@
 
         <div class="portfolio__slider">
             <?php include $_SERVER['DOCUMENT_ROOT'] . '/parts/slider.php';
-            echo createSlider('globalis');
+            echo createSlider('none');
             ?>
         </div>
 

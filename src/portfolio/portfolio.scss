@@ -50,16 +50,16 @@
   }
 
   &__slider {
+    margin: 0 -20vw;
     margin-bottom: 4.4vw;
     padding: 0 1.5vw;
-    width: 100%;
+    width: calc(100% + 40vw);
     position: relative;
-    overflow: hidden;
 
 
     .swiper {
       width: 100%;
-      height: 40vw;
+      height: 21.7vw;
 
       &--desktop {
 
@@ -340,6 +340,45 @@
       left: 0;
       top: calc(100% + 1vw);
     }
+
+  }
+
+  &__slider-nav {
+    width: 100%;
+    @include flex-row-center;
+    position: relative;
+    margin-top: 2vw;
+
+    &:after {
+      @include pseudo-absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: var(--white-color);
+      @include absolute-center;
+    }
+
+    @include tablet-big-screen {
+      display: none;
+    }
+  }
+
+  &__slider-nav-button {
+    width: 200px;
+    height: 50px;
+    background: url(../../assets/icons/arrow-prev.svg);
+    cursor: pointer;
+    @include background-contain-center;
+    margin-right: 30px;
+    margin-left: auto;
+
+    &--next {
+      background: url(../../assets/icons/arrow-next.svg);
+      @include background-contain-center;
+      margin-right: auto;
+      margin-left: 30px;
+    }
+
 
   }
 }
