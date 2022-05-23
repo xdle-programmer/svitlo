@@ -108,7 +108,19 @@
       transition: all .5s linear;
 
       #{$ready-title} & {
+        animation: circle-stroke 3s linear infinite;
+      }
+    }
+
+    @keyframes circle-stroke {
+      0% {
+        stroke-dashoffset: 314;
+      }
+      50% {
         stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: -314;
       }
     }
 

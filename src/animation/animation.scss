@@ -17,7 +17,7 @@
 
   &__scroll {
     position: fixed;
-    width: 30px;
+    width: 16px;
     z-index: 200;
     right: 0;
     top: 0;
@@ -41,8 +41,8 @@
 
   &__scroll-handler {
     position: absolute;
-    right: 5px;
-    width: 20px;
+    right: 3px;
+    width: 10px;
     height: calc(100% - 10px);
     top: 5px;
     transition: all;
@@ -53,6 +53,7 @@
     border: 1px solid var(--main-color);
     border-radius: 10px;
     opacity: .2;
+    cursor: grab;
 
     #{$scroll-hover} & {
       opacity: 1;

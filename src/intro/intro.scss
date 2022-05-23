@@ -57,7 +57,7 @@
   &__name {
     position: absolute;
     z-index: 1;
-    top: 2vw;
+    top: 5vw;
     right: -8.55vw;
     opacity: .2;
     transition: all 300ms ease-out;
@@ -101,6 +101,7 @@
     letter-spacing: -0.05em;
     @include flex-row;
     align-items: baseline;
+    color: #8A999C;
 
     @include tablet-big-screen {
       display: none;

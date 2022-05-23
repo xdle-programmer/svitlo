@@ -5,51 +5,43 @@
 
 @font-face {
   font-family: 'Kudryashev';
-  src: url('../../assets/fonts/kudryashev/KudryashevDisplay-Sans.woff2') format('woff2');
+  src: url('../../assets/fonts/kudryashev/KudryashevDisplay-Sans-convert+2650-600+675.woff');
   font-style: normal;
-  font-weight: normal;
 }
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../../assets/fonts/manrope/Manrope-Light.ttf') format('ttf');
+  src: url('../../assets/fonts/manrope/Manrope-Light.ttf');
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../../assets/fonts/manrope/Manrope-Regular.ttf') format('ttf');
+  src: url('../../assets/fonts/manrope/Manrope-Regular.ttf');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../../assets/fonts/manrope/Manrope-Medium.ttf') format('ttf');
+  src: url('../../assets/fonts/manrope/Manrope-Medium.ttf');
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../../assets/fonts/manrope/Manrope-Bold.ttf') format('ttf');
+  src: url('../../assets/fonts/manrope/Manrope-Bold.ttf');
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Manrope';
-  src: url('../../assets/fonts/manrope/Manrope-ExtraBold.ttf') format('ttf');
+  src: url('../../assets/fonts/manrope/Manrope-ExtraBold.ttf');
   font-style: normal;
   font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Euclid';
-  src: url('../../assets/fonts/euclidsquare/EuclidSquare-Regular.ttf') format('woff2');
-  font-style: normal;
-  font-weight: 400;
 }
 
 :root {

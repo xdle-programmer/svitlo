@@ -131,6 +131,20 @@
     }
   }
 
+  &__text-carousel {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__text-carousel-wrapper {
+    transition: transform 1300ms ease-out;
+  }
+
+  &__text-carousel-item {
+    white-space: nowrap;
+    position: relative;
+  }
+
   &__link-item {
     @include manrope();
     font-size: 8.6503vw;

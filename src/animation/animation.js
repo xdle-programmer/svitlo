@@ -787,7 +787,7 @@ export function animation($wrapper) {
                 setChart();
             }
 
-            setOwnerParallax();
+            // setOwnerParallax();
 
             setLogoScale();
 

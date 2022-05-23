@@ -8,62 +8,33 @@
   $background-transition: 500;
 
   min-height: 100%;
-  background-color: transparent;
-  transition: background-color #{$background-transition}ms ease-out;
-
-  #{$show} & {
-    background-color: var(--black-color);
-    transition-delay: #{$background-transition}ms;
-  }
 
 
-  &:after {
-    @include pseudo-absolute;
-    border-radius: 50%;
-    width: 22.5638vw;
-    height: 22.5638vw;
-    left: 64.2522vw;
-    top: 17.3527vw;
-    background: var(--main-color);
-    filter: blur(250px);
-    transform: rotate(14.5deg);
-    transition: opacity #{$background-transition}ms ease-out;
-    opacity: 0;
+  //&:after {
+  //  @include pseudo-absolute;
+  //  border-radius: 50%;
+  //  width: 22.5638vw;
+  //  height: 22.5638vw;
+  //  left: 64.2522vw;
+  //  top: 17.3527vw;
+  //  background: var(--main-color);
+  //  filter: blur(250px);
+  //  transform: rotate(14.5deg);
+  //  transition: opacity #{$background-transition}ms ease-out;
+  //  opacity: 0;
+  //
+  //  #{$show} & {
+  //    opacity: 1;
+  //    transition-delay: #{$background-transition}ms;
+  //  }
+  //}
 
-    #{$show} & {
-      opacity: 1;
-      transition-delay: #{$background-transition}ms;
-    }
-  }
-
-
-  &__background {
-    position: absolute;
-    @include absolute-fill;
-    background: var(--black-color);
-    transition: transform #{$background-transition}ms ease-out;
-    z-index: 1;
-    transform: translateX(-100%) skewX(-43deg);
-
-    #{$show} & {
-      transform: none;
-    }
-
-
-  }
 
   &__block {
     color: var(--white-color);
     position: relative;
     padding: 7.5vw 0;
     z-index: 2;
-    opacity: 0;
-    transition: opacity #{$background-transition}ms ease-out;
-
-    #{$show} & {
-      opacity: 1;
-      transition-delay: #{$background-transition}ms;
-    }
   }
 
   &__main {
@@ -71,11 +42,18 @@
 
   &__main-item {
     font-size: 9.6925vw;
-    line-height: 100%;
+    line-height: 9.6925vw;
     letter-spacing: -0.05em;
     color: var(--white-color);
     cursor: pointer;
     margin-top: -4vw;
+    display: flex;
+    align-items: baseline;
+
+    & .char-hover__item-inner-hover,
+    & .char-hover__item-inner {
+      padding-right: 1vw;
+    }
 
     &:after {
       @include manrope;

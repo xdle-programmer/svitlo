@@ -10,9 +10,6 @@ function charHover($wrapper) {
     items.forEach(($item) => {
         const text = $item.innerHTML.trim();
 
-        console.log(text)
-        console.log($item)
-
         $item.innerHTML = '';
 
         let $itemInner = document.createElement('div',);

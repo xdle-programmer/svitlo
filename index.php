@@ -23,8 +23,6 @@
 </head>
 <body>
 
-<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
-
 <div class="loader" style="opacity: 0">
     <div class="loader__block layout">
 
@@ -53,6 +51,8 @@
 
 <div class="animation" style="opacity: 0;">
 
+    <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
+
     <div class="animation__scroll">
         <div class="animation__scroll-handler-wrapper">
             <div class="animation__scroll-handler"></div>
@@ -74,7 +74,7 @@
                     <div class="intro__name-mask"></div>
                     <div class="intro__name-title">
                         <div class="intro__name-title-letter">S</div>
-                        <div class="intro__name-title-item">vitle</div>
+                        <div class="intro__name-title-item">vitlo</div>
                     </div>
                     <div class="intro__name-text">
                         <div class="intro__name-text-item">When business requires results,</div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="intro__video">
                     <div class="intro__video-item-wrapper">
-                        <video class="intro__video-item" autoplay muted></video>
+                        <video class="intro__video-item" autoplay muted loop></video>
                         <!--                        <img class="intro__video-item" src="./assets/video/intro-video-temp.jpg">-->
                     </div>
                 </div>
@@ -342,7 +342,14 @@
                         <div class="lets-discuss__link-block-title-item lets-discuss__link-block-title-item--bold">
                             <div class="lets-discuss__link-block-title-item-line animation__title-wrapper">
                                 <div class="animation__title">
-                                    talked about
+                                    <div class="lets-discuss__text-carousel">
+                                        <div class="lets-discuss__text-carousel-wrapper">
+                                            <div class="lets-discuss__text-carousel-item">talked about</div>
+                                            <div class="lets-discuss__text-carousel-item">remembered</div>
+                                            <div class="lets-discuss__text-carousel-item">proud of</div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="lets-discuss__link-block-title-item-line animation__title-wrapper">
@@ -353,7 +360,7 @@
                         </div>
                     </div>
 
-                    <div class="lets-discuss__link-item">
+                    <div class="lets-discuss__link-item" data-modal-open="modal-form">
                         <div class="char-hover">
                             <div class="animation__title-wrapper">
                                 <div class="animation__title char-hover__item">
@@ -369,7 +376,7 @@
 
     <div class="animation__screen process animation__screen--change-background">
         <div class="process__block layout">
-            <div class="animation__block animation__block--ready-title">
+            <div class="animation__block">
                 <div class="process__icon animation__opacity">
                     <div class="logo-circle">
                         <div class="logo-circle__item">
@@ -385,8 +392,8 @@
                             <div class="process__title-line">process&nbsp;</div>
                         </div>
                     </div>
-                    <div class="process__subtitle animation__text-wrapper">
-                        <div class="animation__text">
+                    <div class="process__subtitle animation__title-wrapper">
+                        <div class="animation__title">
                             The path to achieving the result
                         </div>
                     </div>

@@ -2751,9 +2751,9 @@ function animation($wrapper) {
 
       if ($chartMask) {
         setChart();
-      }
+      } // setOwnerParallax();
 
-      setOwnerParallax();
+
       setLogoScale();
       setTexting();
       setCounters();
@@ -2812,8 +2812,6 @@ function charHover($wrapper) {
   let items = $wrapper.querySelectorAll('.char-hover__item');
   items.forEach($item => {
     const text = $item.innerHTML.trim();
-    console.log(text);
-    console.log($item);
     $item.innerHTML = '';
     let $itemInner = document.createElement('div');
     $itemInner.classList.add('char-hover__item-inner');
@@ -3304,7 +3302,32 @@ if (forms.length > 0) {
   \******************************************/
 /***/ (function() {
 
+const $carousel = document.querySelector('.lets-discuss__text-carousel');
 
+if ($carousel) {
+  carousel($carousel);
+}
+
+function carousel($wrapper) {
+  const $itemsWrapper = $wrapper.querySelector('.lets-discuss__text-carousel-wrapper');
+  const items = Array.from($wrapper.querySelectorAll('.lets-discuss__text-carousel-item'));
+  let height = $itemsWrapper.getBoundingClientRect().height;
+  $wrapper.style.height = height / 3 + 'px';
+  const duration = 1000;
+  let counter = 0;
+  window.addEventListener('resize', () => {
+    height = $itemsWrapper.getBoundingClientRect().height;
+    $wrapper.style.height = height / 3 + 'px';
+  });
+  setInterval(() => {
+    if (counter > items.length - 1) {
+      counter = 0;
+    }
+
+    $itemsWrapper.style.transform = `translateY(-${height / 3 * counter}px)`;
+    counter++;
+  }, duration);
+}
 
 /***/ }),
 
@@ -3652,10 +3675,11 @@ function magnet($wrapper) {
 class Modals {
   constructor(options) {
     this.init();
+    this.transitionDuration = 500;
   }
 
   init() {
-    this.#setup();
+    this.setup();
   }
 
   static modalClass = 'modal';
@@ -3663,7 +3687,7 @@ class Modals {
   static modalShowClass = 'modal--show';
   static modalCloseCurrentClass = 'modal--close-current';
 
-  #setup() {
+  setup() {
     this.$modals = Array.from(document.getElementsByClassName(Modals.modalClass));
     this.modalsArray = new Map();
     this.$modals.forEach($modal => {
@@ -3673,8 +3697,7 @@ class Modals {
         closeAttr = 'data-modal-close-current';
       }
 
-      let background = `<div class="modal__background" ${closeAttr}></div>`;
-      $modal.insertAdjacentHTML('afterbegin', background);
+      this.transitionDuration = parseFloat(window.getComputedStyle($modal.querySelector(`.${Modals.modalClass}__background`)).transitionDuration) * 1000;
       this.modalsArray.set($modal.id, $modal);
     });
     this.$openButtons = document.querySelectorAll('[data-modal-open]');
@@ -3711,14 +3734,18 @@ class Modals {
   }
 
   open(id) {
-    this.modalsArray.get(id).classList.add(Modals.modalOpenClass);
-    this.modalsArray.get(id).classList.add(Modals.modalShowClass);
     document.querySelector('html').classList.add('open-modal');
+    this.modalsArray.get(id).classList.add(Modals.modalOpenClass);
+    setTimeout(() => {
+      this.modalsArray.get(id).classList.add(Modals.modalShowClass);
+    }, this.transitionDuration);
   }
 
   closeCurrent($modal) {
-    $modal.classList.remove(Modals.modalOpenClass);
     $modal.classList.remove(Modals.modalShowClass);
+    setTimeout(() => {
+      $modal.classList.remove(Modals.modalOpenClass);
+    }, this.transitionDuration);
     $modal.dispatchEvent(new Event('close', {
       bubbles: true
     }));
@@ -17330,4 +17357,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.3b7bec34d7e45949ab8c.js.map
+//# sourceMappingURL=main.c9fc0b8e7611c7fff546.js.map

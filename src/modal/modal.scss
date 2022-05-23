@@ -5,25 +5,39 @@
 
 .modal {
   $open: '.modal--open';
+  $show: '.modal--show';
 
-  //display: none;
-  position: fixed;
-  @include absolute-fill;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  z-index: 1000;
-  color: var(--black-color);
-  opacity: 0;
-  visibility: hidden;
+  position: relative;
+
+  &--level-1 {
+    z-index: 1000;
+  }
+  &--level-2 {
+    z-index: 2000;
+  }
+  &--level-3 {
+    z-index: 3000;
+  }
+
+  //position: fixed;
+  //@include absolute-fill;
+  //height: 100vh;
+  //overflow-y: auto;
+  //overflow-x: hidden;
+  //z-index: 1000;
+  //color: var(--black-color);
+  ////opacity: 0;
+  ////visibility: hidden;
+
+  $background-transition: 350;
 
   &--open {
-    //display: block;
+    //opacity: 1;
+    //visibility: visible;
   }
 
   &--show {
-    opacity: 1;
-    visibility: visible;
+
   }
 
   @include tablet-big-screen {
@@ -51,7 +65,7 @@
     @include absolute-center;
     fill: var(--white-color);
     opacity: .7;
-    transition: all ease-out .5s;
+    transition: all ease-out 1s;
 
     #{$close-hover} & {
       opacity: 1;
@@ -66,7 +80,7 @@
     stroke: var(--white-color);
     stroke-dasharray: 302;
     stroke-dashoffset: 302;
-    transition: all ease-out .5s;
+    transition: all ease-out 1s;
 
     #{$close-hover} & {
       stroke-dashoffset: 0;
@@ -74,12 +88,45 @@
   }
 
   &__background {
+    position: fixed;
+    @include absolute-fill;
+    transition: all #{$background-transition}ms ease-out;
+    z-index: 1;
+    transform: translateX(-115%) skewX(-17deg);
+    visibility: hidden;
+    pointer-events: none;
+
+    &--black {
+      background: var(--black-color);
+    }
+    &--main {
+      background: var(--main-color);
+    }
+
+    #{$open} & {
+      transform: none;
+      visibility: visible;
+    }
+
+    #{$show} & {
+      pointer-events: all;
+    }
   }
 
   &__content {
-    position: absolute;
+    position: fixed;
     @include absolute-fill;
     z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all #{$background-transition}ms ease-out;
+    pointer-events: none;
+
+    #{$show} & {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
   }
 
 }

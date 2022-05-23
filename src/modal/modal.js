@@ -2,10 +2,11 @@ class Modals {
 
     constructor(options) {
         this.init();
+        this.transitionDuration = 500;
     }
 
     init() {
-        this.#setup();
+        this.setup();
     }
 
     static modalClass = 'modal';
@@ -13,7 +14,7 @@ class Modals {
     static modalShowClass = 'modal--show';
     static modalCloseCurrentClass = 'modal--close-current';
 
-    #setup() {
+    setup() {
         this.$modals = Array.from(document.getElementsByClassName(Modals.modalClass));
         this.modalsArray = new Map();
         this.$modals.forEach(($modal) => {
@@ -23,8 +24,8 @@ class Modals {
                 closeAttr = 'data-modal-close-current';
             }
 
-            let background = `<div class="modal__background" ${closeAttr}></div>`;
-            $modal.insertAdjacentHTML('afterbegin', background);
+            this.transitionDuration = parseFloat(window.getComputedStyle($modal.querySelector(`.${Modals.modalClass}__background`)).transitionDuration) * 1000;
+
             this.modalsArray.set($modal.id, $modal);
         });
 
@@ -50,6 +51,8 @@ class Modals {
     }
 
     clickOpenHandler(event) {
+
+
         if (event.target.dataset.modalOpen) {
             this.open(event.target.dataset.modalOpen);
         } else {
@@ -66,14 +69,23 @@ class Modals {
     }
 
     open(id) {
+        document.querySelector('html').classList.add('open-modal');
+
         this.modalsArray.get(id).classList.add(Modals.modalOpenClass);
-        this.modalsArray.get(id).classList.add(Modals.modalShowClass);
-        document.querySelector('html').classList.add('open-modal')
+
+        setTimeout(() => {
+            this.modalsArray.get(id).classList.add(Modals.modalShowClass);
+        }, this.transitionDuration);
     }
 
     closeCurrent($modal) {
-        $modal.classList.remove(Modals.modalOpenClass);
         $modal.classList.remove(Modals.modalShowClass);
+
+        setTimeout(() => {
+            $modal.classList.remove(Modals.modalOpenClass);
+        }, this.transitionDuration);
+
+
         $modal.dispatchEvent(new Event('close', {bubbles: true}));
     }
 
@@ -83,7 +95,7 @@ class Modals {
             this.closeCurrent($modal);
         });
 
-        document.querySelector('html').classList.remove('open-modal')
+        document.querySelector('html').classList.remove('open-modal');
     }
 
 }
