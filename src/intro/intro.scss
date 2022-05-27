@@ -9,7 +9,7 @@
   padding-bottom: 30vw;
 
   @include tablet-big-screen {
-    padding-bottom: 8vw;
+    padding-bottom: 14vw;
   }
 
   &__block {
@@ -26,7 +26,7 @@
     z-index: 1;
 
     @include tablet-big-screen {
-      top: 120vw;
+      top: 150vw;
     }
   }
 
@@ -36,7 +36,7 @@
     margin-bottom: 2.449192288vw;
 
     @include tablet-big-screen {
-      font-size: 11.5vw;
+      font-size: 13.5vw;
       margin-bottom: 5vw;
     }
   }
@@ -101,7 +101,7 @@
     letter-spacing: -0.05em;
     @include flex-row;
     align-items: baseline;
-    color: #8A999C;
+    color: var(--main-color);
 
     @include tablet-big-screen {
       display: none;
@@ -118,8 +118,15 @@
   }
 
   &__name-text {
-    margin-top: 0.4vw;
+    margin-top: -2.3vw;
     margin-left: 1.4vw;
+
+
+    @include tablet-big-screen {
+      margin-top: 72.4vw;
+      width: 37vw;
+      margin-left: auto;
+    }
   }
 
   &__name-text-item {
@@ -163,7 +170,7 @@
     position: relative;
 
     @include tablet-big-screen {
-      margin-top: 106vw;
+      margin-top: 169vw;
     }
   }
 
@@ -174,9 +181,10 @@
     top: -20vw;
 
     @include tablet-big-screen {
-      width: calc(350% + (10.0052vw * 2));
+      width: 550%;
       left: auto;
-      right: -51vw;
+      right: -78vw;
+      top: -1vw;
     }
   }
 
@@ -216,8 +224,8 @@
     z-index: 1;
 
     @include tablet-big-screen {
-      left: 70vw;
-      top: 9vw;
+      left: 66vw;
+      top: 43vw;
     }
   }
 
@@ -277,14 +285,15 @@
   }
 
   &__about-title {
-    font-size: 22.3032vw;
+    font-size: 24.5vw;
     letter-spacing: -0.05em;
     margin-top: 1vw;
     line-height: 106%;
     position: relative;
 
     @include tablet-big-screen {
-      margin-top: 16vw;
+      margin-top: 83vw;
+      font-size: 29vw;
     }
   }
 
@@ -303,9 +312,14 @@
     }
 
     &--2 {
-      margin-top: -9vw;
-      margin-left: 43.7vw;
+      margin-top: -11vw;
+      margin-left: 50.1vw;
       margin-right: -15vw;
+
+      @include tablet-big-screen {
+        margin-top: -14vw;
+        margin-left: 40vw;
+      }
     }
   }
 
@@ -319,8 +333,9 @@
 
     @include tablet-big-screen {
       flex-direction: column;
-      font-size: 7.5vw;
-      padding-left: 19vw;
+      font-size: 6.5vw;
+      padding-left: 42vw;
+      padding-top: 16vw;
     }
   }
 
@@ -364,7 +379,7 @@
     color: var(--main-color);
 
     @include tablet-big-screen {
-      font-size: 18vw;
+      font-size: 15vw;
     }
   }
 

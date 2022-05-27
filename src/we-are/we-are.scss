@@ -9,6 +9,10 @@
   padding-top: 6vw;
   padding-bottom: 10vw;
 
+  @include tablet-big-screen {
+    padding-top: 10vw;
+  }
+
   &__block {
   }
 
@@ -32,6 +36,11 @@
     margin-bottom: 2.7vw;
     height: auto;
     display: block;
+
+    @include tablet-big-screen {
+      width: 66vw;
+      margin-bottom: 12vw;
+    }
   }
 
   &__subtitle-item-text {
@@ -41,7 +50,7 @@
     letter-spacing: -0.033em;
 
     @include tablet-big-screen {
-      font-size: 6vw;
+      font-size: 6.9vw;
     }
   }
 
@@ -57,17 +66,22 @@
 
     @include tablet-big-screen {
       width: 37vw;
-      margin-right: -8vw;
+      margin-right: -37vw;
+      margin-left: 69vw;
     }
   }
 
   &__title {
     margin-left: -7.4vw;
-    font-size: 22.5638vw;
+    font-size: 25.6vw;
     line-height: 106%;
     letter-spacing: -0.046em;
     white-space: nowrap;
     margin-bottom: 9.6vw;
+
+    @include tablet-big-screen {
+      margin-bottom: 14.6vw;
+    }
   }
 
   &__title-item {
@@ -80,9 +94,9 @@
     grid-template-columns: 33vw 24vw;
     grid-gap: 1vw;
 
-
     @include tablet-big-screen {
       grid-template-columns: 1fr;
+      padding-left: 38vw;
     }
   }
 
@@ -92,7 +106,7 @@
     letter-spacing: -0.033em;
 
     @include tablet-big-screen {
-      font-size: 8vw;
+      font-size: 6vw;
     }
 
     &--1 {
@@ -106,6 +120,10 @@
   &__desc-item-text {
     &--1 {
       margin-bottom: 5.5vw;
+
+      @include tablet-big-screen {
+        margin-bottom: 11.5vw;
+      }
     }
 
     &--2 {
@@ -130,7 +148,7 @@
     font-weight: 300;
 
     @include tablet-big-screen {
-      font-size: 6.4vw;
+      font-size: 4.4vw;
     }
 
     &--bold {
@@ -153,7 +171,8 @@
     letter-spacing: -0.033em;
 
     @include tablet-big-screen {
-      margin-top: 60vw;
+      margin-top: 96vw;
+      font-size: 15.8613vw;
     }
   }
 
@@ -168,9 +187,9 @@
     top: 5.5vw;
 
     @include tablet-big-screen {
-      width: 27.2vw;
-      right: 53.5vw;
-      top: -32.5vw;
+      width: 37.2vw;
+      right: 31.5vw;
+      top: -60.5vw;
     }
   }
 
@@ -187,7 +206,8 @@
     @include tablet-big-screen {
       padding-left: 0;
       width: 100%;
-      font-size: 5vw;
+      font-size: 7vw;
+      margin-top: 11vw;
     }
   }
 
@@ -200,6 +220,7 @@
 
     @include tablet-big-screen {
       grid-template-columns: 1fr;
+      grid-gap: 17vw;
     }
   }
 
@@ -214,8 +235,8 @@
       padding-right: 0;
       width: 100%;
       font-size: 5vw;
-      padding-top: 9vw;
-      padding-left: 34vw;
+      padding-top: 33vw;
+      padding-left: 51vw;
     }
   }
 
@@ -239,7 +260,8 @@
     margin-bottom: 1.5vw;
 
     @include tablet-big-screen {
-      height: 115vw;
+      height: 107vw;
+      margin-bottom: 4.5vw;
     }
   }
 
@@ -251,7 +273,8 @@
     margin-bottom: 1vw;
 
     @include tablet-big-screen {
-      font-size: 11vw;
+      font-size: 9vw;
+      margin-bottom: 2vw;
     }
   }
 
@@ -264,6 +287,7 @@
 
     @include tablet-big-screen {
       font-size: 9vw;
+      margin-bottom: 9.5vw;
     }
   }
 
@@ -281,11 +305,26 @@
     display: grid;
     grid-template-columns: 13vw 1fr;
     grid-gap: 12.7vw;
+    position: relative;
 
     @include tablet-big-screen {
       grid-template-columns: 1fr;
-      margin-top: 25vw;
+      margin-top: 56vw;
+      grid-gap: 23.7vw;
     }
+  }
+
+  &__link-circle {
+    display: none;
+
+    @include tablet-big-screen {
+      position: absolute;
+      display: block;
+      width: 37.2vw;
+      right: -16.5vw;
+      top: -45.5vw;
+    }
+
   }
 
   &__link-title {
@@ -297,7 +336,7 @@
     margin-top: 1.1vw;
 
     @include tablet-big-screen {
-      font-size: 7vw;
+      font-size: 6vw;
     }
   }
 
@@ -325,6 +364,11 @@
     color: var(--main-color);
     position: relative;
     width: fit-content;
+    letter-spacing: -0.033em;
+
+    @include tablet-big-screen {
+      font-size: 14.5vw;
+    }
 
     &:after {
       @include pseudo-absolute();
@@ -333,6 +377,10 @@
       background: var(--main-color);
       left: 0;
       top: calc(100% + 1vw);
+
+      @include tablet-big-screen {
+        height: 1.65vw;
+      }
     }
   }
 

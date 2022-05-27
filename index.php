@@ -24,6 +24,8 @@
 </head>
 <body>
 
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
+
 <div class="loader" style="opacity: 0">
     <div class="loader__block layout">
 
@@ -51,8 +53,6 @@
 </div>
 
 <div class="animation" style="opacity: 0;">
-
-    <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
 
     <div class="animation__scroll">
         <div class="animation__scroll-handler-wrapper">
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="intro__about-link char-hover">
+                    <div class="intro__about-link char-hover" data-modal-open="modal-showreel">
                         <div class="intro__about-link-text animation__text-wrapper">
                             <div class="animation__text char-hover__item">
                                 View
@@ -1280,6 +1280,14 @@
                 </div>
 
                 <div class="we-are__link-block">
+                    <div class="we-are__link-circle">
+                        <div class="logo-circle">
+                            <div class="logo-circle__item">
+                                <img class="logo-circle__text" src="./assets/images/circle-text-white.svg">
+                                <img class="logo-circle__logo" src="./assets/images/logo-white.svg">
+                            </div>
+                        </div>
+                    </div>
                     <div class="we-are__link-title">
                         <div class="animation__text-wrapper">
                             <div class="animation__text">

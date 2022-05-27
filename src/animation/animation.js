@@ -48,6 +48,8 @@ export function animation($wrapper) {
     const screens = Array.from($wrapper.querySelectorAll(`.${screenClass}`));
     let $scrollHandler = document.querySelector('.animation__scroll-handler-wrapper');
 
+    const $headerLogo = document.querySelector('.header__logo');
+    const $header = document.querySelector('.header');
     const $chartMask = $wrapper.querySelector('.portfolio__chart-mask');
     const textingItemSelectors = Array.from($wrapper.querySelectorAll('.animation__texting-item'));
     const textingItems = textingItemSelectors.map(($textingItemSelector) => {
@@ -63,8 +65,8 @@ export function animation($wrapper) {
     textingItems.forEach((textingItem) => {
         const {$selector} = textingItem;
 
-        $selector.style.height = `${$selector.getBoundingClientRect().height}px`
-        $selector.style.width = `${$selector.getBoundingClientRect().width}px`
+        $selector.style.height = `${$selector.getBoundingClientRect().height}px`;
+        $selector.style.width = `${$selector.getBoundingClientRect().width}px`;
 
         $selector.innerText = '';
     });
@@ -154,7 +156,10 @@ export function animation($wrapper) {
                                 scrollToNameFromHash(target);
                             }
                         } else {
-                            setEffects.toggleEffects();
+
+                            setTimeout(() => {
+                                setEffects.toggleEffects();
+                            }, 1000);
                         }
                     }
                 }, 5);
@@ -668,21 +673,41 @@ export function animation($wrapper) {
             }
         }
 
+        // Функция установки цвета хэдера
+        function setHeaderColor() {
+            const coordinates = [$headerLogo.getBoundingClientRect().left, $headerLogo.getBoundingClientRect().top];
+            const elements = Array.from(document.elementsFromPoint(...coordinates));
+
+            elements.forEach(($element) => {
+                if ($element.classList.contains('animation__screen')) {
+                    const rgbString = window.getComputedStyle($element).backgroundColor;
+                    const rgbArray = rgbString.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1);
+                    const lightness = getLightness(rgbArray[0], rgbArray[1], rgbArray[2]);
+
+                    if (lightness > 90) {
+                        $header.classList.add('header--black');
+                    } else {
+                        $header.classList.remove('header--black');
+                    }
+                }
+            });
+        }
+
         // Функция отрисовки парралакса на ковере в кейсах
         function setCaseCoverParallax() {
             coverImgParallaxItems.forEach(($coverImgParallaxItem) => {
-                const scrollHeight = window.innerHeight  + $coverImgParallaxItem.getBoundingClientRect().height;
+                const scrollHeight = window.innerHeight + $coverImgParallaxItem.getBoundingClientRect().height;
                 const $photo = $coverImgParallaxItem.querySelector('.animation__img-parallax-item');
                 const offset = $coverImgParallaxItem.getBoundingClientRect().top - viewportHeight;
 
-                const shiftHeight = $coverImgParallaxItem.getBoundingClientRect().height - $photo.getBoundingClientRect().height
+                const shiftHeight = $coverImgParallaxItem.getBoundingClientRect().height - $photo.getBoundingClientRect().height;
 
                 const percent = (offset * -1) / (scrollHeight / 100);
 
                 if (percent < 0) {
                     $photo.style.transform = `translateY(0)`;
                 } else if (percent > 0 && percent < 100) {
-                    console.log((shiftHeight / 100) * percent)
+                    console.log((shiftHeight / 100) * percent);
 
                     $photo.style.transform = `translateY(${(shiftHeight / 100) * percent}px)`;
                 } else {
@@ -838,13 +863,15 @@ export function animation($wrapper) {
 
             // setOwnerParallax();
 
-            setCaseCoverParallax()
+            setCaseCoverParallax();
 
             setLogoScale();
 
             setTexting();
 
             setCounters();
+
+            setHeaderColor();
         }
 
         this.toggleEffects = toggleEffects;
@@ -858,4 +885,22 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
+
+function getLightness(r, g, b) {
+    // Make r, g, and b fractions of 1
+    r /= 255;
+    g /= 255;
+    b /= 255;
+
+    // Find greatest and smallest channel values
+    let cmin = Math.min(r, g, b);
+    let cmax = Math.max(r, g, b);
+    let lightness = 0;
+
+    // Calculate lightness
+    lightness = (cmax + cmin) / 2;
+    lightness = +(lightness * 100).toFixed(1);
+
+    return lightness;
 }

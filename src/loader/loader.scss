@@ -5,7 +5,7 @@
 
 .loader {
   position: fixed;
-  z-index: 1000;
+  z-index: 5000;
   left: 0;
   right: 0;
   top: 0;
@@ -39,6 +39,10 @@
     @include flex-column-center;
     justify-content: space-between;
     position: relative;
+
+    @include tablet-big-screen {
+      height: calc(100% - 33vw);
+    }
   }
 
   &__top {
@@ -51,6 +55,10 @@
     width: 2.5013vw;
     height: auto;
     display: block;
+
+    @include tablet-big-screen {
+      width: 9.5vw;
+    }
   }
 
   &__text {
@@ -61,6 +69,11 @@
     letter-spacing: -0.033em;
     width: 29vw;
     padding-right: 2vw;
+
+    @include tablet-big-screen {
+      font-size: 9vw;
+      width: 51vw;
+    }
   }
 
   &__bottom {
@@ -75,6 +88,10 @@
     font-size: 13.8613vw;
     line-height: 106%;
     letter-spacing: -0.05em;
+
+    @include tablet-big-screen {
+      font-size: 38vw;
+    }
   }
 
   &__name {
@@ -83,6 +100,10 @@
     font-size: 1.7196vw;
     line-height: 106%;
     letter-spacing: -0.033em;
+
+    @include tablet-big-screen {
+      display: none;
+    }
   }
 
   &__line {
@@ -92,6 +113,10 @@
     bottom: 0;
     height: .1vw;
     background: rgba(255, 255, 255, .3);
+
+    @include tablet-big-screen {
+      height: .5vw;
+    }
   }
 
   &__line-progress {

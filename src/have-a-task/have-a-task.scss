@@ -8,6 +8,11 @@
   color: var(--white-color);
   padding-top: 14vw;
 
+
+  @include tablet-big-screen {
+    padding-top: 42vw;
+  }
+
   &--white {
     background: var(--white-color);
     color: var(--black-color);
@@ -32,6 +37,7 @@
 
     @include tablet-big-screen {
       padding-left: 0;
+      padding-bottom: 49.4vw;
     }
 
     #{$case} & {
@@ -58,9 +64,9 @@
     white-space: nowrap;
 
     @include tablet-big-screen {
-      font-size: 22.5638vw;
+      font-size: 38.5638vw;
       white-space: normal;
-      line-height: 100%;
+      line-height: 80%;
     }
 
     #{$case} & {
@@ -79,7 +85,7 @@
     margin-top: -5vw;
 
     &--2 {
-      padding-left: 26vw;
+      padding-left: 23.55vw;
     }
   }
 
@@ -102,6 +108,7 @@
       width: 71vw;
       margin-top: 10vw;
       line-height: 103%;
+      margin-bottom: 32vw;
     }
   }
 
@@ -128,6 +135,7 @@
 
     @include tablet-big-screen {
       grid-template-columns: 1fr;
+      margin-bottom: 16vw;
     }
 
     #{$case} & {
@@ -144,6 +152,10 @@
 
   &__form-item-field {
     margin-bottom: 2.45vw;
+
+    @include tablet-big-screen {
+      margin-bottom: 10.45vw;
+    }
   }
 
   &__form-button {
@@ -157,7 +169,7 @@
 
 
     @include tablet-big-screen {
-      font-size: 8.5vw;
+      font-size: 9.65vw;
     }
 
     #{$modal} & {
@@ -171,6 +183,10 @@
       background: var(--black-color);
       left: 0;
       top: calc(100% + 1vw);
+
+      @include tablet-big-screen {
+        height: 1.65vw;
+      }
 
       #{$modal} & {
         height: 0.45vw;

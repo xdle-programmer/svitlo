@@ -8,6 +8,11 @@
   padding-top: 15.6vw;
   padding-bottom: 18.3vw;
 
+  @include tablet-big-screen {
+    padding-top: 50vw;
+    padding-bottom: 51vw;
+  }
+
   &__block {
   }
 
@@ -32,7 +37,7 @@
 
     @include tablet-big-screen {
       width: 100%;
-      font-size: 7.5vw;
+      font-size: 8.5vw;
     }
 
     &--1 {
@@ -70,7 +75,7 @@
     padding-left: 25.8vw;
 
     @include tablet-big-screen {
-      margin-top: 30vw;
+      margin-top: 76vw;
       padding-left: 0;
     }
   }
@@ -97,7 +102,7 @@
 
   &__link-block-title {
     @include flex-row();
-    align-items: baseline;
+    align-items: flex-end;
     margin-bottom: 4.8vw;
     position: relative;
 
@@ -142,7 +147,13 @@
 
   &__text-carousel-item {
     white-space: nowrap;
-    position: relative;
+    @include absolute-fill;
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+
+    &--active {
+      opacity: 1;
+    }
   }
 
   &__link-item {
@@ -156,8 +167,8 @@
     width: fit-content;
 
     @include tablet-big-screen {
-      font-size: 11.5vw;
-      margin-top: 10vw;
+      font-size: 14.5vw;
+      margin-top: 28vw;
     }
 
     &:after {
@@ -167,6 +178,10 @@
       background: var(--main-color);
       left: 0;
       top: calc(100% + 1vw);
+
+      @include tablet-big-screen {
+        height: 1.65vw;
+      }
     }
   }
 }

@@ -4,9 +4,13 @@
 @import "../base/media-queries";
 
 .process {
-  padding-top: 10vw;
+  padding-top: 18vw;
   padding-bottom: 7vw;
   background: var(--white-color);
+
+  @include tablet-big-screen {
+    padding-top: 62vw;
+  }
 
   &__block {
   }
@@ -14,13 +18,13 @@
   &__icon {
     position: absolute;
     width: 16.1vw;
-    top: 1.7vw;
+    top: 8.7vw;
     right: -4.2vw;
 
     @include tablet-big-screen {
       width: 46.1vw;
-      top: 3.7vw;
-      right: -4.2vw;
+      top: 40.7vw;
+      right: -13.2vw;
     }
   }
 
@@ -31,26 +35,28 @@
 
     @include tablet-big-screen {
       @include flex-column;
+      margin-bottom: 35vw;
     }
   }
 
   &__title-wrapper {
-    margin-left: -36.25vw;
+    margin-left: -35.05vw;
     margin-bottom: 2vw;
 
     @include tablet-big-screen {
       margin-left: 0;
+      margin-bottom: 8vw;
     }
   }
 
   &__title {
-    font-size: 20.2188vw;
+    font-size: 22.2188vw;
     letter-spacing: -0.05em;
     white-space: nowrap;
     @include flex-row;
 
     @include tablet-big-screen {
-      font-size: 22.5638vw;
+      font-size: 30vw;
       white-space: normal;
       @include flex-column;
       margin-top: 28vw;
@@ -69,15 +75,15 @@
     font-size: 1.7196vw;
     line-height: 100%;
     letter-spacing: -0.033em;
-    margin-left: 5.6vw;
+    margin-left: 3.1vw;
     width: 10vw;
     margin-bottom: 1vw;
 
     @include tablet-big-screen {
       margin-left: 0;
-      width: 69%;
+      width: 91%;
       margin-top: 4vw;
-      font-size: 6vw;
+      font-size: 9vw;
     }
   }
 
@@ -102,10 +108,10 @@
 
     @include tablet-big-screen {
       position: absolute;
-      font-size: 4vw;
+      font-size: 5vw;
       padding-top: 0;
-      top: 28.4vw;
-      left: 0;
+      top: 32.4vw;
+      left: 2vw;
     }
   }
 
@@ -118,8 +124,9 @@
 
     @include tablet-big-screen {
       grid-template-columns: 1fr;
-      border-top: .6vw solid var(--black-color);
-      padding-top: 8vw;
+      border-top: 1.6vw solid var(--black-color);
+      padding-top: 3vw;
+      padding-bottom: 20vw;
     }
   }
 
@@ -130,7 +137,7 @@
     letter-spacing: -0.033em;
 
     @include tablet-big-screen {
-      font-size: 9.5vw;
+      font-size: 13.5vw;
     }
   }
 
@@ -145,9 +152,9 @@
 
     @include tablet-big-screen {
       padding-right: 0;
-      font-size: 4vw;
-      padding-left: 15vw;
-      padding-top: 8vw;
+      font-size: 5vw;
+      padding-left: 39vw;
+      padding-top: 11vw;
     }
   }
 }

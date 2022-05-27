@@ -10,13 +10,15 @@
   width: 100%;
   z-index: 101;
 
+  $header-black: '.header--black';
+
   &__block {
     @include flex-row-center;
     justify-content: space-between;
     padding: 3.5vw 0;
 
     @include tablet-big-screen {
-      //padding: 1.5vw 0;
+      padding-top: 13vw;
     }
   }
 
@@ -24,7 +26,7 @@
     width: 2.5013vw;
 
     @include tablet-big-screen {
-      width: 5.5vw;
+      width: 7.5vw;
     }
   }
 
@@ -36,6 +38,11 @@
 
   &__logo-img-item {
     fill: var(--white-color);
+    transition: fill .3s ease-out;
+
+    #{$header-black} & {
+      fill: var(--black-color);
+    }
   }
 
   &__menu {
@@ -51,25 +58,35 @@
     height: auto;
     display: block;
     margin-right: 1vw;
-    margin-top: 0.8vw;
+    margin-top: 0.5vw;
 
     @include tablet-big-screen {
-      width: 4vw;
-      margin-right: 2vw;
+      width: 5vw;
+      margin-right: 5vw;
       margin-top: 2vw;
     }
   }
 
   &__menu-icon-item {
     fill: var(--white-color);
+    transition: fill .3s ease-out;
+
+    #{$header-black} & {
+      fill: var(--black-color);
+    }
   }
 
   &__menu-text {
     color: var(--white-color);
     font-size: 1.8vw;
+    transition: color .3s ease-out;
+
+    #{$header-black} & {
+      color: var(--black-color);
+    }
 
     @include tablet-big-screen {
-      font-size: 4.8vw;
+      font-size: 8.8vw;
     }
   }
 }

@@ -11,7 +11,7 @@
 
   @include tablet-big-screen {
     padding-top: 11vw;
-    padding-bottom: 17vw;
+    padding-bottom: 25vw;
   }
 
   &__text-row {
@@ -54,7 +54,7 @@
 
     @include tablet-big-screen {
       flex-wrap: wrap;
-      margin-top: 19vw;
+      margin-top: 40vw;
     }
   }
 
@@ -75,7 +75,7 @@
 
     @include tablet-big-screen {
       width: 50vw;
-      font-size: 7vw;
+      font-size: 6vw;
     }
   }
 
@@ -85,7 +85,7 @@
 
     @include tablet-big-screen {
       width: 100%;
-      margin-top: 12vw;
+      margin-top: 20vw;
     }
   }
 
@@ -99,7 +99,8 @@
     margin-bottom: 2.5vw;
 
     @include tablet-big-screen {
-      font-size: 13vw;
+      font-size: 12vw;
+      margin-bottom: 5.5vw;
     }
   }
 
@@ -122,6 +123,10 @@
     letter-spacing: -0.033em;
     line-height: 100%;
     opacity: 0.2;
+
+    @include tablet-big-screen {
+      display: none;
+    }
   }
 
   &__bottom {
@@ -155,6 +160,10 @@
 
   &__social {
     margin-top: 0.6vw;
+
+    @include tablet-big-screen {
+      width: 100%;
+    }
   }
 
 }

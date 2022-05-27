@@ -28,7 +28,7 @@
 <div class="not-found">
 
     <div class="not-found__light">
-        <div class="light"></div>
+        <div class="light" style="border-radius: 50%;filter: blur(180px)"></div>
     </div>
 
     <div class="not-found__background">

@@ -57,6 +57,10 @@
     #{$error} & {
       //padding-top: 24px;
     }
+
+    @include tablet-big-screen {
+      min-height: 32.3vw;
+    }
   }
 
   @include input-placeholder {
@@ -64,6 +68,6 @@
   }
 
   &:focus {
-    border-bottom: .1vw solid rgba(0, 0, 0, .46);
+    border-color: rgba(0, 0, 0, .46);
   }
 }

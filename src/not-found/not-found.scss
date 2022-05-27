@@ -17,11 +17,12 @@
     position: absolute;
     z-index: 2;
     @include absolute-center;
+    left: 49%;
   }
 
   &__background-item {
-    font-size: 95.5184vw;
-    color: var(--main-color);
+    font-size: 82.5vw;
+    color: #38484c;
     line-height: 100%;
     opacity: 0.22;
     transform: rotate(-16deg);
@@ -117,10 +118,14 @@
     &:after {
       @include pseudo-absolute();
       width: 100%;
-      height: 1.65vw;
+      height: 0.65vw;
       background: var(--main-color);
       left: 0;
       top: calc(100% + 1vw);
+
+      @include tablet-big-screen {
+        height: 1.65vw;
+      }
     }
 
   }

@@ -9,8 +9,16 @@
   padding-top: 14vw;
   padding-bottom: 10vw;
 
+  @include tablet-big-screen {
+    padding-top: 45vw;
+  }
+
   &__title-block {
     margin-bottom: 6vw;
+
+    @include tablet-big-screen {
+      margin-bottom: 25vw;
+    }
   }
 
   &__title {
@@ -24,6 +32,10 @@
     line-height: 106%;
     letter-spacing: -0.05em;
     margin-bottom: 2.2vw;
+
+    @include tablet-big-screen {
+      font-size: 28vw;
+    }
   }
 
   &__title-text-line {
@@ -47,6 +59,10 @@
     font-size: 1.7196vw;
     line-height: 100%;
     letter-spacing: -0.026em;
+
+    @include tablet-big-screen {
+      font-size: 4vw;
+    }
   }
 
   &__slider {
@@ -56,6 +72,13 @@
     width: calc(100% + 40vw);
     position: relative;
 
+
+    @include tablet-big-screen {
+      margin: 0;
+      margin-bottom: 4.4vw;
+      padding: 0 1.5vw;
+      width: 100%;
+    }
 
     .swiper {
       width: 100%;
@@ -73,9 +96,9 @@
 
         @include tablet-big-screen {
           display: block;
-          width: 200vw;
-          margin: 3vw -50vw;
-          height: 50vw;
+          width: 240vw;
+          margin: 3vw -70vw;
+          height: 62vw;
         }
       }
     }
@@ -114,7 +137,7 @@
 
   &__desc {
     @include flex-row;
-    padding-left: 22vw;
+    padding-left: 26.5vw;
     position: relative;
     padding-top: 4vw;
     margin-bottom: -7vw;
@@ -122,7 +145,7 @@
 
 
     @include tablet-big-screen {
-      padding-top: 2vw;
+      padding-top: 24vw;
       padding-left: 0;
       @include flex-column;
     }
@@ -136,7 +159,7 @@
       font-size: 3.4392vw;
 
       @include tablet-big-screen {
-        font-size: 7.5vw;
+        font-size: 10.5vw;
         width: 100%;
       }
     }
@@ -147,7 +170,7 @@
       width: 18.5vw;
 
       @include tablet-big-screen {
-        font-size: 4vw;
+        font-size: 7vw;
         width: 100%;
         margin-top: 6vw;
         margin-left: 0;
@@ -190,6 +213,10 @@
     height: 25vw;
     margin-bottom: 4vw;
     overflow: hidden;
+
+    @include tablet-big-screen {
+      margin-top: 32vw;
+    }
   }
 
   &__chart-mask {
@@ -310,8 +337,8 @@
 
     @include tablet-big-screen {
       padding-left: 0;
-      font-size: 8.5vw;
-      margin-top: 10vw;
+      font-size: 10.5vw;
+      margin-top: 33vw;
     }
   }
 
@@ -329,7 +356,8 @@
     width: fit-content;
 
     @include tablet-big-screen {
-      font-size: 11.5vw;
+      font-size: 14.5vw;
+      margin-top: 20vw;
     }
 
     &:after {
@@ -339,6 +367,10 @@
       background: var(--main-color);
       left: 0;
       top: calc(100% + 1vw);
+
+      @include tablet-big-screen {
+        height: 1.65vw;
+      }
     }
 
   }

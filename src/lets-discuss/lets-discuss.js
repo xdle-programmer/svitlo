@@ -7,14 +7,25 @@ if ($carousel) {
 function carousel($wrapper) {
     const $itemsWrapper = $wrapper.querySelector('.lets-discuss__text-carousel-wrapper');
     const items = Array.from($wrapper.querySelectorAll('.lets-discuss__text-carousel-item'));
-    let height = $itemsWrapper.getBoundingClientRect().height;
-    $wrapper.style.height = height / 3 + 'px';
-    const duration = 1000;
-    let counter = 0
+    let height = items[0].getBoundingClientRect().height;
+    let width = items[0].getBoundingClientRect().width;
+    $wrapper.style.height = height + 'px';
+    $wrapper.style.width = width + 'px';
+    const duration = 3000;
+    let counter = 0;
+
+    const activeClass = 'lets-discuss__text-carousel-item--active';
+
+    items.forEach(($item) => {
+        $item.style.position = 'absolute';
+    });
+
 
     window.addEventListener('resize', () => {
-        height = $itemsWrapper.getBoundingClientRect().height;
-        $wrapper.style.height = height / 3 + 'px';
+        height = items[0].getBoundingClientRect().height;
+        width = items[0].getBoundingClientRect().width;
+        $wrapper.style.height = height + 'px';
+        $wrapper.style.width = width + 'px';
     });
 
     setInterval(() => {
@@ -22,9 +33,13 @@ function carousel($wrapper) {
             counter = 0;
         }
 
-        $itemsWrapper.style.transform = `translateY(-${height / 3 * counter}px)`
+        items.forEach(($item) => {
+            $item.classList.remove(activeClass);
+        });
 
-        counter++
+        items[counter].classList.add(activeClass);
+
+        counter++;
 
     }, duration);
 

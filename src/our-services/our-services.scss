@@ -9,16 +9,24 @@
   padding-top: 17.3vw;
   padding-bottom: 10vw;
 
+  @include tablet-big-screen {
+    padding-top: 81.3vw;
+  }
+
   &__block {
   }
 
   &__title {
-    font-size: 22.5638vw;
+    font-size: 24.9vw;
     line-height: 106%;
     letter-spacing: -0.046em;
     position: relative;
     margin-left: -14vw;
     margin-bottom: 13.3vw;
+
+    @include tablet-big-screen {
+      margin-bottom: 26.3vw;
+    }
 
     &:after {
       @include pseudo-absolute;
@@ -28,6 +36,13 @@
       border-radius: 50%;
       right: -8.9630vw;
       top: -2.4491vw;
+
+      @include tablet-big-screen {
+        width: 58vw;
+        height: 58vw;
+        right: -26.963vw;
+        top: -45.4491vw;
+      }
     }
   }
 
@@ -51,7 +66,9 @@
       grid-template-columns: 1fr;
       position: relative;
       padding: 4vw 0;
-      padding-bottom: 10vw;
+      padding-bottom: 20vw;
+      border-bottom: none;
+      border-top: .5vw solid var(--white-color);
     }
   }
 
@@ -95,7 +112,7 @@
     letter-spacing: -0.033em;
 
     @include tablet-big-screen {
-      font-size: 3vw;
+      font-size: 5vw;
       margin: 10vw 0;
     }
   }
@@ -112,7 +129,7 @@
     cursor: pointer;
 
     @include tablet-big-screen {
-      font-size: 6vw;
+      font-size: 9vw;
       margin-left: 0;
       width: fit-content;
     }
@@ -124,6 +141,11 @@
       background: var(--main-color);
       left: 0;
       bottom: -.5vw;
+
+      @include tablet-big-screen {
+        height: 1.1vw;
+        bottom: -1.5vw;
+      }
     }
   }
 }

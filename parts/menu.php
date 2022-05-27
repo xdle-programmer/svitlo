@@ -2,7 +2,7 @@
 
     <div class="modal__background modal__background--black" data-modal-close></div>
 
-    <div class="modal__content">
+    <div class="modal__content" style="opacity: 0">
         <div class="modal__close" data-modal-close>
             <svg viewBox="0 0 100 100" class="modal__close-icon-hover">
                 <circle cx="50" cy="50" r="48" stroke="white" stroke-width=".5" fill="none"/>

@@ -9,6 +9,11 @@
   padding-top: 9vw;
   padding-bottom: 25vw;
 
+  @include tablet-big-screen {
+    padding-top: 33vw;
+    padding-bottom: 81vw;
+  }
+
   &__text-row {
     margin-bottom: 8.6vw;
     position: relative;
@@ -58,7 +63,7 @@
     position: relative;
 
     @include tablet-big-screen {
-      font-size: 10vw;
+      font-size: 19vw;
     }
 
     &:after {
@@ -78,7 +83,7 @@
     position: relative;
 
     @include tablet-big-screen {
-      margin-top: 20vw;
+      margin-top: 55vw;
       height: 240vw;
     }
   }
@@ -92,7 +97,7 @@
     width: 7vw;
 
     @include tablet-big-screen {
-      font-size: 11vw;
+      font-size: 9vw;
     }
   }
 
@@ -114,9 +119,9 @@
 
       @include tablet-big-screen {
         left: -8vw;
-        top: 140vw;
-        height: 40vw;
-        width: 40vw;
+        top: 157vw;
+        height: 38vw;
+        width: 38vw;
       }
     }
 
@@ -139,10 +144,10 @@
 
 
       @include tablet-big-screen {
-        left: 50vw;
-        top: 20vw;
-        height: 50vw;
-        width: 50vw;
+        left: 64vw;
+        top: 15vw;
+        height: 37vw;
+        width: 37vw;
       }
     }
 
@@ -153,10 +158,10 @@
       width: 27.8vw;
 
       @include tablet-big-screen {
-        left: -21vw;
-        top: 50vw;
-        height: 75vw;
-        width: 75vw;
+        left: -25vw;
+        top: 44vw;
+        height: 99vw;
+        width: 99vw;
       }
     }
 
@@ -167,10 +172,10 @@
       width: 18.8vw;
 
       @include tablet-big-screen {
-        left: 46vw;
-        top: 105vw;
-        height: 60vw;
-        width: 60vw;
+        left: 50vw;
+        top: 139vw;
+        height: 74vw;
+        width: 74vw;
       }
     }
 
@@ -181,10 +186,10 @@
       width: 12.1vw;
 
       @include tablet-big-screen {
-        left: 23vw;
-        top: 174vw;
-        height: 77vw;
-        width: 77vw;
+        left: 5vw;
+        top: 209vw;
+        height: 48vw;
+        width: 48vw;
       }
     }
 
