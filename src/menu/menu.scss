@@ -9,21 +9,6 @@
 
   min-height: 100%;
 
-
-  &__light {
-    position: absolute;
-    border-radius: 50%;
-    width: 23vw;
-    height: 23vw;
-    left: calc(50% - 11.5vw);
-    top: calc(50% - 11.5vh);
-    background: var(--main-color);
-    filter: blur(180px);
-
-    transition-duration: 10000ms;
-    transition-timing-function: ease-in-out;
-  }
-
   &__block {
     color: var(--white-color);
     position: relative;

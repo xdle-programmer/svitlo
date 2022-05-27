@@ -15,7 +15,7 @@
 
         <div class="menu">
 
-            <div class="menu__light"></div>
+            <div class="light"></div>
 
             <div class="menu__block layout">
                 <div class="menu__main">

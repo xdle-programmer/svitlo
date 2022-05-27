@@ -1,0 +1,19 @@
+@import "~frontend-scss-mixins/mixins";
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/media-queries";
+
+.light {
+  position: absolute;
+  border-radius: 50%;
+  width: 23vw;
+  height: 23vw;
+  left: calc(50% - 11.5vw);
+  top: calc(50% - 11.5vh);
+  background: var(--main-color);
+  filter: blur(180px);
+  //opacity: .7;
+
+  transition-duration: 10000ms;
+  transition-timing-function: ease-in-out;
+}

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
-
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
     <?php
     $files = scandir('dist');
 
@@ -83,8 +84,7 @@
                 </div>
                 <div class="intro__video">
                     <div class="intro__video-item-wrapper">
-                        <video class="intro__video-item" autoplay muted loop></video>
-                        <!--                        <img class="intro__video-item" src="./assets/video/intro-video-temp.jpg">-->
+                        <video class="intro__video-item" autoplay muted loop playsinline></video>
                     </div>
                 </div>
             </div>
@@ -1466,9 +1466,8 @@
 </div>
 
 <?php require('./parts/modal-form.php'); ?>
-
 <?php require('./parts/modal-showreel.php'); ?>
-
+<?php require('./parts/modal-thank-you.php'); ?>
 <?php require('./parts/menu.php'); ?>
 
 <script src="./dist/<?= $js ?>"></script>

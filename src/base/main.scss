@@ -4,9 +4,8 @@
 @import "./media-queries";
 
 @font-face {
-  font-family: 'Kudryashev';
-  //src: url('../../assets/fonts/kudryashev/KudryashevDisplay-Sans-convert+2650-600+675.woff');
-  src: url('../../assets/fonts/kudryashev/KudryashevDisplay-Sans-test.woff');
+  font-family: 'Milago';
+  src: url('../../assets/fonts/milago/milago.woff');
   font-style: normal;
 }
 
@@ -107,7 +106,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  @include kudryashev;
+  @include milago;
 
   @include tablet-big-screen {
     height: auto;

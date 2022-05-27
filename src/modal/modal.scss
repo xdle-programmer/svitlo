@@ -46,6 +46,13 @@
     top: -3vw;
     cursor: pointer;
     z-index: 3;
+
+    @include tablet-big-screen {
+      width: 43vw;
+      height: 43vw;
+      right: -11vw;
+      top: -3vw;
+    }
   }
 
   $close-hover: '.modal__close:hover';
@@ -62,6 +69,11 @@
     #{$close-hover} & {
       opacity: 1;
     }
+
+    @include tablet-big-screen {
+      width: 5vw;
+      height: 5vw;
+    }
   }
 
   &__close-icon-hover {
@@ -73,6 +85,11 @@
     stroke-dasharray: 302;
     stroke-dashoffset: 302;
     transition: all ease-out 1s;
+
+    @include tablet-big-screen {
+      width: 44.4vw;
+      height: 44.4vw;
+    }
 
     #{$close-hover} & {
       stroke-dashoffset: 0;

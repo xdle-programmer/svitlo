@@ -78,36 +78,7 @@
                 </div>
             </div>
             <div class="footer__social">
-                <a href="#" class="footer__social-item">
-                    <svg viewBox="0 0 100 100" class="footer__social-item-img-hover">
-                        <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" fill="none"/>
-                    </svg>
-                    <img class="footer__social-item-img" src="/assets/icons/whatsapp.svg">
-                </a>
-                <a href="#" class="footer__social-item">
-                    <svg viewBox="0 0 100 100" class="footer__social-item-img-hover">
-                        <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" fill="none"/>
-                    </svg>
-                    <img class="footer__social-item-img" src="/assets/icons/instagram.svg">
-                </a>
-                <a href="#" class="footer__social-item">
-                    <svg viewBox="0 0 100 100" class="footer__social-item-img-hover">
-                        <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" fill="none"/>
-                    </svg>
-                    <img class="footer__social-item-img" src="/assets/icons/linkedin.svg">
-                </a>
-                <a href="#" class="footer__social-item">
-                    <svg viewBox="0 0 100 100" class="footer__social-item-img-hover">
-                        <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" fill="none"/>
-                    </svg>
-                    <img class="footer__social-item-img" src="/assets/icons/behance.svg">
-                </a>
-                <a href="#" class="footer__social-item">
-                    <svg viewBox="0 0 100 100" class="footer__social-item-img-hover">
-                        <circle cx="50" cy="50" r="48" stroke="white" stroke-width="1" fill="none"/>
-                    </svg>
-                    <img class="footer__social-item-img" src="/assets/icons/dribbble.svg">
-                </a>
+                <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/social.php'); ?>
             </div>
         </div>
     </div>

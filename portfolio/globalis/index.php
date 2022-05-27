@@ -487,8 +487,9 @@
 </div>
 
 <?php require('../../parts/modal-form.php'); ?>
-
+<?php require('../../parts/modal-thank-you.php'); ?>
 <?php require('../../parts/menu.php'); ?>
+
 
 <script src="../../dist/<?= $js ?>"></script>
 
