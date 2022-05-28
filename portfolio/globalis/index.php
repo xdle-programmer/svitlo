@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
-
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
     <?php
     $files = scandir('../../dist');
 
@@ -31,7 +32,7 @@
         }
     </style>
 </head>
-<body>
+<body class="body-case">
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
 
@@ -63,54 +64,168 @@
         </div>
         <div class="case-intro__block layout">
 
-            <div class="case-intro__work">
+            <div class="case-intro__work animation__block">
                 <div class="case-intro__work-items">
-                    <div class="case-intro__work-item">Brand identity</div>
-                    <div class="case-intro__work-item">Corporate website</div>
+                    <div class="case-intro__work-item">
+                        Brand identity
+                    </div>
+                    <div class="case-intro__work-item">
+                        Corporate website
+                    </div>
                 </div>
+
                 <div class="case-intro__work-img-wrapper">
                     <img class="case-intro__work-img" src="./assets/images/intro-img.jpg">
                 </div>
+
                 <div class="case-intro__desc">
                     <div class="case-intro__desc-item">
-                        <div class="case-intro__desc-item-name">Challenge:</div>
-                        <div class="case-intro__desc-item-text">Get more customers through digital.</div>
+                        <div class="case-intro__desc-item-name animation__title-wrapper">
+                            <div class="animation__title">
+                                Challenge:
+                            </div>
+                        </div>
+                        <div class="case-intro__desc-item-text">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Get more customers
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    through digital.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="case-intro__desc-item case-intro__desc-item--client">
-                        <div class="case-intro__desc-item-name">Client:</div>
-                        <div class="case-intro__desc-item-text">Globalis Insurance Company was founded in 1997. The
-                            company is listed in the TOP 20 companies on the Ukrainian corporate property insurance
-                            market.
+                        <div class="case-intro__desc-item-name">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Client:
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="case-intro__desc-item-text">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Globalis Insurance
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Company was founded
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    in 1997. The company is
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    listed in the TOP 20
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    companies on the
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Ukrainian corporate
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    property insurance
+                                </div>
+                            </div>
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    market.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="case-intro__cover">
-                <div class="case-intro__title">Globalis</div>
+                <div class="case-intro__title">
+                    <div class="animation__title-wrapper">
+                        <div class="animation__title">
+                            Globalis
+                        </div>
+                    </div>
+                </div>
 
                 <div class="case-intro__img-wrapper animation__img-parallax">
                     <img class="case-intro__img animation__img-parallax-item" src="./assets/images/intro-cover.jpg">
                 </div>
 
                 <div class="case-intro__results">
-                    <div class="case-intro__results-title">Results:</div>
+                    <div class="case-intro__results-title">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                Results:
+                            </div>
+                        </div>
+
+                    </div>
                     <div class="case-intro__counters">
                         <div class="case-intro__counters-item">
                             <div class="case-intro__counter animation__counter" data-animation-counter="166">166</div>
                             <div class="case-intro__counter-desc">
-                                <div class="case-intro__counter-desc-line">Increase</div>
-                                <div class="case-intro__counter-desc-line">lead</div>
-                                <div class="case-intro__counter-desc-line">generation.</div>
+                                <div class="case-intro__counter-desc-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            Increase
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__counter-desc-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            lead
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="case-intro__counter-desc-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            generation.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="case-intro__counters-item">
                             <div class="case-intro__counter animation__counter" data-animation-counter="72">72</div>
                             <div class="case-intro__counter-desc">
-                                <div class="case-intro__counter-desc-line">Increase</div>
-                                <div class="case-intro__counter-desc-line">page time</div>
-                                <div class="case-intro__counter-desc-line">view.</div>
+                                <div class="case-intro__counter-desc-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            Increase
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__counter-desc-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            page time
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__counter-desc-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            view.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -118,64 +233,235 @@
                 </div>
             </div>
 
-            <div class="case-intro__screenshots">
+            <div class="case-intro__screenshots animation__block">
                 <div class="case-intro__screenshots-item">
                     <div class="case-intro__screenshots-item-sizes case-intro__screenshots-item-sizes--desktop">
-                        <div class="case-intro__screenshots-item-sizes-name">Desktop:</div>
-                        <div class="case-intro__screenshots-item-sizes-item">1920</div>
+                        <div class="case-intro__screenshots-item-sizes-name">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Desktop:
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-intro__screenshots-item-sizes-item">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    1920
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
+                    <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-mobile-desc"
+                         src="./assets/images/screenshot-1-mob.jpg">
+                    <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-desc-desc"
                          src="./assets/images/screenshot-1.jpg">
 
                     <div class="case-intro__screenshots-item-analysis">
-                        <div class="case-intro__screenshots-item-analysis-title">Analysis:</div>
+                        <div class="case-intro__screenshots-item-analysis-title">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Analysis:
+                                </div>
+                            </div>
+                        </div>
                         <div class="case-intro__screenshots-item-analysis-items">
                             <div class="case-intro__screenshots-item-analysis-item">
-                                <div class="case-intro__screenshots-item-analysis-item-line">Globalis provides</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">insurance services for
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            Globalis provides
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">B2C and B2B sectors. The
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            insurance services for
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">core of the target</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">audience is legal
-                                    entities,
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            B2C and B2B sectors. The
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">their representatives in
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            core of the target
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">the age range of 35-45.
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            audience is legal entities,
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">The main motivation for
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            their representatives in
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">this category is to save
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            the age range of 35-45.
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">money when an insured</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">event occurs.</div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            The main motivation for
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            this category is to save
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            money when an insured
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            event occurs.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="case-intro__screenshots-item-analysis-item">
-                                <div class="case-intro__screenshots-item-analysis-item-line">Analyzing the</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">market, we realized</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">that companies are</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">visually similar on</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">the Internet, and do</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">not stand out from</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">competitors. Their</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">websites with low</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">usability are not</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">adapted to finding</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">needed information</div>
-                                <div class="case-intro__screenshots-item-analysis-item-line">quickly.</div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            Analyzing the
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            market, we realized
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            that companies are
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            visually similar on
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            the Internet, and do
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            not stand out from
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            competitors. Their
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            websites with low
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            usability are not
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            adapted to finding
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            needed information
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-analysis-item-line">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            quickly.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="case-intro__screenshots-item case-intro__screenshots-item--mobile">
                     <div class="case-intro__screenshots-item-sizes">
-                        <div class="case-intro__screenshots-item-sizes-name">Mobile:</div>
-                        <div class="case-intro__screenshots-item-sizes-item">375</div>
+                        <div class="case-intro__screenshots-item-sizes-name">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Mobile:
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-intro__screenshots-item-sizes-item">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    375
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
                          src="./assets/images/screenshot-2.jpg">
                 </div>
+
+                <div class="case-intro__screenshots-item case-intro__screenshots-item--for-mobile">
+                    <div class="case-intro__screenshots-item-parallax animation__img-parallax">
+                        <img class="case-intro__screenshots-item-parallax-img animation__img-parallax-item"
+                             src="./assets/images/screenshot-2-parallax.png">
+                    </div>
+
+                    <img class="case-intro__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
+                </div>
             </div>
         </div>
 
@@ -183,70 +469,201 @@
 
 
     <div class="animation__screen user-experience">
-        <div class="user-experience__block layout">
+        <div class="user-experience__block layout animation__block">
 
-            <div class="user-experience__block-name">UX</div>
+            <div class="user-experience__block-name">
+                <div class="animation__title-wrapper">
+                    <div class="animation__title">
+                        UX
+                    </div>
+                </div>
+
+            </div>
 
             <div class="user-experience__content">
                 <div class="user-experience__title">
-                    <div class="user-experience__title-line">User</div>
-                    <div class="user-experience__title-line user-experience__title-line--dot">experience</div>
+                    <div class="user-experience__title-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                User
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-experience__title-line user-experience__title-line--dot">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                experience
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="user-experience__desc">
                     <div class="user-experience__desc-item user-experience__desc-item--big">
-                        <div class="user-experience__desc-item-line">The website</div>
-                        <div class="user-experience__desc-item-line">structure gradually</div>
-                        <div class="user-experience__desc-item-line">presents the status</div>
-                        <div class="user-experience__desc-item-line">of the company and</div>
-                        <div class="user-experience__desc-item-line">gives a convenient</div>
-                        <div class="user-experience__desc-item-line">segmentation of</div>
-                        <div class="user-experience__desc-item-line">services according</div>
-                        <div class="user-experience__desc-item-line">to customer</div>
-                        <div class="user-experience__desc-item-line">categories.</div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    The website
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    structure gradually
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    presents the status
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    of the company and
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    gives a convenient
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    segmentation of
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    services according
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    to customer
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    categories.
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
+
                     <div class="user-experience__desc-item user-experience__desc-item--small">
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">Also, we
-                            gave the opportunity
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">to explore
-                            each product in
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">detail with
-                            a separate page.
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">The target
-                            action on the site
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">is to fill
-                            out the form and
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">collect
-                            contact information
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">for further
-                            consultation with a
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">manager. As
-                            a feature, we
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">added the
-                            possibility to
-                        </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">download the
-                            necessary
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Also, we gave the opportunity
+                                </div>
+                            </div>
                         </div>
                         <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
-                            documentation and get
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    to explore each product in
+                                </div>
+                            </div>
                         </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">acquainted
-                            with the
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    detail with a separate page.
+                                </div>
+                            </div>
                         </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">company's
-                            development
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    The target action on the site
+                                </div>
+                            </div>
                         </div>
-                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">strategy.
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    is to fill out the form and
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    collect contact information
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    for further consultation with a
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    manager. As a feature, we
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    added the possibility to
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    download the necessary
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    documentation and get
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    acquainted with the
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    company's development
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line user-experience__desc-item-line--small">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    strategy.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -255,7 +672,7 @@
         </div>
     </div>
 
-    <div class="animation__screen user-experience">
+    <div class="animation__screen user-experience animation__block">
         <div class="user-experience__block user-experience__block--second layout">
 
             <div class="user-experience__content">
@@ -271,75 +688,218 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="user-experience__image-for-mobile">
+                        <div class="case-intro__screenshots-item">
+                            <div class="case-intro__screenshots-item-sizes case-intro__screenshots-item-sizes--desktop">
+                                <div class="case-intro__screenshots-item-sizes-name">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            Desktop:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="case-intro__screenshots-item-sizes-item">
+                                    <div class="animation__title-wrapper">
+                                        <div class="animation__title">
+                                            1920
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
+                                 src="./assets/images/screenshot-3-mob.jpg">
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="animation__screen user-experience">
+    <div class="animation__screen user-experience animation__block">
         <div class="user-experience__block user-experience__block--second layout">
 
-            <div class="user-experience__block-name">UI</div>
+            <div class="user-experience__block-name">
+                <div class="animation__title-wrapper">
+                    <div class="animation__title">
+                        UI
+                    </div>
+                </div>
+
+            </div>
 
             <div class="user-experience__content">
                 <div class="user-experience__title">
-                    <div class="user-experience__title-line">User</div>
-                    <div class="user-experience__title-line user-experience__title-line--dot">interface</div>
+                    <div class="user-experience__title-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                User
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-experience__title-line user-experience__title-line--dot">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                interface
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="user-experience__desc user-experience__desc--fill">
                     <div class="user-experience__desc-item user-experience__desc-item--big">
-                        <div class="user-experience__desc-item-line">The minimalist design with large</div>
-                        <div class="user-experience__desc-item-line">typography emphasizes the</div>
-                        <div class="user-experience__desc-item-line">openness of the brand in</div>
-                        <div class="user-experience__desc-item-line">communication with customers.</div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    The minimalist design with large
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    typography emphasizes the
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    openness of the brand in
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__desc-item-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    communication with customers.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="user-experience__colors">
                     <div class="user-experience__colors-item user-experience__colors-item--main">
-                        <div class="user-experience__colors-item-name user-experience__colors-item-name--main">Wet
-                            asphalt
+                        <div class="user-experience__colors-item-name user-experience__colors-item-name--main">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Wet asphalt
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="user-experience__colors-item user-experience__colors-item--natural">
                         <div class="user-experience__colors-item-name user-experience__colors-item-name--natural">
-                            Emerald shade
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Emerald shade
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 <div class="user-experience__colors-desc">
-                    <div class="user-experience__colors-desc-name">Colors:</div>
+                    <div class="user-experience__colors-desc-name">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                Colors:
+                            </div>
+                        </div>
+                    </div>
                     <div class="user-experience__colors-desc-text">
-                        <div class="user-experience__colors-desc-text-line">Premium,</div>
-                        <div class="user-experience__colors-desc-text-line">restrained colors</div>
-                        <div class="user-experience__colors-desc-text-line">perfectly</div>
-                        <div class="user-experience__colors-desc-text-line">underline the</div>
-                        <div class="user-experience__colors-desc-text-line">level of the</div>
-                        <div class="user-experience__colors-desc-text-line">company.</div>
+                        <div class="user-experience__colors-desc-text-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Premium,
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__colors-desc-text-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    restrained colors
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__colors-desc-text-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    perfectly
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__colors-desc-text-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    underline the
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__colors-desc-text-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    level of the
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-experience__colors-desc-text-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    company.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="animation__screen case-intro">
+    <div class="animation__screen case-intro animation__block">
 
         <div class="case-intro__block layout">
             <div class="case-intro__screenshots">
                 <div class="case-intro__screenshots-item">
                     <div class="case-intro__screenshots-item-sizes case-intro__screenshots-item-sizes--desktop">
-                        <div class="case-intro__screenshots-item-sizes-name">Desktop:</div>
-                        <div class="case-intro__screenshots-item-sizes-item">1920</div>
+                        <div class="case-intro__screenshots-item-sizes-name">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Desktop:
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-intro__screenshots-item-sizes-item">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    1920
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
                          src="./assets/images/screenshot-3.jpg">
                 </div>
                 <div class="case-intro__screenshots-item case-intro__screenshots-item--mobile">
                     <div class="case-intro__screenshots-item-sizes">
-                        <div class="case-intro__screenshots-item-sizes-name">Mobile:</div>
-                        <div class="case-intro__screenshots-item-sizes-item">375</div>
+                        <div class="case-intro__screenshots-item-sizes-name">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Mobile:
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-intro__screenshots-item-sizes-item">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    375
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
                          src="./assets/images/screenshot-4.jpg">
@@ -349,20 +909,63 @@
 
     </div>
 
-    <div class="animation__screen testimonial">
+    <div class="animation__screen testimonial animation__block">
 
         <div class="testimonial__block layout">
 
             <div class="testimonial__title-block">
-                <div class="testimonial__title">Testimonial</div>
+                <div class="testimonial__title">
+                    <div class="animation__title-wrapper">
+                        <div class="animation__title">
+                            Testimonial
+                        </div>
+                    </div>
+
+                </div>
 
                 <div class="testimonial__subtitle">
-                    <div class="testimonial__subtitle-line">After the project was</div>
-                    <div class="testimonial__subtitle-line">completed, we</div>
-                    <div class="testimonial__subtitle-line">presented it to the</div>
-                    <div class="testimonial__subtitle-line">board of directors. The</div>
-                    <div class="testimonial__subtitle-line">website was approved</div>
-                    <div class="testimonial__subtitle-line">on the same day.</div>
+                    <div class="testimonial__subtitle-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                After the project was
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__subtitle-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                completed, we
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__subtitle-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                presented it to the
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__subtitle-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                board of directors. The
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__subtitle-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                website was approved
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial__subtitle-line">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                on the same day.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -374,7 +977,13 @@
                         done. You exceeded all expectations, thank you!
                     </div>
 
-                    <div class="testimonial__item-name">Natalia Voronina, CEO — Globalis.</div>
+                    <div class="testimonial__item-name">
+                        <div class="animation__title-wrapper">
+                            <div class="animation__title">
+                                Natalia Voronina, CEO — Globalis.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="testimonial__screenshots">
@@ -398,18 +1007,47 @@
                         </div>
                     </div>
 
-                    <div class="testimonial__screenshots-item">
+                    <div class="testimonial__screenshots-item testimonial__screenshots-item--1">
                         <div class="testimonial__screenshots-item-name-block">
-                            <div class="testimonial__screenshots-item-name">Website:</div>
-                            <div class="testimonial__screenshots-item-name-title">globalis.com.ua</div>
+                            <div class="testimonial__screenshots-item-name">
+                                <div class="animation__title-wrapper">
+                                    <div class="animation__title">
+                                        Website:
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial__screenshots-item-name-title">
+                                <div class="animation__title-wrapper">
+                                    <div class="animation__title">
+                                        globalis.com.ua
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-1.png">
                     </div>
 
-                    <div class="testimonial__screenshots-item">
+                    <div class="testimonial__screenshots-item testimonial__screenshots-item--2">
                         <img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
                         <div class="testimonial__screenshots-item-name-block testimonial__screenshots-item-name-block--top">
-                            <div class="testimonial__screenshots-item-name-title">By Svitlo.Production</div>
+                            <div class="testimonial__screenshots-item-name-title">
+
+                                <div class="testimonial__circle">
+                                    <div class="logo-circle">
+                                        <div class="logo-circle__item">
+                                            <img class="logo-circle__text"
+                                                 src="../../assets/images/circle-text-white.svg">
+                                            <img class="logo-circle__logo" src="../../assets/images/logo-white.svg">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="animation__title-wrapper">
+                                    <div class="animation__title">
+                                        By Svitlo.Production
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -424,8 +1062,21 @@
             <div class="animation__block">
                 <div class="have-a-task__title-wrapper">
                     <div class="have-a-task__title">
-                        <div class="have-a-task__title-line">Wanna get</div>
-                        <div class="have-a-task__title-line have-a-task__title-line--2">the result?</div>
+                        <div class="have-a-task__title-line">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    Wanna get
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="have-a-task__title-line have-a-task__title-line--2">
+                            <div class="animation__title-wrapper">
+                                <div class="animation__title">
+                                    the result?
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -438,7 +1089,7 @@
     <div class="animation__screen portfolio">
         <div class="animation__block portfolio__title-block layout">
             <div class="portfolio__title">
-                <div class="portfolio__title-text">
+                <div class="portfolio__title-text portfolio__title-text--case">
                     <div class="animation__title-wrapper">
                         <div class="animation__title portfolio__title-text-line">
                             View more
@@ -447,7 +1098,7 @@
                 </div>
 
             </div>
-            <div class="portfolio__subtitle">
+            <div class="portfolio__subtitle portfolio__subtitle--case">
                 <div class="animation__text-wrapper">
                     <div class="animation__text">
                         Check out other case studies
@@ -457,28 +1108,9 @@
         </div>
 
         <div class="portfolio__slider">
-
-            <div class="swiper">
-                <div class="swiper-pagination"></div>
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
-                        <div class="portfolio__slider-img" style="background: #768f94"></div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="portfolio__slider-img" style="background: #768f94"></div>
-                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="portfolio__slider-img" style="background: #768f94"></div>
-                        <!--                        <img class="portfolio__slider-img" src="./assets/images/portfolio-item.jpg">-->
-                    </div>
-                </div>
-            </div>
-
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/parts/slider.php';
+            echo createSlider('globalis');
+            ?>
         </div>
     </div>
 

@@ -36,6 +36,12 @@
     @include tablet-big-screen {
       font-size: 28vw;
     }
+
+    &--case {
+      @include tablet-big-screen {
+        font-size: 23vw;
+      }
+    }
   }
 
   &__title-text-line {
@@ -62,6 +68,12 @@
 
     @include tablet-big-screen {
       font-size: 4vw;
+    }
+
+    &--case {
+      @include tablet-big-screen {
+        font-size: 5vw;
+      }
     }
   }
 

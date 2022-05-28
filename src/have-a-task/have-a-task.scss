@@ -20,11 +20,19 @@
 
   &--case {
     padding-top: 13vw;
+
+    @include tablet-big-screen {
+      padding-top: 49vw;
+    }
   }
 
   &--modal {
     padding-top: 1vw;
     min-height: 100vh;
+
+    @include tablet-big-screen {
+      padding-top: 30vw;
+    }
   }
 
   $white: '.have-a-task--white';
@@ -73,10 +81,19 @@
       @include manrope;
       font-weight: 700;
       font-size: 11.8613vw;
+
+      @include tablet-big-screen {
+        font-size: 13.8613vw;
+        line-height: 130%;
+      }
     }
 
     #{$modal} & {
       font-size: 10.8613vw;
+
+      @include tablet-big-screen {
+        display: none;
+      }
     }
 
   }
@@ -86,6 +103,13 @@
 
     &--2 {
       padding-left: 23.55vw;
+
+      #{$case} & {
+
+        @include tablet-big-screen {
+          margin-top: -4vw;
+        }
+      }
     }
   }
 
@@ -100,6 +124,10 @@
     #{$modal} & {
       width: 18vw;
       margin-bottom: 0;
+
+      @include tablet-big-screen {
+        display: none;
+      }
     }
 
     @include tablet-big-screen {
@@ -118,11 +146,21 @@
     #{$case} & {
       padding-left: 25vw;
       padding-top: 6vw;
+
+      @include tablet-big-screen {
+        padding-left: 0;
+        padding-top: 24vw;
+      }
     }
 
     #{$modal} & {
       padding-left: 33vw;
       margin-top: -5vw;
+
+      @include tablet-big-screen {
+        padding-left: 0;
+        margin-top: 5vw;
+      }
     }
 
   }
@@ -140,6 +178,10 @@
 
     #{$case} & {
       margin-bottom: 1.9vw;
+
+      @include tablet-big-screen {
+        margin-bottom: 13.9vw;
+      }
     }
 
     #{$modal} & {
@@ -174,6 +216,11 @@
 
     #{$modal} & {
       font-size: 4.6279vw;
+
+      @include tablet-big-screen {
+        font-size: 9.45vw;
+        margin-top: 5vw;
+      }
     }
 
     &:after {
@@ -190,6 +237,10 @@
 
       #{$modal} & {
         height: 0.45vw;
+
+        @include tablet-big-screen {
+          height: 1.65vw;
+        }
       }
     }
   }

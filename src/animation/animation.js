@@ -615,6 +615,7 @@ export function animation($wrapper) {
             for (let index = 0; index < titles.length; index++) {
                 const $title = titles[index];
                 const $block = $title.closest(`.${blockClass}`);
+
                 const offset = $title.getBoundingClientRect().top;
                 let changeLimit = 1;
 
@@ -629,6 +630,7 @@ export function animation($wrapper) {
                 } else if (offset > window.innerHeight * changeLimit) {
                     $title.classList.remove(titleActiveClass);
                     $title.closest(`.${titleWrapperClass}`).classList.remove(titleWrapperActiveClass);
+
                     if (Array.from($block.querySelectorAll(`.${titleActiveClass}`)).length === 0) {
                         $block.classList.remove(slideReadyTitleClass);
                     }

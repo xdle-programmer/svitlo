@@ -10,6 +10,11 @@
     grid-template-columns: 25vw 65vw;
     padding-top: 14vw;
 
+    @include tablet-big-screen {
+      grid-template-columns: 1fr;
+      position: relative;
+    }
+
     &--second {
       padding-top: 0;
     }
@@ -20,6 +25,13 @@
     font-weight: 500;
     font-size: 1.3548vw;
     color: var(--natural-text-color);
+
+    @include tablet-big-screen {
+      position: absolute;
+      top: 86.5vw;
+      left: 0;
+      font-size: 6.4392vw;
+    }
   }
 
   &__content {
@@ -32,6 +44,15 @@
     font-size: 12.1417vw;
     margin-top: 4vw;
     letter-spacing: -0.033em;
+
+
+    @include tablet-big-screen {
+      font-size: 18.1417vw;
+      line-height: 117%;
+      margin-top: 27vw;
+    }
+
+
   }
 
   &__title-line {
@@ -47,8 +68,19 @@
     color: var(--main-text-color);
     margin-top: 7.2vw;
 
+    @include tablet-big-screen {
+      margin-top: 18.2vw;
+      padding-left: 27vw;
+      grid-template-columns: 1fr;
+      grid-gap: 6vw;
+    }
+
     &--fill {
       grid-template-columns: 1fr;
+
+      @include tablet-big-screen {
+        padding-left: 0;
+      }
     }
   }
 
@@ -57,13 +89,23 @@
     font-size: 3.4392vw;
     letter-spacing: -0.033em;
 
+    @include tablet-big-screen {
+      font-size: 6.4392vw;
+    }
+
     &--big {
     }
 
     &--small {
       font-size: 1.4392vw;
       margin-top: 0.3vw;
+
+      @include tablet-big-screen {
+        font-size: 4.4392vw;
+      }
     }
+
+
   }
 
   &__desc-item-line {
@@ -87,10 +129,21 @@
     height: 27.7748vw;
     background: var(--main-case-color);
     border-radius: 50%;
+
+    @include tablet-big-screen {
+      left: 45vw;
+      top: 27vw;
+      width: 101vw;
+      height: 101vw;
+    }
   }
 
   &__images-inner {
     transform: translateX(-45vw);
+
+    @include tablet-big-screen {
+      display: none;
+    }
   }
 
   &__images {
@@ -110,11 +163,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 8vw;
+
+    @include tablet-big-screen {
+      margin-top: 17vw;
+      grid-template-columns: 1fr 2fr;
+    }
   }
 
   &__colors-item {
     position: relative;
     padding-bottom: 85%;
+
+    @include tablet-big-screen {
+      padding-bottom: 148%;
+    }
 
     &--main {
       background: var(--natural-case-color);
@@ -133,6 +195,14 @@
     letter-spacing: -0.033em;
     left: 2vw;
     top: 2vw;
+
+    @include tablet-big-screen {
+      left: 4vw;
+      bottom: 4vw;
+      top: auto;
+      font-size: 5.3548vw;
+      width: 21vw;
+    }
 
     &--main {
       color: var(--main-text-color);
@@ -153,6 +223,12 @@
     letter-spacing: -0.033em;
     margin-top: 5.4vw;
     padding-top: 2.7vw;
+
+    @include tablet-big-screen {
+      font-size: 5.3548vw;
+      grid-template-columns: 30vw 1fr;
+      margin-bottom: 26vw;
+    }
   }
 
   &__colors-desc-name {
@@ -166,6 +242,20 @@
 
   &__colors-desc-text-line {
     margin-top: -.7vw;
+  }
+
+  &__image-for-mobile {
+    display: none;
+
+    @include tablet-big-screen {
+      display: block;
+      padding-top: 54vw;
+      padding-bottom: 11vw;
+
+      & .user-experience__block-name {
+        display: none;
+      }
+    }
   }
 }
 

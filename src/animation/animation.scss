@@ -182,4 +182,12 @@
 
   }
 
+  &__img-parallax {
+    overflow: hidden;
+  }
+
+  &__img-parallax-item {
+    transition: all 1s ease-out;
+  }
+
 }
