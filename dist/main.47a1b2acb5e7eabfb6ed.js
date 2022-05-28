@@ -2121,10 +2121,16 @@ function animation($wrapper) {
         $wrapper.style.transition = `all ${introTransition}ms`;
         let checkScale = setInterval(() => {
           let matrix = new WebKitCSSMatrix(window.getComputedStyle($wrapper).transform);
+          let initScale = 1;
 
-          if (matrix.a === 1.4) {
+          if (window.innerWidth > _index__WEBPACK_IMPORTED_MODULE_0__.mobileViewPoint) {
+            initScale = 1.4;
+          }
+
+          if (matrix.a === initScale) {
             $loader.classList.add('loader--hide');
             $wrapper.classList.add('animation--show');
+            $header.classList.add('header--show');
             $video.classList.add('intro__video-item--show');
             setTimeout(() => {
               $video.play();
@@ -2914,6 +2920,7 @@ function charHover($wrapper) {
 
       if (char === ' ') {
         $itemInnerChar.innerText = '\u2009';
+        $itemInnerChar.classList.add('char-hover__item-inner-char--empty');
       }
 
       $itemInnerChar.style.cssText = `--char-index:${text.length - index}`;
@@ -2928,6 +2935,7 @@ function charHover($wrapper) {
 
       if (char === ' ') {
         $itemInnerCharHover.innerText = '\u2009';
+        $itemInnerCharHover.classList.add('char-hover__item-inner-char-hover--empty');
       }
 
       $itemInnerCharHover.style.cssText = `--char-index:${text.length - index}`;
@@ -17655,4 +17663,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.598752581f4ce83e92b8.js.map
+//# sourceMappingURL=main.47a1b2acb5e7eabfb6ed.js.map

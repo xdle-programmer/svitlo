@@ -8,6 +8,10 @@
   &--preshow {
     transform: scale(1.4) !important;
     transition-timing-function: cubic-bezier(.25, .74, .22, .99);
+
+    @include tablet-big-screen {
+      transform: scale(1) !important;
+    }
   }
 
   &--show {

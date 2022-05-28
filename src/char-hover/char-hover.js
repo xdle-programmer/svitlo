@@ -26,6 +26,7 @@ function charHover($wrapper) {
 
             if (char === ' ') {
                 $itemInnerChar.innerText = '\u2009';
+                $itemInnerChar.classList.add('char-hover__item-inner-char--empty');
             }
 
             $itemInnerChar.style.cssText = `--char-index:${text.length - index}`;
@@ -40,6 +41,7 @@ function charHover($wrapper) {
 
             if (char === ' ') {
                 $itemInnerCharHover.innerText = '\u2009';
+                $itemInnerCharHover.classList.add('char-hover__item-inner-char-hover--empty');
             }
 
             $itemInnerCharHover.style.cssText = `--char-index:${text.length - index}`;

@@ -29,6 +29,12 @@
     transition: transform .6s ease;
     transition-delay: calc(var(--char-index) * 10ms);
 
+    &--empty {
+      @include tablet-big-screen {
+        width: .23em;
+      }
+    }
+
     #{$hover} & {
       transform: translateY(-100%);
     }
@@ -41,6 +47,12 @@
     transition: transform .6s ease;
     transition-delay: calc(var(--char-index) * 10ms);
     transform: translateY(100%);
+
+    &--empty {
+      @include tablet-big-screen {
+        width: .23em;
+      }
+    }
 
     #{$hover} & {
       transform: translateY(0);

@@ -131,6 +131,9 @@
     visibility: hidden;
     transition: all #{$background-transition}ms ease-out;
     pointer-events: none;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     #{$show} & {
       opacity: 1!important;

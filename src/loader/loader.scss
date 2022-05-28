@@ -35,13 +35,13 @@
 
   &__block {
     color: var(--white-color);
-    height: calc(100% - 10.0052vw);
+    height: calc(100% - 7vw);
     @include flex-column-center;
     justify-content: space-between;
     position: relative;
 
     @include tablet-big-screen {
-      height: calc(100% - 33vw);
+      height: calc(100% - 26vw);
     }
   }
 
@@ -57,7 +57,7 @@
     display: block;
 
     @include tablet-big-screen {
-      width: 9.5vw;
+      width: 7.5vw;
     }
   }
 

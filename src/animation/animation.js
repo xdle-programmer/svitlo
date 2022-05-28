@@ -132,9 +132,16 @@ export function animation($wrapper) {
 
                 let checkScale = setInterval(() => {
                     let matrix = new WebKitCSSMatrix(window.getComputedStyle($wrapper).transform);
-                    if (matrix.a === 1.4) {
+                    let initScale = 1;
+
+                    if (window.innerWidth > mobileViewPoint) {
+                        initScale = 1.4;
+                    }
+
+                    if (matrix.a === initScale) {
                         $loader.classList.add('loader--hide');
                         $wrapper.classList.add('animation--show');
+                        $header.classList.add('header--show');
                         $video.classList.add('intro__video-item--show');
 
                         setTimeout(() => {

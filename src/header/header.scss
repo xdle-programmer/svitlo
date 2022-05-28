@@ -9,6 +9,11 @@
   top: 0;
   width: 100%;
   z-index: 101;
+  opacity: 0;
+
+  &--show {
+    opacity: 1;
+  }
 
   $header-black: '.header--black';
 
