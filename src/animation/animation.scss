@@ -30,6 +30,10 @@
     &:hover {
       background: rgba(0, 0, 0, .1);
     }
+
+    @include tablet-big-screen {
+      display: none;
+    }
   }
 
   $scroll-hover: '.animation__scroll:hover';

@@ -35,27 +35,27 @@
             <img class="footer__logo" src="/assets/images/logo-white.svg">
             <div class="footer__desc">
 
-                <div class="animation__text-wrapper">
+                <div class="animation__text-wrapper footer__desc-line">
                     <div class="animation__text">
                         We will make
                     </div>
                 </div>
-                <div class="animation__text-wrapper">
+                <div class="animation__text-wrapper footer__desc-line">
                     <div class="animation__text">
                         your digital
                     </div>
                 </div>
-                <div class="animation__text-wrapper">
+                <div class="animation__text-wrapper footer__desc-line">
                     <div class="animation__text">
                         side of business
                     </div>
                 </div>
-                <div class="animation__text-wrapper">
+                <div class="animation__text-wrapper footer__desc-line">
                     <div class="animation__text">
                         attractive to
                     </div>
                 </div>
-                <div class="animation__text-wrapper">
+                <div class="animation__text-wrapper footer__desc-line">
                     <div class="animation__text">
                         your clients.
                     </div>

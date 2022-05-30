@@ -423,7 +423,7 @@
                                     <div class="animation__text">
                                         We discuss your business and the goals that you want to achieve. The main point
                                         is to take a
-                                        look at your business from the side, find growth points and determine the goal
+                                        look at your business from the side, find growth points and determine the goal.
                                     </div>
                                 </div>
                             </div>
@@ -788,7 +788,7 @@
                             </div>
                             <div class="animation__text-wrapper">
                                 <div class="animation__text">
-                                    so that the visitor desire to buy it
+                                    so that the visitor desire to buy it.
                                 </div>
                             </div>
                         </div>
@@ -833,7 +833,7 @@
                             </div>
                             <div class="animation__text-wrapper">
                                 <div class="animation__text">
-                                    and potential candidates wish to work for you
+                                    and potential candidates wish to work for you.
                                 </div>
                             </div>
                         </div>
@@ -873,7 +873,7 @@
                             </div>
                             <div class="animation__text-wrapper">
                                 <div class="animation__text">
-                                    stores to increase % of conversion
+                                    stores to increase % of conversion.
                                 </div>
                             </div>
                         </div>
@@ -908,7 +908,7 @@
                         <div class="our-services__item-desc-text">
                             <div class="animation__text-wrapper">
                                 <div class="animation__text">
-                                    If you need to stand out among competitors and cause a wow effect.
+                                    If you need to stand out among competitors and cause a WOW effect.
                                 </div>
                             </div>
                         </div>

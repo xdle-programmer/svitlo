@@ -160,6 +160,31 @@
                     </div>
                 </div>
 
+                <div class="case-intro__title-mobile">
+                    <div class="clients__text-row">
+                        <div class="clients__text-row-line clients__text-row-line--1">
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                        </div>
+                        <div class="clients__text-row-line clients__text-row-line--2">
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                            <div class="clients__text-row-item">Globalis</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="case-intro__img-wrapper animation__img-parallax">
                     <img class="case-intro__img animation__img-parallax-item" src="./assets/images/intro-cover.jpg">
                 </div>
@@ -720,7 +745,7 @@
     <div class="animation__screen user-experience animation__block">
         <div class="user-experience__block user-experience__block--second layout">
 
-            <div class="user-experience__block-name">
+            <div class="user-experience__block-name user-experience__block-name--mobile-hidden">
                 <div class="animation__title-wrapper">
                     <div class="animation__title">
                         UI
@@ -971,6 +996,18 @@
 
             <div class="testimonial__content">
 
+                <svg class="testimonial__content-quotes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.54 51.94">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: var(--main-case-color);
+                            }</style>
+                    </defs>
+                    <path class="cls-1"
+                          d="M0,37.81a42.41,42.41,0,0,1,5.17-19.7A68.79,68.79,0,0,1,18.51,0l.79.8Q7.17,13.53,7.16,24.48c.4,3.05,1.07,5.17,2,6.37a39,39,0,0,0,6.57,4.57Q20.29,39,20.3,43.58a7.53,7.53,0,0,1-2.79,6,9.58,9.58,0,0,1-6.76,2.39A9.45,9.45,0,0,1,3,48.16Q0,44.38,0,37.81Z"/>
+                    <path class="cls-1"
+                          d="M24.24,37.81a42.43,42.43,0,0,1,5.18-19.7A68.75,68.75,0,0,1,42.75,0l.8.8Q31.4,13.53,31.41,24.48q.6,4.57,2,6.37A38.59,38.59,0,0,0,40,35.42q4.58,3.59,4.57,8.16a7.55,7.55,0,0,1-2.78,6A9.6,9.6,0,0,1,35,51.94a9.43,9.43,0,0,1-7.76-3.78Q24.24,44.38,24.24,37.81Z"/>
+                </svg>
                 <div class="testimonial__item-wrapper">
                     <div class="testimonial__item animation__texting-item">
                         We accepted your project unanimously. The entire board of directors was pleased with the work

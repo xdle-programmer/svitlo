@@ -29,7 +29,7 @@
     font-weight: 200;
     font-size: 12.1417vw;
     letter-spacing: -0.033em;
-    color: var(--natural-text-color);
+    color: var(--main-case-color);
 
     @include tablet-big-screen {
       font-size: 18.1417vw;
@@ -62,12 +62,26 @@
     padding-top: 17vw;
     padding-left: 25vw;
     padding-bottom: 25vw;
+    position: relative;
 
     @include tablet-big-screen {
       padding-top: 30vw;
       padding-left: 4vw;
       padding-right: 4vw;
       padding-bottom: 151vw;
+    }
+  }
+
+  &__content-quotes {
+    position: absolute;
+    width: 8vw;
+    left: 2.6vw;
+    top: 12vw;
+
+    @include tablet-big-screen {
+      width: 10vw;
+      left: 3.6vw;
+      top: 8vw;
     }
   }
 

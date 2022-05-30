@@ -98,7 +98,8 @@
 
     @include tablet-big-screen {
       order: 1;
-      width: 85vw;
+      //width: 85vw;
+      width: 100%;
     }
   }
 
@@ -178,6 +179,33 @@
       margin-top: 41vw;
       margin-left: -14vw;
       font-size: 36.581vw;
+      display: none;
+    }
+  }
+
+  &__title-mobile {
+    display: none;
+
+    @include tablet-big-screen {
+      display: block;
+      order: 3;
+      margin-top: 47vw;
+      margin-left: -14vw;
+      margin-bottom: 35vw;
+      color: var(--main-case-color)!important;
+
+      & .clients__text-row-item {
+        font-size: 36.581vw;
+        font-weight: 400;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      & .clients__text-row-line {
+        opacity: 1;
+      }
     }
   }
 
@@ -390,7 +418,7 @@
       width: 51vw;
 
       @include tablet-big-screen {
-        width: 94%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         z-index: 1;

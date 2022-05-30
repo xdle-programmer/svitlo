@@ -70,13 +70,17 @@
     @include manrope;
     font-weight: 700;
     font-size: 1.7196vw;
-    line-height: 100%;
+
     letter-spacing: -0.033em;
 
     @include tablet-big-screen {
       width: 50vw;
       font-size: 6vw;
     }
+  }
+
+  &__desc-line {
+    margin-top: -.55vw;
   }
 
   &__contacts {

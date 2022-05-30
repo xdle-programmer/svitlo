@@ -26,7 +26,7 @@
     z-index: 1;
 
     @include tablet-big-screen {
-      top: 150vw;
+      top: 140vw;
     }
   }
 
@@ -68,7 +68,7 @@
 
     @include tablet-big-screen {
       opacity: 1;
-      top: 212vw;
+      top: 202vw;
       width: 100%;
       text-align: right;
       right: 0;
@@ -150,6 +150,7 @@
     @include tablet-big-screen {
       width: 250vw;
       margin: 0 -76vw;
+      margin-left: -78vw;
     }
   }
 
@@ -170,7 +171,7 @@
     position: relative;
 
     @include tablet-big-screen {
-      margin-top: 169vw;
+      margin-top: 159vw;
     }
   }
 
