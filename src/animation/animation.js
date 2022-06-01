@@ -170,6 +170,45 @@ export function animation($wrapper) {
                         }
                     }
                 }, 5);
+            } else if (document.querySelector('body').classList.contains('body-case')) {
+                const $loader = document.querySelector('.loader');
+                const introTransition = 800;
+
+                $body.classList.add('init');
+                $wrapper.classList.add('animation--preshow');
+                $wrapper.style.transition = `all ${introTransition}ms`;
+
+                let checkScale = setInterval(() => {
+                    let matrix = new WebKitCSSMatrix(window.getComputedStyle($wrapper).transform);
+                    let initScale = 1;
+
+                    if (window.innerWidth > mobileViewPoint) {
+                        initScale = 1.4;
+                    }
+
+                    if (matrix.a === initScale) {
+                        $loader.classList.add('loader--hide');
+                        $wrapper.classList.add('animation--show');
+                        $header.classList.add('header--show');
+
+                        clearInterval(checkScale);
+
+                        if (window.innerWidth > mobileViewPoint) {
+                            const hash = window.location.hash;
+                            let target = '';
+
+                            if (hash !== '') {
+                                target = hash.split('#')[1];
+                                scrollToNameFromHash(target);
+                            }
+                        } else {
+
+                            setTimeout(() => {
+                                setEffects.toggleEffects();
+                            }, 1000);
+                        }
+                    }
+                }, 5);
             }
         });
 
@@ -689,9 +728,18 @@ export function animation($wrapper) {
 
             elements.forEach(($element) => {
                 if ($element.classList.contains('animation__screen')) {
-                    const rgbString = window.getComputedStyle($element).backgroundColor;
-                    const rgbArray = rgbString.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1);
-                    const lightness = getLightness(rgbArray[0], rgbArray[1], rgbArray[2]);
+
+                    let rgbString = window.getComputedStyle($element).backgroundColor;
+                    let rgbArray = rgbString.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1);
+                    let lightness = getLightness(rgbArray[0], rgbArray[1], rgbArray[2]);
+                    let opacity = rgbArray[3];
+
+                    if ((!opacity || parseFloat(opacity) === 0) && !isNaN(parseFloat(opacity))) {
+                        rgbString = window.getComputedStyle(document.querySelector('html')).backgroundColor;
+                        rgbArray = rgbString.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1);
+                        lightness = getLightness(rgbArray[0], rgbArray[1], rgbArray[2]);
+                        console.log(lightness)
+                    }
 
                     if (lightness > 90) {
                         $header.classList.add('header--black');
@@ -716,8 +764,6 @@ export function animation($wrapper) {
                 if (percent < 0) {
                     $photo.style.transform = `translateY(0)`;
                 } else if (percent > 0 && percent < 100) {
-                    console.log((shiftHeight / 100) * percent);
-
                     $photo.style.transform = `translateY(${(shiftHeight / 100) * percent}px)`;
                 } else {
                     $photo.style.transform = `translateY(-${shiftHeight}px)`;

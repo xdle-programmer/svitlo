@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" style="background: #020305">
+<html lang="en" style="background: #020305">
 <head>
     <meta charset="UTF-8">
     <title>Svitlo</title>
@@ -31,12 +31,22 @@
             --natural-text-color: #282F31;
         }
     </style>
+
+    <script>
+        window.loadState = [];
+        function setLoadState() {
+            loadState.push(true)
+        }
+    </script>
+
 </head>
 <body class="body-case">
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
 
-<div class="animation">
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/loader.php'); ?>
+
+<div class="animation" style="opacity: 0;">
 
     <div class="animation__scroll">
         <div class="animation__scroll-handler-wrapper">
@@ -75,7 +85,7 @@
                 </div>
 
                 <div class="case-intro__work-img-wrapper">
-                    <img class="case-intro__work-img" src="./assets/images/intro-img.jpg">
+                    <img onload="setLoadState()" data-loader-img class="case-intro__work-img" src="./assets/images/intro-img.jpg">
                 </div>
 
                 <div class="case-intro__desc">
@@ -186,7 +196,7 @@
                 </div>
 
                 <div class="case-intro__img-wrapper animation__img-parallax">
-                    <img class="case-intro__img animation__img-parallax-item" src="./assets/images/intro-cover.jpg">
+                    <img onload="setLoadState()" data-loader-img class="case-intro__img animation__img-parallax-item" src="./assets/images/intro-cover.jpg">
                 </div>
 
                 <div class="case-intro__results">
@@ -276,9 +286,9 @@
                             </div>
                         </div>
                     </div>
-                    <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-mobile-desc"
+                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-mobile-desc"
                          src="./assets/images/screenshot-1-mob.jpg">
-                    <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-desc-desc"
+                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-desc-desc"
                          src="./assets/images/screenshot-1.jpg">
 
                     <div class="case-intro__screenshots-item-analysis">
@@ -475,17 +485,17 @@
                             </div>
                         </div>
                     </div>
-                    <img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
+                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
                          src="./assets/images/screenshot-2.jpg">
                 </div>
 
                 <div class="case-intro__screenshots-item case-intro__screenshots-item--for-mobile">
                     <div class="case-intro__screenshots-item-parallax animation__img-parallax">
-                        <img class="case-intro__screenshots-item-parallax-img animation__img-parallax-item"
+                        <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-item-parallax-img animation__img-parallax-item"
                              src="./assets/images/screenshot-2-parallax.png">
                     </div>
 
-                    <img class="case-intro__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
+                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
                 </div>
             </div>
         </div>
@@ -706,9 +716,9 @@
                     <div class="user-experience__images-inner">
                         <div class="animation__text-x-scroll animation__text-x-scroll--user-experience">
                             <div class="user-experience__images animation__text-x-scroll-item">
-                                <img class="user-experience__image" src="./assets/images/ux-1.png"
+                                <img onload="setLoadState()" data-loader-img class="user-experience__image" src="./assets/images/ux-1.png"
                                      alt="user-experience">
-                                <img class="user-experience__image" src="./assets/images/ux-2.png"
+                                <img onload="setLoadState()" data-loader-img class="user-experience__image" src="./assets/images/ux-2.png"
                                      alt="user-experience">
                             </div>
                         </div>
@@ -732,7 +742,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
+                            <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
                                  src="./assets/images/screenshot-3-mob.jpg">
                         </div>
 
@@ -906,7 +916,7 @@
                             </div>
                         </div>
                     </div>
-                    <img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
+                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
                          src="./assets/images/screenshot-3.jpg">
                 </div>
                 <div class="case-intro__screenshots-item case-intro__screenshots-item--mobile">
@@ -926,7 +936,7 @@
                             </div>
                         </div>
                     </div>
-                    <img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
+                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
                          src="./assets/images/screenshot-4.jpg">
                 </div>
             </div>
@@ -1061,20 +1071,20 @@
                                 </div>
                             </div>
                         </div>
-                        <img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-1.png">
+                        <img onload="setLoadState()" data-loader-img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-1.png">
                     </div>
 
                     <div class="testimonial__screenshots-item testimonial__screenshots-item--2">
-                        <img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
+                        <img onload="setLoadState()" data-loader-img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
                         <div class="testimonial__screenshots-item-name-block testimonial__screenshots-item-name-block--top">
                             <div class="testimonial__screenshots-item-name-title">
 
                                 <div class="testimonial__circle">
                                     <div class="logo-circle">
                                         <div class="logo-circle__item">
-                                            <img class="logo-circle__text"
+                                            <img onload="setLoadState()" data-loader-img class="logo-circle__text"
                                                  src="../../assets/images/circle-text-white.svg">
-                                            <img class="logo-circle__logo" src="../../assets/images/logo-white.svg">
+                                            <img onload="setLoadState()" data-loader-img class="logo-circle__logo" src="../../assets/images/logo-white.svg">
                                         </div>
                                     </div>
                                 </div>

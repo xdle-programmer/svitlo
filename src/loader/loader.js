@@ -7,9 +7,16 @@ const $wrapper = document.querySelector('.loader');
 const $animation = document.querySelector('.animation');
 
 if ($wrapper) {
-    loadIntro();
+
+
+    if (document.querySelector('body').classList.contains('body-case')) {
+        loadImages();
+    } else {
+        loadIntro();
+    }
 } else {
     startVideo();
+
 }
 
 function loadIntro() {
@@ -42,6 +49,36 @@ function loadIntro() {
                 startVideo();
             });
     }
+}
+
+function loadImages() {
+    const $loaderText = document.querySelector('.loader__progress');
+    const $loaderLine = document.querySelector('.loader__line-progress');
+    const all = Array.from(document.querySelectorAll(`[data-loader-img]`)).length
+
+
+
+    const checkImagesLoad = setInterval(()=>{
+        let loaded = window.loadState.length
+
+        if (loaded < all) {
+            let progress = parseInt(loaded / (all / 100));
+            $loaderText.innerText = `${progress}%`;
+            $loaderLine.style.transform = `scaleX(0${progress / 100})`;
+        } else {
+            startVideo()
+            clearInterval(checkImagesLoad);
+        }
+
+    },50)
+
+
+
+
+
+
+
+
 }
 
 function startVideo() {
