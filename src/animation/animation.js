@@ -313,7 +313,11 @@ export function animation($wrapper) {
     }
 
     function scrollToNameFromHash(target) {
-        shiftScroll = [(anchorScreenPositions[target] - scrollPosition) / smoothCoefficient + 1];
+        if (((scrollPosition / smoothCoefficient) + (anchorScreenPositions[target] - scrollPosition) / smoothCoefficient + 1) >= originalHeight / smoothCoefficient) {
+            shiftScroll = [originalHeight / smoothCoefficient];
+        } else {
+            shiftScroll = [(anchorScreenPositions[target] - scrollPosition) / smoothCoefficient + 1];
+        }
     }
 
     // Функция рекурсии алгоритмического скролла
@@ -738,7 +742,6 @@ export function animation($wrapper) {
                         rgbString = window.getComputedStyle(document.querySelector('html')).backgroundColor;
                         rgbArray = rgbString.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+\.{0,1}\d*))?\)$/).slice(1);
                         lightness = getLightness(rgbArray[0], rgbArray[1], rgbArray[2]);
-                        console.log(lightness)
                     }
 
                     if (lightness > 90) {

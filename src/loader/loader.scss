@@ -21,16 +21,15 @@
     visibility: hidden;
   }
 
-  &:after {
+  &__light {
     @include pseudo-absolute;
     border-radius: 50%;
-    width: 22.5638vw;
-    height: 22.5638vw;
-    left: 64.2522vw;
-    top: 17.3527vw;
+    width: 23vw;
+    height: 23vw;
+    left: 64vw;
+    top: 17vw;
     background: var(--main-color);
-    filter: blur(250px);
-    transform: rotate(14.5deg);
+    filter: blur(180px);
   }
 
   &__block {
@@ -103,8 +102,8 @@
 
     @include tablet-big-screen {
       position: absolute;
-      bottom: 81vw;
-      left: 39.1vw;
+      bottom: 45vw;
+      left: 0;
       font-size: 5.7196vw;
     }
   }

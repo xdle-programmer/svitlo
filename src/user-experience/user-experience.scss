@@ -113,10 +113,14 @@
     letter-spacing: -0.033em;
 
     @include tablet-big-screen {
-      font-size: 6.4392vw;
+      font-size: 6vw;
+      white-space: nowrap;
     }
 
     &--big {
+      @include tablet-big-screen {
+        font-size: 5vw;
+      }
     }
 
     &--small {
@@ -218,21 +222,24 @@
     letter-spacing: -0.033em;
     left: 2vw;
     top: 2vw;
+    text-transform: uppercase;
 
     @include tablet-big-screen {
       left: 4vw;
       bottom: 4vw;
       top: auto;
-      font-size: 5.3548vw;
+      font-size: 4vw;
       width: 21vw;
     }
 
     &--main {
-      color: var(--main-text-color);
+      //color: var(--main-text-color);
+      color: var(--white-color);
     }
 
     &--natural {
-      color: var(--natural-text-color);
+      //color: var(--natural-text-color);
+      color: var(--black-color);
     }
   }
 

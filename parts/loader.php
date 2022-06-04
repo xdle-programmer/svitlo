@@ -1,4 +1,6 @@
 <div class="loader" style="opacity: 0">
+
+    <div class="loader__light"></div>
     <div class="loader__block layout">
 
         <div class="loader__top">
@@ -21,5 +23,7 @@
             <div class="loader__line-progress"></div>
         </div>
 
+
+<!--        <div class="light"></div>-->
     </div>
 </div>

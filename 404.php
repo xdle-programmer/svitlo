@@ -2,7 +2,7 @@
 <html lang="en" style="background: #020305">
 <head>
     <meta charset="UTF-8">
-    <title>Svitlo</title>
+    <title>Svitlo Web Production</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
     <?php

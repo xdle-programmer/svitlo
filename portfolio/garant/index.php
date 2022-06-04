@@ -2,7 +2,10 @@
 <html lang="en" style="background: #f9fafe">
 <head>
     <meta charset="UTF-8">
-    <title>Svitlo</title>
+    <title>Svitlo Web Production</title>
+
+    <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/open-graph.php'); ?>
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
     <?php
@@ -40,6 +43,8 @@
     </script>
 </head>
 <body class="body-case">
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/schema.php'); ?>
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
 <script>
@@ -867,7 +872,7 @@
                         <div class="user-experience__colors-item-name user-experience__colors-item-name--main">
                             <div class="animation__title-wrapper">
                                 <div class="animation__title">
-                                    Wet asphalt
+                                    #000000
                                 </div>
                             </div>
 
@@ -877,7 +882,7 @@
                         <div class="user-experience__colors-item-name user-experience__colors-item-name--natural">
                             <div class="animation__title-wrapper">
                                 <div class="animation__title">
-                                    Emerald shade
+                                    #000000
                                 </div>
                             </div>
 
@@ -1132,8 +1137,8 @@
                                     <div class="logo-circle">
                                         <div class="logo-circle__item">
                                             <img onload="setLoadState()" data-loader-img class="logo-circle__text"
-                                                 src="../../assets/images/circle-text-white.svg">
-                                            <img onload="setLoadState()" data-loader-img class="logo-circle__logo" src="../../assets/images/logo-white.svg">
+                                                 src="../../assets/images/circle-text.svg">
+                                            <img onload="setLoadState()" data-loader-img class="logo-circle__logo" src="../../assets/images/logo.svg">
                                         </div>
                                     </div>
                                 </div>

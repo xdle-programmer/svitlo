@@ -11,8 +11,8 @@
   left: calc(50% - 11.5vw);
   top: calc(50% - 11.5vh);
   background: var(--main-color);
-  filter: blur(180px);
-  //opacity: .7;
+  filter: blur(100px);
+  opacity: .5;
 
   transition-duration: 10000ms;
   transition-timing-function: ease-in-out;

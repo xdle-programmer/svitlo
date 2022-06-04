@@ -2,7 +2,10 @@
 <html lang="en" style="background: #f3f3f3">
 <head>
     <meta charset="UTF-8">
-    <title>Svitlo</title>
+    <title>Svitlo Web Production</title>
+
+    <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/open-graph.php'); ?>
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
     <?php
@@ -34,16 +37,19 @@
 
     <script>
         window.loadState = [];
+
         function setLoadState() {
-            loadState.push(true)
+            loadState.push(true);
         }
     </script>
 </head>
 <body class="body-case">
 
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/schema.php'); ?>
+
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
 <script>
-document.querySelector('.header').classList.add('header--black');
+    document.querySelector('.header').classList.add('header--black');
 </script>
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/loader.php'); ?>
 
@@ -84,7 +90,8 @@ document.querySelector('.header').classList.add('header--black');
                 </div>
 
                 <div class="case-intro__work-img-wrapper">
-                    <img onload="setLoadState()" data-loader-img class="case-intro__work-img" src="./assets/images/intro-img.jpg">
+                    <img onload="setLoadState()" data-loader-img class="case-intro__work-img"
+                         src="./assets/images/intro-img.jpg">
                 </div>
 
                 <div class="case-intro__desc">
@@ -190,7 +197,8 @@ document.querySelector('.header').classList.add('header--black');
                 </div>
 
                 <div class="case-intro__img-wrapper animation__img-parallax">
-                    <img onload="setLoadState()" data-loader-img class="case-intro__img animation__img-parallax-item" src="./assets/images/intro-cover.jpg">
+                    <img onload="setLoadState()" data-loader-img class="case-intro__img animation__img-parallax-item"
+                         src="./assets/images/intro-cover.jpg">
                 </div>
 
             </div>
@@ -213,9 +221,11 @@ document.querySelector('.header').classList.add('header--black');
                             </div>
                         </div>
                     </div>
-                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-mobile-desc"
+                    <img onload="setLoadState()" data-loader-img
+                         class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-mobile-desc"
                          src="./assets/images/screenshot-1-mob.jpg">
-                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-desc-desc"
+                    <img onload="setLoadState()" data-loader-img
+                         class="case-intro__screenshots-img case-intro__screenshots-img--desktop case-intro__screenshots-img--for-desc-desc"
                          src="./assets/images/screenshot-1.jpg">
 
                     <div class="case-intro__screenshots-item-analysis">
@@ -419,17 +429,20 @@ document.querySelector('.header').classList.add('header--black');
                             </div>
                         </div>
                     </div>
-                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
+                    <img onload="setLoadState()" data-loader-img
+                         class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
                          src="./assets/images/screenshot-2.jpg">
                 </div>
 
                 <div class="case-intro__screenshots-item case-intro__screenshots-item--for-mobile">
                     <div class="case-intro__screenshots-item-parallax animation__img-parallax">
-                        <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-item-parallax-img animation__img-parallax-item"
+                        <img onload="setLoadState()" data-loader-img
+                             class="case-intro__screenshots-item-parallax-img animation__img-parallax-item"
                              src="./assets/images/screenshot-2-parallax.png">
                     </div>
 
-                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
+                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-item-img"
+                         src="./assets/images/screen-mobile-2.png">
                 </div>
             </div>
         </div>
@@ -657,9 +670,11 @@ document.querySelector('.header').classList.add('header--black');
                     <div class="user-experience__images-inner">
                         <div class="animation__text-x-scroll animation__text-x-scroll--user-experience">
                             <div class="user-experience__images animation__text-x-scroll-item">
-                                <img onload="setLoadState()" data-loader-img class="user-experience__image" src="./assets/images/ux-1.png"
+                                <img onload="setLoadState()" data-loader-img class="user-experience__image"
+                                     src="./assets/images/ux-1.png"
                                      alt="user-experience">
-                                <img onload="setLoadState()" data-loader-img class="user-experience__image" src="./assets/images/ux-2.png"
+                                <img onload="setLoadState()" data-loader-img class="user-experience__image"
+                                     src="./assets/images/ux-2.png"
                                      alt="user-experience">
                             </div>
                         </div>
@@ -683,7 +698,8 @@ document.querySelector('.header').classList.add('header--black');
                                     </div>
                                 </div>
                             </div>
-                            <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
+                            <img onload="setLoadState()" data-loader-img
+                                 class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
                                  src="./assets/images/screenshot-3-mob.jpg">
                         </div>
 
@@ -754,7 +770,7 @@ document.querySelector('.header').classList.add('header--black');
                         <div class="user-experience__colors-item-name user-experience__colors-item-name--main">
                             <div class="animation__title-wrapper">
                                 <div class="animation__title">
-                                    Wet asphalt
+                                    #000000
                                 </div>
                             </div>
 
@@ -764,7 +780,7 @@ document.querySelector('.header').classList.add('header--black');
                         <div class="user-experience__colors-item-name user-experience__colors-item-name--natural">
                             <div class="animation__title-wrapper">
                                 <div class="animation__title">
-                                    Emerald shade
+                                    #000000
                                 </div>
                             </div>
 
@@ -892,7 +908,8 @@ document.querySelector('.header').classList.add('header--black');
                             </div>
                         </div>
                     </div>
-                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
+                    <img onload="setLoadState()" data-loader-img
+                         class="case-intro__screenshots-img case-intro__screenshots-img--desktop"
                          src="./assets/images/screenshot-3.jpg">
                 </div>
                 <div class="case-intro__screenshots-item case-intro__screenshots-item--mobile">
@@ -912,7 +929,8 @@ document.querySelector('.header').classList.add('header--black');
                             </div>
                         </div>
                     </div>
-                    <img onload="setLoadState()" data-loader-img class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
+                    <img onload="setLoadState()" data-loader-img
+                         class="case-intro__screenshots-img case-intro__screenshots-img--mobile"
                          src="./assets/images/screenshot-4.jpg">
                 </div>
             </div>
@@ -996,7 +1014,8 @@ document.querySelector('.header').classList.add('header--black');
                 </svg>
                 <div class="testimonial__item-wrapper">
                     <div class="testimonial__item animation__texting-item">
-                        Guys, the level of work exceeded all expectations! It is understandable why our colleagues recommended you so warmly. We will do the following launches only with you.
+                        Guys, the level of work exceeded all expectations! It is understandable why our colleagues
+                        recommended you so warmly. We will do the following launches only with you.
                     </div>
 
                     <div class="testimonial__item-name">
@@ -1013,15 +1032,19 @@ document.querySelector('.header').classList.add('header--black');
                         <div class="case-intro__filter-text-wrapper">
                             <div class="case-intro__filter-text case-intro__filter-text--background">
                                 <div class="case-intro__filter-text-item">
-                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian market.
-                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian market.
+                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian
+                                    market.
+                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian
+                                    market.
                                 </div>
                             </div>
                             <div class="case-intro__filter-text case-intro__filter-text--flashlight flashlight"
                                  data-flashlight-size="11.07">
                                 <div class="case-intro__filter-text-item">
-                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian market.
-                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian market.
+                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian
+                                    market.
+                                    Edu.pro — TOP-10 performance marketing academy in e-commerce niche on the Ukrainian
+                                    market.
                                 </div>
                             </div>
                         </div>
@@ -1044,11 +1067,13 @@ document.querySelector('.header').classList.add('header--black');
                                 </div>
                             </div>
                         </div>
-                        <img onload="setLoadState()" data-loader-img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-1.png">
+                        <img onload="setLoadState()" data-loader-img class="testimonial__screenshots-item-img"
+                             src="./assets/images/screen-mobile-1.png">
                     </div>
 
                     <div class="testimonial__screenshots-item testimonial__screenshots-item--2">
-                        <img onload="setLoadState()" data-loader-img class="testimonial__screenshots-item-img" src="./assets/images/screen-mobile-2.png">
+                        <img onload="setLoadState()" data-loader-img class="testimonial__screenshots-item-img"
+                             src="./assets/images/screen-mobile-2.png">
                         <div class="testimonial__screenshots-item-name-block testimonial__screenshots-item-name-block--top">
                             <div class="testimonial__screenshots-item-name-title">
 
@@ -1056,8 +1081,9 @@ document.querySelector('.header').classList.add('header--black');
                                     <div class="logo-circle">
                                         <div class="logo-circle__item">
                                             <img onload="setLoadState()" data-loader-img class="logo-circle__text"
-                                                 src="../../assets/images/circle-text-white.svg">
-                                            <img onload="setLoadState()" data-loader-img class="logo-circle__logo" src="../../assets/images/logo-white.svg">
+                                                 src="../../assets/images/circle-text.svg">
+                                            <img onload="setLoadState()" data-loader-img class="logo-circle__logo"
+                                                 src="../../assets/images/logo.svg">
                                         </div>
                                     </div>
                                 </div>

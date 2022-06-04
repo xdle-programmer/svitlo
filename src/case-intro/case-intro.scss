@@ -111,9 +111,10 @@
 
   &__desc {
     display: grid;
-    grid-template-columns: 39vw 1fr;
-    grid-gap: 20vw;
+    grid-template-columns: 58vw 1fr;
+    grid-gap: 1vw;
     margin-top: 5vw;
+
 
     @include tablet-big-screen {
       order: 4;
@@ -140,7 +141,7 @@
 
     @include tablet-big-screen {
       grid-template-columns: 1fr;
-      font-size: 7.3548vw;
+      font-size: 6vw;
     }
   }
 
@@ -149,10 +150,11 @@
   }
 
   &__desc-item-text {
+    white-space: nowrap;
 
     @include tablet-big-screen {
       margin-top: 4vw;
-      line-height: 103%;
+      line-height: 116%;
     }
 
   }
@@ -192,11 +194,12 @@
       margin-top: 47vw;
       margin-left: -14vw;
       margin-bottom: 35vw;
-      color: var(--main-case-color)!important;
+      color: var(--main-case-color) !important;
 
       & .clients__text-row-item {
         font-size: 36.581vw;
         font-weight: 400;
+        white-space: nowrap;
 
         &:after {
           display: none;
@@ -252,7 +255,7 @@
   }
 
   &__results-title {
-    color: var(--natural-case-color);
+    color: var(--natural-text-color);
     @include manrope;
     font-weight: 200;
     font-size: 6.9306vw;
@@ -440,7 +443,8 @@
     grid-template-columns: 26vw 1fr;
 
     @include tablet-big-screen {
-      font-size: 5.3548vw;
+      font-size: 4.5vw;
+      white-space: nowrap;
       grid-template-columns: 30vw 1fr;
     }
   }

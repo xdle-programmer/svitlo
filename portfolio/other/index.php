@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" style="background: #020305">
+<html lang="en" style="background: #070707">
 <head>
     <meta charset="UTF-8">
-    <title>Svitlo</title>
+    <title>Svitlo Web Production</title>
+
+    <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/open-graph.php'); ?>
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"/>
     <?php
@@ -24,7 +27,7 @@
     <style>
         :root {
             --main-case-color: #e24f26;
-            --main-case-color-pseudo-opacity: #141414;
+            --main-case-color-pseudo-opacity: #101010;
             --natural-case-color: #131313;
 
             --main-text-color: #fff;
@@ -40,6 +43,8 @@
     </script>
 </head>
 <body class="body-case">
+
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/schema.php'); ?>
 
 <?php require($_SERVER['DOCUMENT_ROOT'] . '/parts/header.php'); ?>
 
@@ -780,7 +785,7 @@
                         <div class="user-experience__colors-item-name user-experience__colors-item-name--main">
                             <div class="animation__title-wrapper">
                                 <div class="animation__title">
-                                    Wet asphalt
+                                    #000000
                                 </div>
                             </div>
 
@@ -790,7 +795,7 @@
                         <div class="user-experience__colors-item-name user-experience__colors-item-name--natural">
                             <div class="animation__title-wrapper">
                                 <div class="animation__title">
-                                    Emerald shade
+                                    #000000
                                 </div>
                             </div>
 
