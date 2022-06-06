@@ -80,9 +80,8 @@
 
   &__button {
 
-
-
     &--disabled {
+      cursor: not-allowed!important;
     }
 
   }

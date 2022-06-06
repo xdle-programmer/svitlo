@@ -240,7 +240,7 @@
   &__results {
     margin-top: 5vw;
     padding-top: 1vw;
-    border-top: 0.1563vw solid var(--natural-case-color);
+    border-top: 0.1563vw solid var(--natural-text-color);
     display: grid;
     grid-template-columns: 48vw 1fr;
 
@@ -248,7 +248,7 @@
       order: 6;
       margin-top: 20vw;
       padding-top: 1vw;
-      border-top: 1.1563vw solid var(--natural-case-color);
+      border-top: 1.1563vw solid var(--natural-text-color);
       grid-template-columns: 1fr;
       grid-gap: 17vw;
     }

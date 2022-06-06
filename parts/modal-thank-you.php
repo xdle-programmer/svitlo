@@ -1,4 +1,4 @@
-<div class="modal modal--level-1" id="modal-thank-you">
+<div class="modal modal--level-3" id="modal-thank-you">
     <div class="modal__background modal__background--black" data-modal-close></div>
 
     <div class="modal__content"  style="opacity: 0">

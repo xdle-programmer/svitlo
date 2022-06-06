@@ -3418,12 +3418,39 @@ haveTask.forEach($haveTask => {
 
 function haveTaskSend($wrapper) {
   const $button = $wrapper.querySelector('.have-a-task__form-button');
+  const $form = $wrapper.querySelector('.form-check');
+  const id = $form.id;
+  const $name = $wrapper.querySelector('[data-form-name="name"]');
+  const $phone = $wrapper.querySelector('[data-form-name="phone"]');
+  const $mail = $wrapper.querySelector('[data-form-name="mail"]');
+  const $message = $wrapper.querySelector('[data-form-name="message"]');
   $button.addEventListener('click', () => {
-    axios.defaults.headers.common['Content-Type'] = 'application/json';
-    axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-    axios.post('/send.php', {
-      answers: 'answers!answers'
-    }).then(response => {
+    if ($button.classList.contains('form-check__button--disabled')) {
+      return;
+    }
+
+    let config = {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    };
+    let params = new URLSearchParams();
+    const name = `Name: ${$name.value}\n\n`;
+    const phone = `Phone: ${$phone.value}\n\n`;
+    const mail = `Mail: ${$mail.value}\n\n`;
+    const message = `Message: ${$message.value}\n\n`;
+    params.append('lead', name + phone + mail + message);
+    $name.value = '';
+    $phone.value = '';
+    $mail.value = '';
+    $message.value = '';
+    $name.dispatchEvent(new Event('input'));
+    $phone.dispatchEvent(new Event('input'));
+    $mail.dispatchEvent(new Event('input'));
+    $message.dispatchEvent(new Event('input'));
+    modals.open('modal-thank-you');
+    window.formsArray.get(id).refresh();
+    axios.post('/send.php', params, config).then(response => {
       console.log(response);
     }).catch(error => {
       console.log(error);
@@ -17774,4 +17801,4 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.32140cb1e99000be159c.js.map
+//# sourceMappingURL=main.56a99d8a2f265bc200b9.js.map
