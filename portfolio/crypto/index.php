@@ -950,7 +950,7 @@
                             <div class="testimonial__screenshots-item-name-title">
                                 <div class="animation__title-wrapper">
                                     <div class="animation__title">
-                                        globalis.com.ua
+                                        crypto0-100.com.ua
                                     </div>
                                 </div>
                             </div>

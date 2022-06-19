@@ -29,7 +29,8 @@
     left: 64vw;
     top: 17vw;
     background: var(--main-color);
-    filter: blur(180px);
+    filter: blur(80px);
+    opacity: .5;
   }
 
   &__block {

@@ -823,7 +823,7 @@ button:focus, input:focus, textarea:focus {
   @media (max-width: 1279px) {
     .case-intro__desc-item-text {
       margin-top: 4vw;
-      line-height: 116%; } }
+      line-height: 128%; } }
 
 .case-intro__title {
   font-family: 'Manrope', sans-serif;
@@ -2175,7 +2175,7 @@ button:focus, input:focus, textarea:focus {
       font-weight: 800; }
       @media (max-width: 1279px) {
         .lets-discuss__link-block-title-item--bold {
-          font-size: 15.4vw; } }
+          font-size: 13vw; } }
   .lets-discuss__text-carousel {
     position: relative;
     overflow: hidden; }
@@ -2258,7 +2258,8 @@ button:focus, input:focus, textarea:focus {
     left: 64vw;
     top: 17vw;
     background: var(--main-color);
-    filter: blur(180px); }
+    filter: blur(80px);
+    opacity: .5; }
   .loader__block {
     color: var(--white-color);
     height: calc(100% - 7vw);
@@ -3455,8 +3456,7 @@ button:focus, input:focus, textarea:focus {
   padding-top: 4vw; }
   @media (max-width: 1279px) {
     .testimonial__item-name {
-      font-size: 5.4392vw;
-      padding-top: 0; } }
+      font-size: 5.4392vw; } }
 
 .testimonial__screenshots {
   display: grid;
@@ -4111,4 +4111,4 @@ button:focus, input:focus, textarea:focus {
           height: 1.65vw; } }
 
 
-/*# sourceMappingURL=main.56a99d8a2f265bc200b9.css.map*/
+/*# sourceMappingURL=main.3db5082a57b989cd826e.css.map*/
