@@ -1,1 +1,1 @@
-export const mobileViewPoint = 1279
+export const mobileViewPoint = 1023

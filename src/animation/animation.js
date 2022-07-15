@@ -271,7 +271,7 @@ export function animation($wrapper) {
             });
 
             $scrollHandler.addEventListener('mousedown', (event) => {
-                event.preventDefault();
+                // event.preventDefault();
                 scrollBarDragged = true;
                 scrollBarLast = event.clientY;
             });
@@ -281,8 +281,6 @@ export function animation($wrapper) {
             });
 
             window.addEventListener('mousemove', (event) => {
-                event.preventDefault();
-
                 let inScreen = true;
 
                 if (event.clientY > viewportHeight || event.clientY < 0) {
@@ -298,6 +296,7 @@ export function animation($wrapper) {
                 }
 
                 if (scrollBarDragged) {
+                    event.preventDefault();
                     let scrollBarDragShift = event.clientY - scrollBarLast;
                     let scrollPercent = scrollBarDragShift / (scrollBarHeight / 100);
 
@@ -377,6 +376,8 @@ export function animation($wrapper) {
 
     // Функция расчета размеров экрана
     function calcScreenSizes() {
+
+
         let height = 0;
 
         for (let index = 0; index < screens.length; index++) {
@@ -443,6 +444,15 @@ export function animation($wrapper) {
         originalHeight = height - viewportHeight;
 
         scrollBarHeight = viewportHeight - $scrollHandler.getBoundingClientRect().height;
+
+        console.log(originalHeight);
+        console.log(scrollBarHeight);
+        console.log(scrollBarDragged);
+        console.log(scrollBarLast);
+        console.log(shiftScroll);
+        console.log(scrollPosition);
+        console.log(lastWheelDeltaY);
+        console.log('******************************');
 
         setBodyHeight();
     }
