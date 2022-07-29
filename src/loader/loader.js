@@ -38,6 +38,7 @@ function loadIntro() {
                 responseType: 'blob',
                 onDownloadProgress: (progressEvent) => {
                     let progress = parseInt(progressEvent.loaded / (progressEvent.total / 100));
+                    $loaderText.innerText = '';
                     $loaderText.innerText = `${progress}%`;
                     $loaderLine.style.transform = `scaleX(0${progress / 100})`;
                 },
@@ -54,29 +55,22 @@ function loadIntro() {
 function loadImages() {
     const $loaderText = document.querySelector('.loader__progress');
     const $loaderLine = document.querySelector('.loader__line-progress');
-    const all = Array.from(document.querySelectorAll(`[data-loader-img]`)).length
+    const all = Array.from(document.querySelectorAll(`[data-loader-img]`)).length;
 
 
-
-    const checkImagesLoad = setInterval(()=>{
-        let loaded = window.loadState.length
+    const checkImagesLoad = setInterval(() => {
+        let loaded = window.loadState.length;
 
         if (loaded < all) {
             let progress = parseInt(loaded / (all / 100));
             $loaderText.innerText = `${progress}%`;
             $loaderLine.style.transform = `scaleX(0${progress / 100})`;
         } else {
-            startVideo()
+            startVideo();
             clearInterval(checkImagesLoad);
         }
 
-    },50)
-
-
-
-
-
-
+    }, 50);
 
 
 }
